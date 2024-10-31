@@ -13,18 +13,21 @@ export function ComingSoon() {
         width={250}
         height={100}
       />
-      <h1 className="text-lg sm:text-5xl font-bold text-white z-20">
+      <h1 className="text-xl sm:text-5xl font-bold text-white z-20">
         Estamos chegando muito em breve
       </h1>
-      <p className="text-xs sm:text-base text-slate-50 max-w-lg z-20">
-        Transparência em cada comando. <br></br> <span className="font-bold text-orange-500">ESH:</span> Segurança inteligente para
-        suas equipes.
+      <p className="text-base text-slate-50 max-w-lg z-20">
+        Transparência em cada comando. <br></br>{" "}
+        <span className="font-bold text-orange-500">ESH:</span> Segurança
+        inteligente para suas equipes.
       </p>
       <a
-        href=""
+        aria-label="contact via whatsapp button"
+        href="https://wa.me/message/X2DMDA457ASDN1"
+        target="_blank"
         className="text-white bg-orange-600 hover:bg-orange-700 py-3 w-full sm:w-60 rounded z-20 font-semibold"
       >
-        WhatsApp
+        Entrar em contato
       </a>
     </section>
   );
