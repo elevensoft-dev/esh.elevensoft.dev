@@ -9,7 +9,7 @@ export function ComingSoon() {
 
       <h1 className="flex flex-col text-xl sm:text-5xl font-bold text-white z-20 gap-y-5">
         <span className="text-orange-600 text-6xl">ESH</span>
-        <span className="leading-tight">
+        <span className="leading-tight block max-w-5xl">
           A maneira mais simples e segura de acessar e proteger sua
           infraestrutura
         </span>
