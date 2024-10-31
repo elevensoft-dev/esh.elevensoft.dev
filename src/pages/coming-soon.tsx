@@ -29,13 +29,15 @@ export function ComingSoon() {
       </a>
       <footer className="fixed bottom-0 py-5 bg-neutral-900 inset-x-0 flex items-center justify-center gap-x-3 z-20">
         <span className="text-white text-sm opacity-50">Um produto </span>
-        <img
-          src="assets/logo-light.png"
-          alt="logo"
-          className="z-20 text-white"
-          width={100}
-          height={100}
-        />
+        <a href="https://elevensoft.dev" target="_blank">
+          <img
+            src="assets/logo-light.png"
+            alt="logo"
+            className="z-20 text-white"
+            width={100}
+            height={100}
+          />
+        </a>
       </footer>
     </section>
   );
