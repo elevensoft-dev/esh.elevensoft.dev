@@ -4,7 +4,7 @@ export function ComingSoon() {
       <img
         src="assets/12.png"
         alt="Letter E"
-        className="fixed inset-0 w-full h-full opacity-50 z-10"
+        className="fixed inset-0 w-full h-full opacity-20 z-10 object-cover"
       />
 
       <h1 className="flex flex-col text-xl sm:text-5xl font-bold text-white z-20 gap-y-5">
