@@ -5,28 +5,34 @@ function Header() {
     <header className="fixed w-full bg-white/80 backdrop-blur-sm z-50 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-2">
-            <Eye className="h-8 w-8 text-indigo-600" />
-            <span className="text-2xl font-bold text-gray-900">ESH</span>
-          </div>
+          <a href="/" className="flex items-center gap-x-1 block">
+            <img
+              src="/assets/logo-light.png"
+              alt="logo"
+              width={100}
+              height={30}
+            />
+          </a>
           <nav className="hidden md:flex space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-indigo-600">
-              Features
+            <a href="#features" className="text-gray-600 hover:text-orange-600">
+              Sobre
             </a>
-            <a href="#about" className="text-gray-600 hover:text-indigo-600">
-              About
-            </a>
-            <a href="#contact" className="text-gray-600 hover:text-indigo-600">
-              Contact
-            </a>
-            <a href="#blog" className="text-gray-600 hover:text-indigo-600">
+            <a
+              href="https://elevensoft.dev/blog"
+              target="_blank"
+              className="text-gray-600 hover:text-orange-600"
+            >
               Blog
             </a>
           </nav>
           <div>
-            <button className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
-              Get Started
-            </button>
+            <a
+              className="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors"
+              href="https://wa.me/message/X2DMDA457ASDN1"
+              target="_blank"
+            >
+              Contato
+            </a>
           </div>
         </div>
       </div>
