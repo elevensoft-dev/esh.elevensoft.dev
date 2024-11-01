@@ -1,19 +1,25 @@
 import { ComingSoon } from "@/pages/coming-soon";
 import Home from "@/pages/home";
 
-import { createBrowserRouter } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    errorElement: <div>Página não encontrada</div>,
-    element: <ComingSoon />,
-  },
-  {
-    path: "/home",
-    errorElement: <div>Página não encontrada</div>,
-    element: <Home />,
-  }
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements([
+    <Route
+      path="/"
+      element={<ComingSoon />}
+      errorElement={<div>Página não encontrada</div>}
+    />,
+    <Route
+      path="/home"
+      element={<Home />}
+      errorElement={<div>Página não encontrada</div>}
+    />,
+  ])
+);
 
 export default router;
