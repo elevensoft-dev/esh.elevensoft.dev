@@ -3,11 +3,11 @@ function CallToAction() {
     <section className="py-20 bg-orange-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold text-white mb-4">
-          Pronto para transformar seu local de trabalho?
+          Pronto para transformar a gestão de acessos da sua empresa?
         </h2>
         <p className="text-xl text-orange-100 mb-8">
-          Comece seu teste gratuito de 14 dias hoje. Não é necessário cartão de
-          crédito.
+          Garanta mais segurança e eficiência para sua equipe com o ESH.
+          Fale conosco agora e descubra o plano ideal para sua empresa.
         </p>
         <div className="flex justify-center space-x-4">
           <a
@@ -15,7 +15,7 @@ function CallToAction() {
             href="https://wa.me/message/X2DMDA457ASDN1"
             target="_blank"
           >
-            Começar
+            Solicitar Demonstração
           </a>
           <a
             className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition-colors"
@@ -31,3 +31,4 @@ function CallToAction() {
 }
 
 export default CallToAction;
+

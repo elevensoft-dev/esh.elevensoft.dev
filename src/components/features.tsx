@@ -1,42 +1,41 @@
-import { BarChart, Clock, Shield } from "lucide-react";
+import { BarChart, Clock, Shield, Layers, Users, FileText } from "lucide-react";
 
 const features = [
   {
     icon: <Shield className="h-8 w-8 text-orange-600" />,
     title: "Agregador Centralizado de Conexões",
     description:
-      "ESH reúne diferentes protocolos de conexão, como SSH e Telnet, em uma única plataforma para simplificar o gerenciamento de acessos remotos.",
+      "Reúna protocolos como SSH e Telnet em uma única plataforma, simplificando o gerenciamento de acessos remotos e reduzindo complexidades.",
   },
   {
-    icon: <BarChart className="h-8 w-8 text-orange-600" />,
+    icon: <Layers className="h-8 w-8 text-orange-600" />,
     title: "Controle de Acesso por Tags",
     description:
-      "Sistema avançado de permissão com tags que define quais servidores cada usuário pode acessar, garantindo segurança e segmentação.",
+      "Defina permissões precisas com o sistema de tags, garantindo que cada usuário tenha acesso apenas ao que precisa.",
   },
   {
     icon: <Clock className="h-8 w-8 text-orange-600" />,
     title: "Menu Interativo e Personalizável",
     description:
-      "Interface amigável que permite navegação intuitiva por servidores, grupos de servidores e logs de sessão.",
+      "Navegue facilmente por servidores, grupos e logs com uma interface intuitiva e otimizada.",
   },
-
   {
-    icon: <Clock className="h-8 w-8 text-orange-600" />,
+    icon: <Users className="h-8 w-8 text-orange-600" />,
     title: "Facilidade de Configuração",
     description:
-      "Integrado como shell padrão para determinados usuários, possibilitando o acesso direto ao ambiente ESH logo após o login.",
+      "Configuração simples como shell padrão para usuários, permitindo acesso imediato ao ESH após o login.",
   },
   {
-    icon: <Clock className="h-8 w-8 text-orange-600" />,
+    icon: <BarChart className="h-8 w-8 text-orange-600" />,
     title: "Gerenciamento de Grupos de Servidores",
     description:
-      "Organização de servidores em grupos customizáveis para facilitar o acesso e o controle das conexões.",
+      "Organize servidores em grupos customizáveis para melhorar o controle e a eficiência no acesso.",
   },
   {
-    icon: <Clock className="h-8 w-8 text-orange-600" />,
+    icon: <FileText className="h-8 w-8 text-orange-600" />,
     title: "Registro Centralizado de Logs",
     description:
-      "Todos os comandos e saídas de sessões são registrados, criando um histórico de atividades completo para auditoria.",
+      "Registre todos os comandos e saídas de sessões em um único lugar, criando um histórico completo para auditoria.",
   },
 ];
 
@@ -49,8 +48,7 @@ function Features() {
             Tudo que você precisa para visibilidade completa
           </h2>
           <p className="text-xl text-gray-600">
-            Ferramentas de monitoramento abrangentes projetadas para locais de
-            trabalho modernos
+            Ferramentas abrangentes projetadas para ambientes modernos de trabalho.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
