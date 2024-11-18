@@ -11,12 +11,12 @@ const router = createBrowserRouter(
   createRoutesFromElements([
     <Route
       path="/"
-      element={<ComingSoon />}
+      element={<Home />}
       errorElement={<div>Página não encontrada</div>}
     />,
     <Route
-      path="/home"
-      element={<Home />}
+      path="/coming-soon"
+      element={<ComingSoon />}
       errorElement={<div>Página não encontrada</div>}
     />,
   ])
