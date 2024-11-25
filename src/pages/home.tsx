@@ -4,8 +4,14 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import SocialProof from "@/components/social-proof";
+import ReactGA from "react-ga4";
 
 function Home() {
+  ReactGA.send({
+    hitType: "pageview",
+    page: "/",
+    title: "Acessou a home page - ESH",
+  });
   return (
     <div className="min-h-screen bg-white">
       <Header />

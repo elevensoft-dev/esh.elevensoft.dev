@@ -1,4 +1,10 @@
+import ReactGA from "react-ga4";
 export function ComingSoon() {
+  ReactGA.send({
+    hitType: "pageview",
+    page: "/",
+    title: "Acessou cooming soon page - ESH",
+  });
   return (
     <section className="relative bg-neutral-800 h-dvh w-dvw flex flex-col items-center justify-center text-center gap-y-14 px-5 sm:px-10">
       <img
