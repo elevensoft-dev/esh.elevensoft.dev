@@ -10,8 +10,9 @@ function Hero() {
           <span className="text-orange-600">Melhorar.</span>
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Visibilidade completa das atividades dos funcionários com reprodução
-          segura de sessões e monitoramento em tempo real.
+          O <strong>ESH</strong> é a solução definitiva para empresas que buscam
+          monitoramento eficiente e controle absoluto de acessos. Conecte-se a
+          qualquer tecnologia baseada em terminal com praticidade, segurança e escalabilidade.
         </p>
         <div className="flex justify-center space-x-4 mb-12">
           <a
@@ -19,13 +20,13 @@ function Hero() {
             href="https://wa.me/message/X2DMDA457ASDN1"
             className="cursor-pointer bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition-colors flex items-center"
           >
-            Quero contratar
+            Solicitar Demonstração
           </a>
           <a
             href="#features"
             className="bg-white text-orange-600 border-2 border-orange-600 px-8 py-3 rounded-lg hover:bg-orange-50 transition-colors"
           >
-            Saber mais
+            Descubra Mais
           </a>
         </div>
         <div className="relative max-w-4xl mx-auto h-full">
@@ -56,6 +57,15 @@ function Hero() {
             </div>
           </div>
         </div>
+        <p className="text-lg text-gray-700 mt-6">
+          ⚡ <b>Destaques do ESH:</b> Monitoramento em tempo real, controle granular de acessos,
+          relatórios detalhados, e total escalabilidade. Transforme a forma como sua equipe
+          gerencia e acessa servidores.
+        </p>
+        <p className="text-lg text-gray-700 mt-2">
+          🚀 Empresas líderes já confiam no ESH para garantir eficiência e segurança
+          em suas operações. Você está pronto para se juntar a elas?
+        </p>
       </div>
     </section>
   );
