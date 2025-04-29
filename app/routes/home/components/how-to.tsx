@@ -3,8 +3,8 @@ import { CameraIcon, EyeOpenIcon, LockClosedIcon, LockOpen1Icon, SymbolIcon } fr
 export function HowTo() {
   return (
     <section className="py-24 relative">
-      <div className="absolute top-[50%] w-full h-px bg-neutral-800"></div>
-      <div className="bg-blend-color mix-blend-color absolute top-[75%] w-full h-px bg-neutral-800"></div>
+      <div className="mix-blend-color absolute top-[53%] w-full h-px bg-neutral-800"></div>
+      <div className="mix-blend-color absolute top-[75%] w-full h-px bg-neutral-800"></div>
 
       <div className="z-10 text-center container mx-auto">
         <div className="py-1 px-10 rounded-full bg-neutral-800 text-neutral-400  w-max mx-auto">Usabilidade</div>
