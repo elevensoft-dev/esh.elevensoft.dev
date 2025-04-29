@@ -31,14 +31,18 @@ export function Access() {
                   </div>
                   <p className='text-neutral-400'>Visualize e administre de forma centralizada</p>
                 </li>
-
               </ul>
             </div>
-            <div className='min-w-1/2 h-80 ring-1 ring-neutral-800 rounded-xl bg-neutral-950'></div>
+            <div className='w-1/2 h-80 overflow-hidden ring-1 ring-neutral-800 rounded-xl bg-neutral-950'>
+              <img className="object-cover object-center w-full h-full" src="dashboard-notebook.webp" alt="Notebook com a tela da aplicação ESH rodando" />
+            </div>
+
           </article>
 
-          <article className="bg-neutral-900 p-3 rounded-xl ring-1 ring-neutral-800 flex gap-x-5 w-full">
-            <div className='min-w-1/2 h-80 ring-1 ring-neutral-800 rounded-xl bg-neutral-950'></div>
+          <article className="bg-neutral-900 p-3 rounded-xl ring-1 ring-neutral-800 flex gap-x-5">
+            <div className='w-1/2 h-80 overflow-hidden ring-1 ring-neutral-800 rounded-xl bg-neutral-950'>
+              <img className="object-cover object-center w-full h-full" src="tags-notebook.webp" alt="Notebook com a tela da aplicação ESH rodando" />
+            </div>
             <div className='text-start space-y-5 w-1/2 p-6'>
               <h1 className='text-3xl font-medium'>Grupos de servidores</h1>
               <p className='text-neutral-400 text-lg'>Organize, gerencie e potencialize seus servidores em grupos inteligentes.</p>
@@ -64,6 +68,34 @@ export function Access() {
 
               </ul>
             </div>
+          </article>
+
+          <article className="bg-neutral-900 p-3 rounded-xl ring-1 ring-neutral-800 flex gap-x-5 w-full">
+            <div className='text-start space-y-5 w-1/2 p-6'>
+              <h1 className='text-3xl font-medium'>Replay e monitoramento</h1>
+              <p className='text-neutral-400 text-lg'>Monitore em tempo real e revise eventos passados com replays detalhados.</p>
+              <ul className='flex flex-col gap-y-5'>
+                <li className="w-full flex items-center gap-x-3">
+                  <div className='rounded-full w-6 h-6 bg-neutral-800 flex items-center justify-center'>
+                    <CheckIcon className='w-4 h-4 text-neutral-400' />
+                  </div>
+                  <p className='text-neutral-400'>Acompanhe atividades ao vivo</p>
+                </li>
+                <li className="w-full flex items-center gap-x-3">
+                  <div className='rounded-full w-6 h-6 bg-neutral-800 flex items-center justify-center'>
+                    <CheckIcon className='w-4 h-4 text-neutral-400' />
+                  </div>
+                  <p className='text-neutral-400'>Assista replay de sessões importantes</p>
+                </li>
+                <li className="w-full flex items-center gap-x-3">
+                  <div className='rounded-full w-6 h-6 bg-neutral-800 flex items-center justify-center'>
+                    <CheckIcon className='w-4 h-4 text-neutral-400' />
+                  </div>
+                  <p className='text-neutral-400'>Tome decisões rápidas e embasadas</p>
+                </li>
+              </ul>
+            </div>
+            <div className='min-w-1/2 h-80 ring-1 ring-neutral-800 rounded-xl bg-neutral-950'></div>
           </article>
 
         </div>

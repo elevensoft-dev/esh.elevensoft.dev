@@ -2,6 +2,8 @@ import type { Route } from "./+types/home";
 import { Header } from "~/components/header";
 import { Hero } from "./home/components/hero";
 import { Access } from "./home/components/access";
+import { HowTo } from "./home/components/how-to";
+import { CallToAction } from "./home/components/cta";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -16,6 +18,8 @@ export default function Home() {
       <Header />
       <Hero />
       <Access />
+      <HowTo />
+      <CallToAction />
     </main>
-  ) 
+  )
 }
