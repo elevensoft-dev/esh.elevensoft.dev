@@ -3,6 +3,7 @@ import { Hero } from "./home/components/hero";
 import { Access } from "./home/components/access";
 import { HowTo } from "./home/components/how-to";
 import { CallToAction } from "./home/components/cta";
+import { Audition } from "./home/components/audition";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -18,6 +19,7 @@ export default function Home() {
       <Access />
       <HowTo />
       <CallToAction />
+      <Audition />
     </main>
   )
 }
