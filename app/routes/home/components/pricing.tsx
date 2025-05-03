@@ -19,6 +19,17 @@ export const projects = [
   },
 ]
 
+const startPlan = 'https://www.asaas.com/c/khwwp9tuv0fztx2k'
+const proPlan = 'https://www.asaas.com/c/5lwcu96mlzr95dcf'
+const maxPlan = 'https://www.asaas.com/c/kdstk9lzzagz7ww4'
+
+function openLink(link: string) {
+  const aTag = document.createElement('a');
+  aTag.href = link;
+  aTag.target = '_blank';
+  aTag.click();
+}
+
 export function Pricing() {
   return (
     <section className="py-14 container mx-auto">
@@ -26,7 +37,7 @@ export function Pricing() {
       <h1 className="text-3xl font-semibold mt-10 mb-5 text-center">Simples, preço justo para suas equipes</h1>
       <p className="text-neutral-400 text-lg mb-10 text-center">Escolha a melhor opção para você.</p>
       <div className="flex justify-center gap-x-5">
-        <CardSpotlight className="w-96 cursor-pointer" onClick={() => console.log("event")}>
+        <CardSpotlight className="w-96 cursor-pointer bg-transparent" onClick={() => openLink(startPlan)}>
           <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 500/mês</p>
           <div className="text-neutral-200 mt-4 relative z-20">
             <span className="text-orange-500">Plano START</span>
@@ -42,7 +53,7 @@ export function Pricing() {
             Garantir que seu servidor esteja devidamente protegida ajuda a proteger suas informações e dados pessoais
           </p>
         </CardSpotlight>
-        <CardSpotlight className="relative w-96 cursor-pointer" onClick={() => console.log("event")}>
+        <CardSpotlight className="relative w-96 cursor-pointer" onClick={() => openLink(proPlan)}>
           <p className="absolute top-4 inset-x-5 mx-auto text-center text-blue-400 font-semibold">Mais popular</p>
           <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 1000/mês</p>
           <div className="text-neutral-200 mt-4 relative z-20">
@@ -63,7 +74,7 @@ export function Pricing() {
           <figure className="pointer-events-none bg-orange-900/5 absolute bottom-[-50px] right-[7vw] z-20 hidden aspect-square w-[30vw] rounded-full bg-surface-primary opacity-50 blur-[100px] dark:bg-dark-surface-primary md:block"></figure>
 
         </CardSpotlight>
-        <CardSpotlight className="w-96 cursor-pointer" onClick={() => console.log("event")}>
+        <CardSpotlight className="w-96 cursor-pointer bg-transparent" onClick={() => openLink(maxPlan)}>
           <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 2000/mês</p>
           <div className="text-neutral-200 mt-4 relative z-20">
             <span className="text-orange-500">Plano MAX</span>
