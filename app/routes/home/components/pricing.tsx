@@ -1,36 +1,115 @@
-import { CheckIcon } from "@radix-ui/react-icons";
-import { GlareCard } from "~/components/ui/glare-card";
+import { CardSpotlight } from "~/components/ui/card-spotlight"
+
+export const projects = [
+  {
+    title: "R$ 500/mês",
+    description: "A technology company that builds economic infrastructure for the internet.",
+    link: "https://stripe.com",
+  },
+  {
+    title: "R$ 750/mês",
+    description:
+    "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+    link: "https://netflix.com",
+  },
+  {
+    title: "R$ 1000/Mês",
+    description: "A multinational technology company that specializes in Internet-related services and products.",
+    link: "https://google.com",
+  },
+]
 
 export function Pricing() {
   return (
     <section className="py-14 container mx-auto">
       <div className="py-1 px-10 rounded-full bg-neutral-800 text-neutral-400  w-max mx-auto">Preços</div>
-      <h1 className="text-3xl font-semibold my-10 text-center">Simples, preço justo para suas equipes</h1>
+      <h1 className="text-3xl font-semibold mt-10 mb-5 text-center">Simples, preço justo para suas equipes</h1>
       <p className="text-neutral-400 text-lg mb-10 text-center">Escolha a melhor opção para você.</p>
-      <div className="flex gap-7">
-        <GlareCard className="flex flex-col items-center justify-center">
-          <h1>R$300/mês</h1>
+      <div className="flex justify-center gap-x-5">
+        <CardSpotlight className="w-96 cursor-pointer" onClick={() => console.log("event")}>
+          <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 500/mês</p>
+          <div className="text-neutral-200 mt-4 relative z-20">
+            <span className="text-orange-500">Plano START</span>
+            . Ideal para empresas pequenas e micro empresas.
+            <ul className="list-none  mt-2">
+              <Step title="2 servidores" />
+              <Step title="10 usuários" />
+              <Step title="10 tags" />
+              <Step title="10 grupos de servidores" />
+            </ul>
+          </div>
+          <p className="text-neutral-300 mt-4 relative z-20 text-sm">
+            Garantir que seu servidor esteja devidamente protegida ajuda a proteger suas informações e dados pessoais
+          </p>
+        </CardSpotlight>
+        <CardSpotlight className="relative w-96 cursor-pointer" onClick={() => console.log("event")}>
+          <p className="absolute top-4 inset-x-5 mx-auto text-center text-blue-400 font-semibold">Mais popular</p>
+          <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 1000/mês</p>
+          <div className="text-neutral-200 mt-4 relative z-20">
+            <span className="text-orange-500">Plano PRO</span>
+            . Ideal para empresas pequenas e micro empresas.
+            <ul className="list-none  mt-2">
+              <Step title="2 servidores" />
+              <Step title="10 usuários" />
+              <Step title="10 tags" />
+              <Step title="10 grupos de servidores" />
+            </ul>
+          </div>
+          <p className="text-neutral-300 mt-4 relative z-20 text-sm">
+            Garantir que seu servidor esteja devidamente protegida ajuda a proteger suas informações e dados pessoais
+          </p>
+          <figure className="pointer-events-none bg-orange-500 absolute -bottom-[50%] left-1/2 z-0 block aspect-square w-96 -translate-x-1/2 rounded-full bg-accent-500/5 blur-[150px]"></figure>
+          <figure className="pointer-events-none bg-orange-900/5 absolute left-[4vw] top-[64px] z-20 hidden aspect-square w-[32vw] rounded-full bg-surface-primary opacity-50 dark:bg-dark-surface-primary md:block"></figure>
+          <figure className="pointer-events-none bg-orange-900/5 absolute bottom-[-50px] right-[7vw] z-20 hidden aspect-square w-[30vw] rounded-full bg-surface-primary opacity-50 blur-[100px] dark:bg-dark-surface-primary md:block"></figure>
 
-          <p className="text-white font-bold text-xl mt-4">plano básico</p>
-          <span className="text-neutral-500">cobrança anula</span>
-          <ul>
-            <li className="flex items-center gap-x-2">
-              <CheckIcon className="text-neutral-500" />
-              <span>Lorem ipsum dolor</span>
-            </li>
-            <li className="flex items-center gap-x-2">
-              <CheckIcon className="text-neutral-500" />
-              <span>Lorem ipsum dolor</span>
-            </li>
-
-            <li className="flex items-center gap-x-2">
-              <CheckIcon className="text-neutral-500" />
-              <span>Lorem ipsum dolor</span>
-            </li>
-          </ul>
-          <a href="https://elevensoft.dev">Quero conhecer</a>
-        </GlareCard>
+        </CardSpotlight>
+        <CardSpotlight className="w-96 cursor-pointer" onClick={() => console.log("event")}>
+          <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 2000/mês</p>
+          <div className="text-neutral-200 mt-4 relative z-20">
+            <span className="text-orange-500">Plano MAX</span>
+            . Ideal para empresas pequenas e micro empresas.
+            <ul className="list-none  mt-2">
+              <Step title="2 servidores" />
+              <Step title="10 usuários" />
+              <Step title="10 tags" />
+              <Step title="10 grupos de servidores" />
+            </ul>
+          </div>
+          <p className="text-neutral-300 mt-4 relative z-20 text-sm">
+            Garantir que seu servidor esteja devidamente protegida ajuda a proteger suas informações e dados pessoais
+          </p>
+        </CardSpotlight>
       </div>
     </section>
   )
 }
+
+const Step = ({ title }: { title: string }) => {
+  return (
+    <li className="flex gap-2 items-start">
+      <CheckIcon />
+      <p className="text-white">{title}</p>
+    </li>
+  );
+};
+
+const CheckIcon = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="h-4 w-4 text-blue-500 mt-1 shrink-0"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path
+        d="M12 2c-.218 0 -.432 .002 -.642 .005l-.616 .017l-.299 .013l-.579 .034l-.553 .046c-4.785 .464 -6.732 2.411 -7.196 7.196l-.046 .553l-.034 .579c-.005 .098 -.01 .198 -.013 .299l-.017 .616l-.004 .318l-.001 .324c0 .218 .002 .432 .005 .642l.017 .616l.013 .299l.034 .579l.046 .553c.464 4.785 2.411 6.732 7.196 7.196l.553 .046l.579 .034c.098 .005 .198 .01 .299 .013l.616 .017l.642 .005l.642 -.005l.616 -.017l.299 -.013l.579 -.034l.553 -.046c4.785 -.464 6.732 -2.411 7.196 -7.196l.046 -.553l.034 -.579c.005 -.098 .01 -.198 .013 -.299l.017 -.616l.005 -.642l-.005 -.642l-.017 -.616l-.013 -.299l-.034 -.579l-.046 -.553c-.464 -4.785 -2.411 -6.732 -7.196 -7.196l-.553 -.046l-.579 -.034a28.058 28.058 0 0 0 -.299 -.013l-.616 -.017l-.318 -.004l-.324 -.001zm2.293 7.293a1 1 0 0 1 1.497 1.32l-.083 .094l-4 4a1 1 0 0 1 -1.32 .083l-.094 -.083l-2 -2a1 1 0 0 1 1.32 -1.497l.094 .083l1.293 1.292l3.293 -3.292z"
+        fill="currentColor"
+        strokeWidth="0"
+      />
+    </svg>
+  );
+};
+
