@@ -8,8 +8,8 @@ export function HowTo() {
 
       <div className="z-10 text-center container mx-auto">
         <div className="py-1 px-10 rounded-full bg-neutral-800 text-neutral-400  w-max mx-auto">Usabilidade</div>
-        <h1 className="text-3xl font-semibold mt-10 mb-10">Como o ESH funciona</h1>
-        <div className='grid grid-cols-3 gap-7'>
+        <h1 className="text-white text-3xl font-semibold mt-10 mb-10">Como o ESH funciona</h1>
+        <div className='grid grid-cols-3 gap-7 text-neutral-200'>
           <article className="text-start bg-neutral-800 p-5 rounded flex">
             <div className="w-8">
               <LockOpen1Icon className="w-5 h-5 text-orange-500"/>

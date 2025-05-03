@@ -23,19 +23,19 @@ export function Hero() {
           <div className="absolute left-12 w-7 h-7 p-1 object-contain rounded-full bg-neutral-900 border border-neutral-700 z-30">
             <img className="max-w-full h-auto" src="https://cdn.pixabay.com/photo/2017/02/18/19/20/logo-2078018_1280.png" alt="Pixxey logo" />
           </div>
-          <p className="text-sm tracking-tight text-neutral-500">14 clientes satisfeitos</p>
+          <p className="text-sm tracking-tight text-neutral-400">14 clientes satisfeitos</p>
         </div>
       </div>
         <div>
           <div className="mx-auto flex min-h-[288px] max-w-[80vw] shrink-0 flex-col items-center justify-center gap-2 px-2 py-4 sm:px-16 lg:px-24">
-            <h1 className="max-w-(--breakpoint-lg) text-pretty text-center text-[clamp(32px,7vw,64px)] font-medium leading-none tracking-[-1.44px] text-text-primary dark:text-dark-text-primary md:tracking-[-2.16px]">
+            <h1 className="max-w-(--breakpoint-lg) text-pretty text-center text-[clamp(32px,7vw,64px)] font-medium leading-none tracking-[-1.44px] text-white md:tracking-[-2.16px]">
               Acesso, controle e monitoramento dos seus servidores
             </h1>
             <h2 className="text-md max-w-2xl text-pretty text-center text-neutral-500 md:text-lg"> ESH permite que você visualize e controle as atividades dos seus funcionários, com replay inteiro de sessões, granularização de acessos e mais </h2> </div> </div>
         <div className="flex items-start justify-center px-8 sm:px-24">
           <div className="relative md:max-w-[392px]! flex w-full max-w-[80vw] flex-col items-center justify-start ">
-            <button className="cursor-pointer hover:bg-neutral-800 w-full p-4 duration-200">Solicitar demo</button>
-            <button className="cursor-pointer bg-linear-to-r/hsl from-orange-500 to-amber-400 hover:to-orange-500 p-4 w-full duration-200">Quero começar agora</button>
+            <button className="text-neutral-300 cursor-pointer hover:bg-neutral-800 w-full p-4 duration-200">Solicitar demo</button>
+            <button className="cursor-pointer bg-linear-to-r/hsl from-orange-500 to-amber-400 hover:to-orange-500 p-4 w-full duration-200 text-white">Quero começar agora</button>
           </div>
         </div>
       </div>

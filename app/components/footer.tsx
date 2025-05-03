@@ -2,7 +2,7 @@ import { InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 export function Footer() {
   return (
-    <footer className="py-24 bg-neutral-950">
+    <footer className="py-24 bg-neutral-900">
       <div className="container mx-auto flex justify-between">
         <p className="text-sm text-neutral-400">@ 2025 Eleven Soft. Todos os direitos reservados.</p>
         <div className="flex gap-x-7">

@@ -3,7 +3,7 @@ export function CallToAction() {
     <section className="container mx-auto py-14">
       <article className="rounded-2xl bg-orange-950/40 py-5 px-10 space-y-3">
         <div className="flex items-center justify-between">
-          <h1 className="text-3xl font-semibold">Aumente a produtividade do seu time com o ESH</h1>
+          <h1 className="text-white text-3xl font-semibold">Aumente a produtividade do seu time com o ESH</h1>
           <button className="text-white bg-orange-600 rounded-full px-6 py-2 text-sm">Começar</button>
         </div>
         <div className="flex justify-between items-center">

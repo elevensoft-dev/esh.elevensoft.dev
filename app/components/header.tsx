@@ -21,11 +21,11 @@ isScrolled ? 'bg-neutral-950' : 'bg-transparent'
     >
       <div className="flex h-16 bg-surface-primary dark:bg-dark-surface-primary">
         <div className="items-center container mx-auto flex justify-between w-full">
-          <h1 className="text-3xl font-semibold">
+          <h1 className="text-3xl font-semibold text-white">
             <span className="text-orange-400">E</span>
             SH
           </h1>
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-10 text-neutral-400">
             <p>Features</p>
             <Link to="/">Preços</Link>
             <Link to="/">Blog</Link>

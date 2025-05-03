@@ -1,8 +1,8 @@
 export function Faq() {
   return (
-    <section className="py-14 container mx-auto">
+    <section className="py-36 container mx-auto">
       <div className="py-1 px-10 rounded-full bg-neutral-800 text-neutral-400  w-max mx-auto">FAQs</div>
-      <h1 className="text-3xl font-semibold mt-10 mb-5 text-center">Perguntas frequentes</h1>
+      <h1 className="text-white text-3xl font-semibold mt-10 mb-5 text-center">Perguntas frequentes</h1>
       <p className="text-neutral-400 text-lg mb-10 text-center">Conselhos e respostas do nosso time.</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 gap-12">
         <div className="flex flex-col">
