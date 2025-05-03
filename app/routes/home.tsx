@@ -6,6 +6,7 @@ import { CallToAction } from "./home/components/cta";
 import { Audition } from "./home/components/audition";
 import { Pricing } from "./home/components/pricing";
 import { Faq } from "./home/components/faq";
+import { Footer } from "~/components/footer";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -24,6 +25,7 @@ export default function Home() {
       <Audition />
       <Pricing />
       <Faq />
+      <Footer />
     </main>
   )
 }
