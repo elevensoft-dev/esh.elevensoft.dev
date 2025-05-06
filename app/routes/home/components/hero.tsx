@@ -8,9 +8,9 @@ export function Hero() {
         <div className="col-span-1 flex h-full items-center justify-center" />
       </div>
       {/* --- */}
-      <figure className="pointer-events-none absolute -bottom-[70%] left-1/2 z-0 block aspect-square w-[520px] -translate-x-1/2 rounded-full bg-accent-500/40 blur-[200px]" />
-      <figure className="pointer-events-none absolute left-[4vw] top-[64px] z-20 hidden aspect-square w-[32vw] rounded-full bg-surface-primary opacity-50 blur-[100px] dark:bg-dark-surface-primary md:block" />
-      <figure className="pointer-events-none absolute bottom-[-50px] right-[7vw] z-20 hidden aspect-square w-[30vw] rounded-full bg-surface-primary opacity-50 blur-[100px] dark:bg-dark-surface-primary md:block" />
+      <figure className="pointer-events-none absolute -bottom-[70%] left-1/2 z-0 block aspect-square md:w-[520px] -translate-x-1/2 rounded-full bg-accent-500/40 blur-[200px]" />
+      <figure className="pointer-events-none absolute left-[4vw] top-[64px] z-20 hidden aspect-square md:w-[32vw] rounded-full bg-surface-primary opacity-50 blur-[100px] dark:bg-dark-surface-primary md:block" />
+      <figure className="pointer-events-none absolute bottom-[-50px] right-[7vw] z-20 hidden aspect-square md:w-[30vw] rounded-full bg-surface-primary opacity-50 blur-[100px] dark:bg-dark-surface-primary md:block" />
       {/* --- */}
       <div className="relative z-10 flex flex-col divide-y divide-neutral-800 pt-[35px]"> <div className="flex flex-col items-center justify-end">
         <div className="border! border-b-0! flex items-center gap-10 border-neutral-800 px-4 py-2 relative h-12">

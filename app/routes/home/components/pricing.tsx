@@ -32,12 +32,12 @@ function openLink(link: string) {
 
 export function Pricing() {
   return (
-    <section id="prices" className="py-14 container mx-auto">
-      <div className="py-1 px-10 rounded-full bg-neutral-800 text-neutral-400  w-max mx-auto">Preços</div>
-      <h1 className="text-white text-3xl font-semibold mt-10 mb-5 text-center">Simples, preço justo para suas equipes</h1>
+    <section id="prices" className="py-14 md:container md:mx-auto">
+      <div className="py-1 px-10 rounded-full bg-neutral-800 text-neutral-400 w-max mx-auto">Preços</div>
+      <h1 className="text-white text-xl md:text-3xl font-semibold mt-10 mb-5 text-center px-5">Simples, preço justo para suas equipes</h1>
       <p className="text-neutral-400 text-lg mb-10 text-center">Escolha a melhor opção para você.</p>
-      <div className="flex justify-center gap-x-5">
-        <CardSpotlight className="w-96 cursor-pointer bg-transparent" onClick={() => openLink(startPlan)}>
+      <div className="flex justify-center gap-5 p-5 flex-col items-center md:flex-row">
+        <CardSpotlight className="w-full md:w-96 cursor-pointer bg-transparent" onClick={() => openLink(startPlan)}>
           <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 500/mês</p>
           <div className="text-neutral-200 mt-4 relative z-20">
             <span className="text-orange-500">Plano START</span>
@@ -53,7 +53,7 @@ export function Pricing() {
             Garantir que seu servidor esteja devidamente protegida ajuda a proteger suas informações e dados pessoais
           </p>
         </CardSpotlight>
-        <CardSpotlight className="relative w-96 cursor-pointer" onClick={() => openLink(proPlan)}>
+        <CardSpotlight className="relative w-full md:w-96 cursor-pointer" onClick={() => openLink(proPlan)}>
           <p className="absolute top-4 inset-x-5 mx-auto text-center text-blue-400 font-semibold">Mais popular</p>
           <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 1000/mês</p>
           <div className="text-neutral-200 mt-4 relative z-20">
@@ -74,7 +74,7 @@ export function Pricing() {
           <figure className="pointer-events-none bg-orange-900/5 absolute bottom-[-50px] right-[7vw] z-20 hidden aspect-square w-[30vw] rounded-full bg-surface-primary opacity-50 blur-[100px] dark:bg-dark-surface-primary md:block"></figure>
 
         </CardSpotlight>
-        <CardSpotlight className="w-96 cursor-pointer bg-transparent" onClick={() => openLink(maxPlan)}>
+        <CardSpotlight className="md:w-96 cursor-pointer bg-transparent" onClick={() => openLink(maxPlan)}>
           <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 2000/mês</p>
           <div className="text-neutral-200 mt-4 relative z-20">
             <span className="text-orange-500">Plano MAX</span>
