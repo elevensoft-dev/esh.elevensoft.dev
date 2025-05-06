@@ -7,7 +7,7 @@ export function Access() {
         <div className="py-1 px-10 rounded-full bg-neutral-800 text-neutral-400  w-max mx-auto">Acceso</div>
         <h1 className="text-white text-xl md:text-3xl font-semibold mt-10 mb-3">Gerencie acessos de forma unificada</h1>
         <p className="text-neutral-400 text-lg mb-10">Simplifique o acesso e controle dos servidores com controle total dos usários.</p>
-        <div className='space-y-7 flex flex-col gap-7 items-center justify-center w-full'>
+        <div className='space-y-7 flex flex-col gap-7 items-center md:items-stretch justify-center w-full'>
           <article className="bg-neutral-900 p-3 flex-col md:flex-row rounded-xl ring-1 ring-neutral-800 flex gap-x-5 w-full">
             <div className='text-start space-y-5 md:w-1/2 p-6'>
               <h1 className='text-xl md:text-3xl font-medium text-white'>Usuários e servidores</h1>
@@ -36,7 +36,6 @@ export function Access() {
             <div className='md:w-1/2 h-80 overflow-hidden ring-1 ring-neutral-800 rounded-xl bg-neutral-950'>
               <img className="object-cover object-center w-full h-full" src="dashboard-notebook.webp" alt="Notebook com a tela da aplicação ESH rodando" />
             </div>
-
           </article>
 
           <article className="bg-neutral-900 p-3 rounded-xl ring-1 ring-neutral-800 flex flex-col md:flex-row gap-x-5">
@@ -98,8 +97,7 @@ export function Access() {
             <div className='md:w-1/2 h-80 overflow-hidden ring-1 ring-neutral-800 rounded-xl bg-neutral-950'>
               <img className="object-cover object-left w-full h-full" src="replay-small-size.png" alt="Notebook com a tela da aplicação ESH rodando" />
             </div>
-            </article>
-
+          </article>
         </div>
       </div>
     </section>
