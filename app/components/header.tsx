@@ -26,13 +26,17 @@ isScrolled ? 'bg-neutral-950' : 'bg-transparent'
             SH
           </h1>
           <div className="flex items-center gap-10 text-neutral-400">
-            <p>Features</p>
-            <Link to="/">Preços</Link>
-            <Link to="/">Blog</Link>
-            <Link to="/">Changelog</Link>
+            <a href="#prices">Preços</a>
+            <a href="https://elevensoft.dev/blog" target="_blank">Blog</a>
           </div>
           <div className="flex items-center gap-2">
-            <Link to="/" className="rounded-full bg-orange-400 text-white text-sm px-4 py-2 font-light">Começar hoje</Link>
+          <a
+            href="https://wa.me/message/X2DMDA457ASDN1"
+            target="_blank"
+            className="rounded-full bg-orange-400 text-white text-sm px-4 py-2 font-light"
+          >
+            Começar hoje
+          </a>
           </div>
         </div>
       </div>

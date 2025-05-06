@@ -34,8 +34,8 @@ export function Hero() {
             <h2 className="text-md max-w-2xl text-pretty text-center text-neutral-500 md:text-lg"> ESH permite que você visualize e controle as atividades dos seus funcionários, com replay inteiro de sessões, granularização de acessos e mais </h2> </div> </div>
         <div className="flex items-start justify-center px-8 sm:px-24">
           <div className="relative md:max-w-[392px]! flex w-full max-w-[80vw] flex-col items-center justify-start ">
-            <button className="text-neutral-300 cursor-pointer hover:bg-neutral-800 w-full p-4 duration-200">Solicitar demo</button>
-            <button className="cursor-pointer bg-linear-to-r/hsl from-orange-500 to-amber-400 hover:to-orange-500 p-4 w-full duration-200 text-white">Quero começar agora</button>
+            <a href="https://wa.me/message/X2DMDA457ASDN1" target="_blank" className="text-neutral-300 cursor-pointer hover:bg-neutral-800 w-full p-4 duration-200 block text-center">Solicitar demo</a>
+            <a href="#prices" className="cursor-pointer bg-linear-to-r/hsl from-orange-500 to-amber-400 hover:to-orange-500 p-4 w-full duration-200 text-white block text-center">Quero começar agora</a>
           </div>
         </div>
       </div>

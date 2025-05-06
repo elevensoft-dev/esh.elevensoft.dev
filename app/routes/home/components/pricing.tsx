@@ -32,7 +32,7 @@ function openLink(link: string) {
 
 export function Pricing() {
   return (
-    <section className="py-14 container mx-auto">
+    <section id="prices" className="py-14 container mx-auto">
       <div className="py-1 px-10 rounded-full bg-neutral-800 text-neutral-400  w-max mx-auto">Preços</div>
       <h1 className="text-white text-3xl font-semibold mt-10 mb-5 text-center">Simples, preço justo para suas equipes</h1>
       <p className="text-neutral-400 text-lg mb-10 text-center">Escolha a melhor opção para você.</p>
