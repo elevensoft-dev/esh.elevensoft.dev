@@ -25,7 +25,7 @@ isScrolled ? 'bg-neutral-950 pt-2' : 'bg-transparent'
             <span className="text-orange-400">E</span>
             SH
           </h1>
-          <img src="favicon.png" alt="Logo Eleven, letra E" className="md:hidden w-14" />
+          <img src="logo.png" alt="Logo Eleven, letra E" className="md:hidden w-10" />
           <div className="md:flex items-center gap-10 text-neutral-400 hidden">
             <a href="#prices">Preços</a>
             <a href="https://elevensoft.dev/blog" target="_blank">Blog</a>
