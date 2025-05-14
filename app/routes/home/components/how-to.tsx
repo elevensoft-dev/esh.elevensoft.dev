@@ -1,4 +1,4 @@
-import { CameraIcon, EyeOpenIcon, LockClosedIcon, LockOpen1Icon, SymbolIcon } from "@radix-ui/react-icons";
+import { LaptopIcon, ExclamationTriangleIcon, GearIcon, BarChartIcon, CameraIcon, EyeOpenIcon, LockClosedIcon, LockOpen1Icon, SymbolIcon } from "@radix-ui/react-icons";
 
 export function HowTo() {
   return (
@@ -12,33 +12,39 @@ export function HowTo() {
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 px-5 text-neutral-200 w-full'>
           <article className="text-start bg-neutral-800 p-5 rounded flex">
             <div className="w-8">
-              <LockOpen1Icon className="w-5 h-5 text-orange-500"/>
+              <LaptopIcon className="w-5 h-5 text-orange-500"/>
             </div>
-            <p className="flex-1 text-xs md:text-base">Admistra acessos através de um painel intuitivo</p>
-          </article>
-          <article className="text-start bg-neutral-800 p-5 rounded flex">
-            <div className="w-8">
-              <CameraIcon className="w-5 h-5 text-orange-500"/>
-            </div>
-            <p className="flex-1 text-xs md:text-base">Monitora e audita todas as conexões, garantindo rastreabilidade</p>
+            <p className="flex-1 text-xs md:text-base">Painel unificado para gerenciar todos os acessos e usuários</p>
           </article>
           <article className="text-start bg-neutral-800 p-5 rounded flex">
             <div className="w-8">
               <LockClosedIcon className="w-5 h-5 text-orange-500"/>
             </div>
-            <p className="flex-1 text-xs md:text-base">Protege contra acessos não autorizados e vulnerabilidades</p>
+            <p className="flex-1 text-xs md:text-base">Proteção contra acessos indevidos com regras e bloqueios automatizados</p>
           </article>
           <article className="text-start bg-neutral-800 p-5 rounded flex">
             <div className="w-8">
-              <SymbolIcon className="w-5 h-5 text-orange-500"/>
+              <CameraIcon className="w-5 h-5 text-orange-500"/>
             </div>
-            <p className="flex-1 text-xs md:text-base">Automatiza permissões e melhora a eficiência operacional</p>
+            <p className="flex-1 text-xs md:text-base">Replay completo de sessões para auditoria e rastreabilidade</p>
           </article>
           <article className="text-start bg-neutral-800 p-5 rounded flex">
             <div className="w-8">
-              <EyeOpenIcon className="w-5 h-5 text-orange-500"/>
+              <ExclamationTriangle className="w-5 h-5 text-orange-500"/>
             </div>
-            <p className="flex-1 text-xs md:text-base">Audita todos os comandos executados no servidor para total transparência</p>
+            <p className="flex-1 text-xs md:text-base">Alertas por comando digitado e interrupção remota de sessões suspeitas</p>
+          </article>
+          <article className="text-start bg-neutral-800 p-5 rounded flex">
+            <div className="w-8">
+              <GearIcon className="w-5 h-5 text-orange-500"/>
+            </div>
+            <p className="flex-1 text-xs md:text-base">Automação de permissões reduz erros e aumenta eficiência</p>
+          </article>
+          <article className="text-start bg-neutral-800 p-5 rounded flex">
+            <div className="w-8">
+              <BarChartIcon className="w-5 h-5 text-orange-500"/>
+            </div>
+            <p className="flex-1 text-xs md:text-base">Logs e evidências para conformidade com ISO 27001 e LGPD</p>
           </article>
         </div>
       </div>

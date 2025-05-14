@@ -29,13 +29,14 @@ export function Hero() {
         <div>
           <div className="mx-auto flex min-h-[288px] max-w-[80vw] shrink-0 flex-col items-center justify-center gap-2 px-2 py-4 sm:px-16 lg:px-24">
             <h1 className="max-w-(--breakpoint-lg) text-pretty text-center text-[clamp(32px,7vw,64px)] font-medium leading-none tracking-[-1.44px] text-white md:tracking-[-2.16px]">
-              Acesso, controle e monitoramento dos seus servidores
+              <b>Nunca mais fique no escuro sobre o que aconteceu no seu servidor.</b>
+              Com o ESH, você <b>vê tudo que o técnico fez,</b> como se estivesse do lado dele — <b>com gravações completas, acesso em tempo real</b> e <b>controle total por web.</b>
             </h1>
             <h2 className="text-md max-w-2xl text-pretty text-center text-neutral-500 md:text-lg"> ESH permite que você visualize e controle as atividades dos seus funcionários, com replay inteiro de sessões, granularização de acessos e mais </h2> </div> </div>
         <div className="flex items-start justify-center px-8 sm:px-24">
           <div className="relative md:max-w-[392px]! flex w-full max-w-[80vw] flex-col items-center justify-start ">
-            <a href="https://wa.me/message/X2DMDA457ASDN1" target="_blank" className="text-neutral-300 cursor-pointer hover:bg-neutral-800 w-full p-4 duration-200 block text-center">Solicitar demo</a>
-            <a href="#prices" className="cursor-pointer bg-linear-to-r/hsl from-orange-500 to-amber-400 hover:to-orange-500 p-4 w-full duration-200 text-white block text-center">Quero começar agora</a>
+            <a href="https://wa.me/message/X2DMDA457ASDN1" target="_blank" className="text-neutral-300 cursor-pointer hover:bg-neutral-800 w-full p-4 duration-200 block text-center">Agende uma call técnica</a>
+            <a href="#prices" className="cursor-pointer bg-linear-to-r/hsl from-orange-500 to-amber-400 hover:to-orange-500 p-4 w-full duration-200 text-white block text-center">Quero ver uma demonstração</a>
           </div>
         </div>
       </div>

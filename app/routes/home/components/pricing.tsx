@@ -33,15 +33,15 @@ function openLink(link: string) {
 export function Pricing() {
   return (
     <section id="prices" className="py-14 md:container md:mx-auto">
-      <div className="py-1 px-10 rounded-full bg-neutral-800 text-neutral-400 w-max mx-auto">Preços</div>
-      <h1 className="text-white text-xl md:text-3xl font-semibold mt-10 mb-5 text-center px-5">Simples, preço justo para suas equipes</h1>
-      <p className="text-neutral-400 text-lg mb-10 text-center">Escolha a melhor opção para você.</p>
+      <div className="py-1 px-10 rounded-full bg-neutral-800 text-neutral-400 w-max mx-auto">Planos</div>
+      <h1 className="text-white text-xl md:text-3xl font-semibold mt-10 mb-5 text-center px-5">Preços Justos, Benefícios Reais</h1>
+      <p className="text-neutral-400 text-lg mb-10 text-center">Escolha o plano ideal para o seu time e aumente a segurança e produtividade.</p>
       <div className="flex justify-center gap-5 p-5 flex-col items-center md:flex-row">
         <CardSpotlight className="w-full md:w-96 cursor-pointer bg-transparent" onClick={() => openLink(startPlan)}>
           <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 500/mês</p>
           <div className="text-neutral-200 mt-4 relative z-20">
             <span className="text-orange-500">Plano START</span>
-            . Ideal para empresas pequenas e micro empresas.
+            . Para empresas pequenas que precisam de controle básico.
             <ul className="list-none  mt-2">
               <Step title="2 servidores" />
               <Step title="10 usuários" />
@@ -78,7 +78,7 @@ export function Pricing() {
           <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 2000/mês</p>
           <div className="text-neutral-200 mt-4 relative z-20">
             <span className="text-orange-500">Plano MAX</span>
-            . Ideal para empresas pequenas e micro empresas.
+            . Para empresas que precisam de controle total e visibilidade.
             <ul className="list-none  mt-2">
               <Step title="2 servidores" />
               <Step title="10 usuários" />
