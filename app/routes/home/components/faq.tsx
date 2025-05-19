@@ -6,24 +6,24 @@ export function Faq() {
       <p className="text-neutral-400 text-lg mb-10 text-center">Conselhos e respostas do nosso time.</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 gap-7 p-5 md:p-0 md:gap-12">
         <div className="flex flex-col">
-          <h2 className="text-white font-semibold text-base md:text-lg">Quais empresas podem se beneficiar do ESH?</h2>
-          <p className="text-neutral-500 font-normal text-xs md:text-base">Nossas soluções de segurança se encaixam em diversas indústrias, incluindo ISP's, telecoms, financeiras e manufaturas.</p>
+          <h2 className="text-white font-semibold text-base md:text-lg">Quais empresas se beneficiam do ESH?</h2>
+          <p className="text-neutral-500 font-normal text-xs md:text-base">Qualquer empresa com servidores acessados remotamente — incluindo ISPs, telecoms, fintechs, indústrias e software houses.</p>
         </div>
         <div className="flex flex-col">
           <h2 className="text-white font-semibold text-base md:text-lg">O ESH grava as sessões dos usuários?</h2>
-          <p className="text-neutral-500 font-normal text-xs md:text-base">Sim. Todas as conexões via SSH podem ser gravadas com armazenamento centralizado. Além disso, é possível reproduzir as sessões para auditorias, garantindo total rastreabilidade das ações executadas.</p>
+          <p className="text-neutral-500 font-normal text-xs md:text-base">Sim. Todas as conexões via SSH são gravadas com armazenamento centralizado e replay completo, garantindo rastreabilidade total.</p>
         </div>
         <div className="flex flex-col">
-          <h2 className="text-white font-semibold text-base md:text-lg">Posso definir diferentes níveis de acesso para cada colaborador?</h2>
-          <p className="text-neutral-500 font-normal text-xs md:text-base">Sim. O ESH permite controle granular de permissões por meio de tags, horários e grupos de servidores. Isso garante que cada usuário tenha acesso somente ao que for necessário para sua função.</p>
+          <h2 className="text-white font-semibold text-base md:text-lg">Posso definir acessos diferentes por colaborador?</h2>
+          <p className="text-neutral-500 font-normal text-xs md:text-base"> Sim. Controle granular por usuário com base em tags e grupos de servidores.</p>
         </div>
         <div className="flex flex-col">
-          <h2 className="text-white font-semibold text-base md:text-lg">O ESH ajuda minha empresa a estar em conformidade com normas de segurança?</h2>
-          <p className="text-neutral-500 font-normal text-xs md:text-base">Com certeza. O ESH oferece logs detalhados, controle de acessos e rastreamento completo de sessões, atendendo requisitos de conformidade de normas como ISO 27001, LGPD e outras diretrizes de segurança da informação.</p>
+          <h2 className="text-white font-semibold text-base md:text-lg">O ESH ajuda com conformidade e auditoria?</h2>
+          <p className="text-neutral-500 font-normal text-xs md:text-base">Sim. Logs detalhados, rastreamento de comandos e controle de acessos compatíveis com normas como ISO 27001 e LGPD.</p>
         </div>
         <div className="flex flex-col">
-          <h2 className="text-white font-semibold text-base md:text-lg">5. O ESH funciona com que tipo de acesso remoto?</h2>
-          <p className="text-neutral-500 font-normal text-xs md:text-base">O ESH é compatível com conexões SSH e Telnet, que são centralizadas na plataforma para controle e auditoria. Todo o acesso passa por um menu interativo, sem necessidade de instalação nos ativos da rede, permitindo gerenciamento completo sem alterar o ambiente dos servidores.</p>
+          <h2 className="text-white font-semibold text-base md:text-lg">Que tipos de acesso remoto são suportados?</h2>
+          <p className="text-neutral-500 font-normal text-xs md:text-base"> SSH e Telnet, sem precisar instalar nada nos servidores. O acesso é mediado por um menu interativo da plataforma.</p>
         </div>
       </div>
     </section>

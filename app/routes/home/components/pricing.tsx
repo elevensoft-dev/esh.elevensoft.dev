@@ -38,36 +38,34 @@ export function Pricing() {
       <p className="text-neutral-400 text-lg mb-10 text-center">Escolha o plano ideal para o seu time e aumente a segurança e produtividade.</p>
       <div className="flex justify-center gap-5 p-5 flex-col items-center md:flex-row">
         <CardSpotlight className="w-full md:w-96 cursor-pointer bg-transparent" onClick={() => openLink(startPlan)}>
-          <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 500/mês</p>
+          <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 599/mês</p>
           <div className="text-neutral-200 mt-4 relative z-20">
             <span className="text-orange-500">Plano START</span>
-            . Para empresas pequenas que precisam de controle básico.
+            . Para pequenas equipes que precisam de rastreabilidade básica.
             <ul className="list-none  mt-2">
-              <Step title="2 servidores" />
-              <Step title="10 usuários" />
-              <Step title="10 tags" />
-              <Step title="10 grupos de servidores" />
+              <Step title="25 Sessões Simultâneas" />
+              <Step title="600 Servidores" />
+              <Step title="30 usuários" />
             </ul>
           </div>
           <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-            Garantir que seu servidor esteja devidamente protegida ajuda a proteger suas informações e dados pessoais
+            *Sessão = Conexão com gravação, monitoramento e auditoria.
           </p>
         </CardSpotlight>
         <CardSpotlight className="relative w-full md:w-96 cursor-pointer" onClick={() => openLink(proPlan)}>
           <p className="absolute top-4 inset-x-5 mx-auto text-center text-blue-400 font-semibold">Mais popular</p>
-          <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 1000/mês</p>
+          <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 1499/mês</p>
           <div className="text-neutral-200 mt-4 relative z-20">
             <span className="text-orange-500">Plano PRO</span>
-            . Ideal para empresas pequenas e micro empresas.
+            . Ideal para empresas em crescimento que precisam de visibilidade contínua.
             <ul className="list-none  mt-2">
-              <Step title="2 servidores" />
-              <Step title="10 usuários" />
-              <Step title="10 tags" />
-              <Step title="10 grupos de servidores" />
+              <Step title="80 Sessões Simutâneas" />
+              <Step title="Usuários Ilimitados" />
+              <Step title="Servidores Ilimitados" />
             </ul>
           </div>
           <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-            Garantir que seu servidor esteja devidamente protegida ajuda a proteger suas informações e dados pessoais
+            *Sessão = Conexão com gravação, monitoramento e auditoria.
           </p>
           <figure className="pointer-events-none bg-orange-500 absolute -bottom-[50%] left-1/2 z-0 block aspect-square w-96 -translate-x-1/2 rounded-full bg-accent-500/5 blur-[150px]"></figure>
           <figure className="pointer-events-none bg-orange-900/5 absolute left-[4vw] top-[64px] z-20 hidden aspect-square w-[32vw] rounded-full bg-surface-primary opacity-50 dark:bg-dark-surface-primary md:block"></figure>
@@ -80,14 +78,13 @@ export function Pricing() {
             <span className="text-orange-500">Plano MAX</span>
             . Para empresas que precisam de controle total e visibilidade.
             <ul className="list-none  mt-2">
-              <Step title="2 servidores" />
-              <Step title="10 usuários" />
-              <Step title="10 tags" />
-              <Step title="10 grupos de servidores" />
+              <Step title="200 Sessões Simultâneas" />
+              <Step title="Usuários Ilimitados" />
+              <Step title="Servidores Ilimitados" />
             </ul>
           </div>
           <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-            Garantir que seu servidor esteja devidamente protegida ajuda a proteger suas informações e dados pessoais
+            *Sessão = Conexão com gravação, monitoramento e auditoria.
           </p>
         </CardSpotlight>
       </div>
