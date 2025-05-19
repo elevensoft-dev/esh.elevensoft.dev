@@ -30,7 +30,7 @@ export function HowTo() {
           </article>
           <article className="text-start bg-neutral-800 p-5 rounded flex">
             <div className="w-8">
-              <ExclamationTriangle className="w-5 h-5 text-orange-500"/>
+              <ExclamationTriangleIcon className="w-5 h-5 text-orange-500"/>
             </div>
             <p className="flex-1 text-xs md:text-base">Alertas por comando digitado e interrupção remota de sessões suspeitas</p>
           </article>
