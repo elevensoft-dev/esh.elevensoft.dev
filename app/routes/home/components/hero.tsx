@@ -29,9 +29,9 @@ export function Hero() {
         <div>
           <div className="mx-auto flex min-h-[288px] max-w-[80vw] shrink-0 flex-col items-center justify-center gap-2 px-2 py-4 sm:px-16 lg:px-24">
             <h1 className="max-w-(--breakpoint-lg) text-pretty text-center text-[clamp(32px,7vw,64px)] font-medium leading-none tracking-[-1.44px] text-white md:tracking-[-2.16px]">
-              Veja <b>tudo o que acontece no seu servidor</b> — ao vivo ou em replay.
+              <b>Veja tudo o que acontece no seu servidor</b> — ao vivo ou em replay.
             </h1>
-            <h2 className="text-md max-w-4xl text-pretty text-center text-white md:text-lg">Com o ESH, você tem controle <b>total, como se estivesse ao lado</b> do técnico.</h2>
+            <h2 className="text-md max-w-4xl text-pretty text-center text-white md:text-lg">Com o ESH, você tem <b>controle total, como se estivesse ao lado</b> do técnico.</h2>
             <h3 className="text-md max-w-2xl text-pretty text-center text-neutral-500 md:text-lg"> ESH permite que você visualize e controle as atividades dos seus funcionários, com replay inteiro de sessões, granularização de acessos e mais </h3> </div> </div>
         <div className="flex items-start justify-center px-8 sm:px-24">
           <div className="relative md:max-w-[392px]! flex w-full max-w-[80vw] flex-col items-center justify-start ">
