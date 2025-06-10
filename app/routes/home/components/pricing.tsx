@@ -1,27 +1,8 @@
 import { CardSpotlight } from "~/components/ui/card-spotlight"
 
-export const projects = [
-  {
-    title: "R$ 500/mês",
-    description: "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
-  },
-  {
-    title: "R$ 750/mês",
-    description:
-    "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
-  },
-  {
-    title: "R$ 1000/Mês",
-    description: "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
-  },
-]
-
 const startPlan = 'https://www.asaas.com/c/khwwp9tuv0fztx2k'
 const proPlan = 'https://www.asaas.com/c/5lwcu96mlzr95dcf'
-const maxPlan = 'https://www.asaas.com/c/kdstk9lzzagz7ww4'
+const maxPlan = 'https://api.whatsapp.com/message/X2DMDA457ASDN1?autoload=1&app_absent=0'
 
 function openLink(link: string) {
   const aTag = document.createElement('a');
@@ -54,7 +35,7 @@ export function Pricing() {
         </CardSpotlight>
         <CardSpotlight className="relative w-full md:w-96 cursor-pointer" onClick={() => openLink(proPlan)}>
           <p className="absolute top-4 inset-x-5 mx-auto text-center text-blue-400 font-semibold">Mais popular</p>
-          <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 1499/mês</p>
+          <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 999/mês</p>
           <div className="text-neutral-200 mt-4 relative z-20">
             <span className="text-orange-500">Plano PRO</span>
             . Ideal para empresas em crescimento que precisam de visibilidade contínua.
@@ -73,7 +54,7 @@ export function Pricing() {
 
         </CardSpotlight>
         <CardSpotlight className="md:w-96 cursor-pointer bg-transparent" onClick={() => openLink(maxPlan)}>
-          <p className="text-xl font-bold relative z-20 mt-2 text-white">R$ 2000/mês</p>
+          <p className="text-xl font-bold relative z-20 mt-2 text-white">Sob demanda</p>
           <div className="text-neutral-200 mt-4 relative z-20">
             <span className="text-orange-500">Plano MAX</span>
             . Para empresas que precisam de controle total e visibilidade.
