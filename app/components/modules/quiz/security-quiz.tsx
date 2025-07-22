@@ -5,7 +5,6 @@ import { Button } from '~/components/ui/button';
 import { Input } from '~/components/ui/input';
 import { Label } from '~/components/ui/label';
 import { Progress } from '~/components/ui/progress';
-import { Badge } from '~/components/ui/badge';
 import { useQuizAnalytics } from '~/hooks/use-quiz-analytics';
 
 interface Question {
@@ -216,56 +215,56 @@ export default function SecurityQuiz() {
 
   if (showResult && profile) {
     return (
-      <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4">
-        <Card className="w-full max-w-2xl bg-gradient-card border-primary/10 shadow-glow animate-fade-in">
+      <div className="min-h-screen bg-gradient-to-b from-neutral-900 to-neutral-800 flex items-center justify-center p-4">
+        <Card className="w-full max-w-2xl bg-neutral-800 border-neutral-600 shadow-[0_0_40px_rgba(255,138,41,0.2)] animate-[fadeIn_0.6s_ease-out]">
           <CardHeader className="text-center">
-            <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-primary mb-6 mx-auto shadow-glow`}>
-              <div className="text-primary-foreground">
+            <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 mb-6 mx-auto shadow-[0_0_40px_rgba(255,138,41,0.2)]`}>
+              <div className="text-gray-900">
                 {profile.icon}
               </div>
             </div>
-            <CardTitle className="text-3xl font-bold text-foreground mb-4">
+            <CardTitle className="text-3xl font-bold text-white mb-4">
               Perfil: {profile.name}
             </CardTitle>
-            <CardDescription className="text-lg text-muted-foreground">
+            <CardDescription className="text-lg text-neutral-400">
               {profile.description}
             </CardDescription>
-            <Badge variant="outline" className="mt-4 mx-auto border-primary/30 bg-primary/10 text-primary">
+            <div className="mt-4 mx-auto border border-orange-500/30 bg-orange-500/10 text-orange-500 inline-block px-3 py-1 rounded-full text-sm">
               {profile.score}
-            </Badge>
+            </div>
           </CardHeader>
           <CardContent className="space-y-8">
             <div>
-              <h3 className="font-semibold mb-4 text-foreground text-lg">Recomendações para sua empresa:</h3>
+              <h3 className="font-semibold mb-4 text-white text-lg">Recomendações para sua empresa:</h3>
               <ul className="space-y-3">
                 {profile.recommendations.map((rec, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">{rec}</span>
+                    <CheckCircle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-neutral-400">{rec}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="bg-gradient-primary p-8 rounded-lg text-center shadow-glow">
-              <h3 className="font-semibold mb-3 text-primary-foreground text-lg">Quer melhorar sua segurança?</h3>
-              <p className="text-primary-foreground/90 mb-6">
+            <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-8 rounded-lg text-center shadow-[0_0_40px_rgba(255,138,41,0.2)]">
+              <h3 className="font-semibold mb-3 text-gray-900 text-lg">Quer melhorar sua segurança?</h3>
+              <p className="text-neutral-800 mb-6">
                 Agende uma consultoria gratuita com nossos especialistas em segurança.
               </p>
               <Button
                 variant="secondary"
-                className="bg-white text-primary hover:bg-gray-100 shadow-lg font-semibold"
+                className="bg-white text-orange-600 hover:bg-neutral-100 shadow-lg font-semibold"
               >
                 Agendar Consultoria Gratuita
               </Button>
             </div>
 
             <div className="text-center space-y-3">
-              <Button variant="outline" onClick={resetQuiz} className="border-primary/30 hover:bg-primary/10">
+              <Button variant="outline" onClick={resetQuiz} className="border-orange-500/30 hover:bg-orange-500/10 text-white">
                 Fazer Quiz Novamente
               </Button>
-              <div className="text-sm text-muted-foreground">
-                <a href="/" className="hover:underline hover:text-primary transition-colors">
+              <div className="text-sm text-neutral-400">
+                <a href="/" className="hover:underline hover:text-orange-500 transition-colors">
                   ← Voltar ao início
                 </a>
               </div>
@@ -278,40 +277,40 @@ export default function SecurityQuiz() {
 
   if (showEmailCapture) {
     return (
-      <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4">
-        <Card className="w-full max-w-lg bg-gradient-card border-primary/10 shadow-glow animate-fade-in">
+      <div className="min-h-screen bg-gradient-to-b from-neutral-900 to-neutral-800 flex items-center justify-center p-4">
+        <Card className="w-full max-w-lg bg-neutral-800 border-neutral-600 shadow-[0_0_40px_rgba(255,138,41,0.2)] animate-[fadeIn_0.6s_ease-out]">
           <CardHeader className="text-center">
-            <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6 shadow-glow">
-              <Shield className="w-8 h-8 text-primary-foreground" />
+            <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_40px_rgba(255,138,41,0.2)]">
+              <Shield className="w-8 h-8 text-gray-900" />
             </div>
-            <CardTitle className="text-2xl font-bold text-foreground mb-4">
+            <CardTitle className="text-2xl font-bold text-white mb-4">
               Quase terminando!
             </CardTitle>
-            <CardDescription className="text-muted-foreground">
+            <CardDescription className="text-neutral-400">
               Digite seu email para receber o resultado personalizado do seu diagnóstico de segurança.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-foreground">Email profissional</Label>
+              <Label htmlFor="email" className="text-white">Email profissional</Label>
               <Input
                 id="email"
                 type="email"
                 placeholder="seu@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="text-center bg-background border-border"
+                className="text-center bg-neutral-900 border-neutral-600 text-white placeholder:text-neutral-400"
               />
             </div>
             <Button
               onClick={handleEmailSubmit}
               variant="startup"
-              className="w-full"
+              className="w-full cursor-pointer animate-fade-in bg-gradient-to-r from-orange-500 to-yellow-500 text-gray-900 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)] hover:scale-105 transition-all duration-300"
               disabled={!email.trim()}
             >
               Ver Meu Diagnóstico
             </Button>
-            <p className="text-xs text-muted-foreground text-center">
+            <p className="text-xs text-neutral-400 text-center">
               Seus dados estão seguros e não serão compartilhados com terceiros.
             </p>
           </CardContent>
@@ -321,19 +320,19 @@ export default function SecurityQuiz() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4">
-      <Card className="w-full max-w-2xl bg-gradient-card border-primary/10 shadow-glow animate-fade-in">
+    <div className="min-h-screen bg-gradient-to-b from-neutral-900 to-neutral-800 flex items-center justify-center p-4">
+      <Card className="w-full max-w-2xl bg-neutral-800 border-neutral-700 shadow-[0_0_40px_rgba(255,138,41,0.2)] animate-[fadeIn_0.6s_ease-out]">
         <CardHeader>
           <div className="flex items-center justify-between mb-6">
-            <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center shadow-glow">
-              <Shield className="w-6 h-6 text-primary-foreground" />
+            <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(255,138,41,0.2)]">
+              <Shield className="w-6 h-6 text-gray-900" />
             </div>
-            <Badge variant="outline" className="border-primary/30 bg-primary/10 text-primary">
+            <div className="border border-orange-500/30 bg-orange-500/10 text-orange-500 px-3 py-1 rounded-full text-sm">
               {currentQuestion + 1} de {questions.length}
-            </Badge>
+            </div>
           </div>
           <Progress value={progress} className="mb-6" />
-          <CardTitle className="text-2xl text-foreground">
+          <CardTitle className="text-2xl text-white">
             {questions[currentQuestion].question}
           </CardTitle>
         </CardHeader>
@@ -343,10 +342,10 @@ export default function SecurityQuiz() {
               <Button
                 key={index}
                 variant="quiz"
-                className="w-full text-left justify-start h-auto p-6 hover:bg-primary/10 hover:border-primary/30 hover:shadow-card transition-all duration-300"
+                className="w-full text-left justify-start h-auto p-6 hover:bg-orange-500/10 hover:border-orange-500/30 hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] transition-all duration-300"
                 onClick={() => handleAnswer(questions[currentQuestion].id, option.points)}
               >
-                <span className="text-foreground">{option.text}</span>
+                <span className="text-white">{option.text}</span>
               </Button>
             ))}
           </div>
