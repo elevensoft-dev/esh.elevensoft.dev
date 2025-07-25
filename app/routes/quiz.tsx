@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Shield, Play, Users, Award, ArrowRight } from 'lucide-react';
+
 import { Button } from '~/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
 import SecurityQuiz from '~/components/modules/quiz/security-quiz';

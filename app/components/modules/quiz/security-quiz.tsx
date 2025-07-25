@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+
+import { useQuizAnalytics }
+from '~/hooks/use-quiz-analytics';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
 import { Button } from '~/components/ui/button';
-import { Input } from '~/components/ui/input';
-import { Label } from '~/components/ui/label';
 import { Progress } from '~/components/ui/progress';
-import { useQuizAnalytics } from '~/hooks/use-quiz-analytics';
+import { Label } from '~/components/ui/label';
+import { Input } from '~/components/ui/input';
 
 interface Question {
   id: number;
@@ -152,6 +154,7 @@ const profiles: Profile[] = [
 ];
 
 export default function SecurityQuiz() {
+  const emailInputRef = useRef<HTMLInputElement | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<UserAnswers>({});
   const [email, setEmail] = useState('');
@@ -212,6 +215,12 @@ export default function SecurityQuiz() {
   };
 
   const progress = ((currentQuestion + 1) / questions.length) * 100;
+
+  useEffect(() => {
+    if(showEmailCapture && emailInputRef.current) {
+      emailInputRef.current.focus()
+    }
+  }, [showEmailCapture])
 
   if (showResult && profile) {
     return (
@@ -300,6 +309,7 @@ export default function SecurityQuiz() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="text-center bg-neutral-900 border-neutral-600 text-white placeholder:text-neutral-400"
+                ref={emailInputRef}
               />
             </div>
             <Button
