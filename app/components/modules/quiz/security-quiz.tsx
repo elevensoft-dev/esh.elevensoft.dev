@@ -1,13 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
+import { toast } from 'sonner';
 
-import { useQuizAnalytics }
-from '~/hooks/use-quiz-analytics';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
 import { Button } from '~/components/ui/button';
 import { Progress } from '~/components/ui/progress';
 import { Label } from '~/components/ui/label';
 import { Input } from '~/components/ui/input';
+import { useQuizAnalytics } from '~/hooks/use-quiz-analytics';
+import { isValidEmailFull } from '~/lib/utils';
 
 interface Question {
   id: number;
@@ -154,6 +155,8 @@ const profiles: Profile[] = [
 ];
 
 export default function SecurityQuiz() {
+  const nameInputRef = useRef<HTMLInputElement | null>(null);
+  const [name, setName] = useState('');
   const emailInputRef = useRef<HTMLInputElement | null>(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<UserAnswers>({});
@@ -186,22 +189,34 @@ export default function SecurityQuiz() {
     }
   };
 
-  const handleEmailSubmit = () => {
+  const handleEmailSubmit = async () => {
+    if (!name.trim()) {
+      toast.error('Digite seu nome!');
+      return nameInputRef.current?.focus();
+    }
+
+    if(!email || !isValidEmailFull(email)) {
+      toast.error('Insira um email válido!')
+      return emailInputRef.current?.focus()
+    }
+
     if (email.trim()) {
       const userProfile = calculateProfile();
       const totalScore = Object.values(answers).reduce((sum, points) => sum + points, 0);
 
-      setProfile(userProfile);
-      setShowResult(true);
-      setShowEmailCapture(false);
-
-      // Salvar resultado no analytics
-      saveQuizResult({
+      const { success } = await saveQuizResult({
+        name,
         email,
         answers,
         profile: userProfile.name,
         totalScore
       });
+
+      if(success) {
+        setProfile(userProfile);
+        setShowResult(true);
+        setShowEmailCapture(false);
+      }
     }
   };
 
@@ -209,6 +224,7 @@ export default function SecurityQuiz() {
     setCurrentQuestion(0);
     setAnswers({});
     setEmail('');
+    setName('');
     setShowEmailCapture(false);
     setShowResult(false);
     setProfile(null);
@@ -308,8 +324,22 @@ export default function SecurityQuiz() {
                 placeholder="seu@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                onKeyUp={(e) => e.code === 'Enter' ? handleEmailSubmit() : e}
                 className="text-center bg-neutral-900 border-neutral-600 text-white placeholder:text-neutral-400"
                 ref={emailInputRef}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="name" className="text-white">Nome completo</Label>
+              <Input
+                id="name"
+                type="text"
+                placeholder="Seu nome"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                onKeyUp={(e) => e.code === 'Enter' && emailInputRef.current?.focus()}
+                className="text-center bg-neutral-900 border-neutral-600 text-white placeholder:text-neutral-400"
+                ref={nameInputRef}
               />
             </div>
             <Button
