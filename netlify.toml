@@ -9,3 +9,7 @@
     VITE_MEASUREMENT_ID
   """
 
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+  publish = "build/client"
