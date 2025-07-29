@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { doc, setDoc } from 'firebase/firestore'
 import { toast } from 'sonner'
 
-import { db } from '~/lib/firebase'
+import { getDb } from '~/lib/firebase'
 
 interface QuizResult {
   id: string
@@ -22,6 +22,7 @@ interface AnalyticsData {
 }
 
 export function useQuizAnalytics() {
+  const db = getDb();
   const [analytics, setAnalytics] = useState<AnalyticsData>({
     totalCompletions: 0,
     profileDistribution: {},

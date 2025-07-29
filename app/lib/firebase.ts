@@ -1,17 +1,29 @@
-import { initializeApp } from 'firebase/app'
+import { initializeApp, getApps, getApp, type FirebaseApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
 
-const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
+let app: FirebaseApp;
+
+export function getFirebaseApp() {
+  if (!app) {
+    const firebaseConfig = {
+      apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+      authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+      projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+      storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+      messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+      appId: import.meta.env.VITE_FIREBASE_APP_ID,
+      measurementId: import.meta.env.VITE_MEASUREMENT_ID,
+    };
+
+    app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+
+    console.log("🔥 Firebase initialized", firebaseConfig);
+  }
+
+  return app;
 }
 
-console.log("hereeee: ", firebaseConfig)
+export function getDb() {
+  return getFirestore(getFirebaseApp());
+}
 
-const app = initializeApp(firebaseConfig)
-export const db = getFirestore(app);
