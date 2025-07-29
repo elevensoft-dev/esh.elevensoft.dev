@@ -1,12 +1,15 @@
-import { defineConfig, loadEnv } from 'vite';
-import { reactRouter } from '@react-router/dev/vite';
-import tailwindcss from '@tailwindcss/vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
-import path from 'path';
+import { defineConfig, loadEnv } from "vite";
+import { reactRouter } from "@react-router/dev/vite";
+import tailwindcss from "@tailwindcss/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+import path from "path";
 
 export default defineConfig(({ mode }) => {
-  // carrega as variáveis do ambiente, incluindo Netlify UI
-  const env = loadEnv(mode, process.cwd(), '');
+  const rawEnv = loadEnv(mode, process.cwd());
+  const env = {
+    ...rawEnv,
+    ...process.env,
+  };
 
   return {
     plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
