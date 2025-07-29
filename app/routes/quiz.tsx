@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Shield, Play, Users, Award, ArrowRight } from 'lucide-react';
 
 import { Button } from '~/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
 import SecurityQuiz from '~/components/modules/quiz/security-quiz';
 
-const Index = () => {
+const Quiz = () => {
   const [showQuiz, setShowQuiz] = useState(false);
+
+  useEffect(() => {
+    document.title = 'ESH | Quiz'
+  }, [])
 
   if (showQuiz) {
     return <SecurityQuiz />;
@@ -107,4 +111,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Quiz;

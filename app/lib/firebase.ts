@@ -16,8 +16,6 @@ export function getFirebaseApp() {
     };
 
     app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
-
-    console.log("🔥 Firebase initialized", firebaseConfig);
   }
 
   return app;

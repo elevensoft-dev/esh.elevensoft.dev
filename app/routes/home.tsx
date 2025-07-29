@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { Footer } from "~/components/footer";
 
 import { Hero } from "./home/components/hero";
@@ -9,14 +11,12 @@ import { Pricing } from "./home/components/pricing";
 import { Faq } from "./home/components/faq";
 
 
-export function meta() {
-  return [
-    { title: "ESH | Eleven Soft" },
-    { name: "description", content: "Welcome to Eleven Shell HUB!" },
-  ];
-}
-
 export default function Home() {
+
+  useEffect(() => {
+    document.title = 'ESH | Eleven Soft'
+  }, [])
+
   return (
     <main>
       <Hero />

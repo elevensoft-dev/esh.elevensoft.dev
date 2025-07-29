@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState<boolean>(false)

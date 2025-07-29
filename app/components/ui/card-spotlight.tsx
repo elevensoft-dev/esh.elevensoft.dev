@@ -2,7 +2,7 @@ import { useMotionValue, motion, useMotionTemplate } from "motion/react";
 import { useState } from "react";
 import type { MouseEvent as ReactMouseEvent } from "react";
 
-import { cn } from "lib/utils";
+import { cn } from "~/lib/utils";
 
 import { CanvasRevealEffect } from "./canvas-revel-effect";
 
