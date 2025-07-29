@@ -1,4 +1,4 @@
-import { LaptopIcon, ExclamationTriangleIcon, GearIcon, BarChartIcon, CameraIcon, EyeOpenIcon, LockClosedIcon, LockOpen1Icon, SymbolIcon } from "@radix-ui/react-icons";
+import { LaptopIcon, ExclamationTriangleIcon, GearIcon, BarChartIcon, CameraIcon, LockClosedIcon } from "@radix-ui/react-icons";
 
 export function HowTo() {
   return (

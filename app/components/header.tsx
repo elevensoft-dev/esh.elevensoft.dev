@@ -21,23 +21,25 @@ isScrolled ? 'bg-neutral-950 pt-2' : 'bg-transparent'
     >
       <div className="flex h-16 bg-surface-primary dark:bg-dark-surface-primary">
         <div className="items-center md:container md:mx-auto flex justify-between w-full">
-          <h1 className="hidden md:block text-xl md:text-3xl font-semibold text-white">
-            <span className="text-orange-400">E</span>
-            SH
-          </h1>
-          <img src="logo.png" alt="Logo Eleven, letra E" className="md:hidden w-10" />
+          <Link to="/">
+            <img src="logo.png" alt="Logo Eleven, letra E" className="w-8" width={30} height={30} />
+          </Link>
           <div className="md:flex items-center gap-10 text-neutral-400 hidden">
             <a href="#prices">Preços</a>
-            <a href="https://elevensoft.dev/blog" target="_blank">Blog</a>
+            <a
+              rel="noreferrer"
+              href="https://elevensoft.dev/blog"
+              target="_blank">Blog</a>
           </div>
           <div className="flex items-center gap-2">
-          <a
-            href="https://wa.me/message/X2DMDA457ASDN1"
-            target="_blank"
-            className="rounded-full bg-orange-400 text-white text-sm px-4 py-2 font-light"
-          >
-            Começar hoje
-          </a>
+            <a
+              rel="noreferrer"
+              href="https://wa.me/message/X2DMDA457ASDN1"
+              target="_blank"
+              className="rounded-full bg-orange-400 text-white text-sm px-4 py-2 font-light"
+            >
+              Começar hoje
+            </a>
           </div>
         </div>
       </div>
