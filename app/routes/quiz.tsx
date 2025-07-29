@@ -21,17 +21,17 @@ const Index = () => {
             <Shield className="w-4 h-4 mr-2" />
             Diagnóstico Gratuito de Segurança
           </div>
-          <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent animate-fade-in">
+          <h1 className="text-3xl sm:text-6xl font-bold mb-8 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent animate-fade-in">
             Qual o Nível de Segurança da Sua Empresa?
           </h1>
-          <p className="text-xl text-neutral-400 mb-10 animate-fade-in leading-relaxed">
+          <p className="text-base sm:text-xl text-neutral-400 mb-10 animate-fade-in leading-relaxed">
             Descubra em poucos minutos se sua empresa está protegida contra ameaças cibernéticas.
             Receba um diagnóstico personalizado e recomendações específicas para o seu negócio.
           </p>
           <Button
             onClick={() => setShowQuiz(true)}
             size="lg"
-            className="cursor-pointer px-12 py-8 animate-fade-in text-lg bg-gradient-to-r from-orange-500 to-yellow-500 text-gray-900 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)] hover:scale-105 transition-all duration-300 font-semibold"
+            className="cursor-pointer sm:px-12 sm:py-8 animate-fade-in sm:text-lg bg-gradient-to-r from-orange-500 to-yellow-500 text-gray-900 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)] hover:scale-105 transition-all duration-300 font-semibold"
           >
             <Play className="w-6 h-6 mr-3" />
             Iniciar Diagnóstico Gratuito

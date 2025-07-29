@@ -233,8 +233,8 @@ export default function SecurityQuiz() {
   const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   useEffect(() => {
-    if(showEmailCapture && emailInputRef.current) {
-      emailInputRef.current.focus()
+    if(showEmailCapture && nameInputRef.current) {
+      nameInputRef.current.focus()
     }
   }, [showEmailCapture])
 
@@ -270,24 +270,25 @@ export default function SecurityQuiz() {
                 ))}
               </ul>
             </div>
-
             <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-8 rounded-lg text-center shadow-[0_0_40px_rgba(255,138,41,0.2)]">
               <h3 className="font-semibold mb-3 text-gray-900 text-lg">Quer melhorar sua segurança?</h3>
               <p className="text-neutral-800 mb-6">
                 Agende uma consultoria gratuita com nossos especialistas em segurança.
               </p>
-              <Button
-                variant="secondary"
-                className="bg-white text-orange-600 hover:bg-neutral-100 shadow-lg font-semibold"
+              <a
+                href="https://wa.me/message/X2DMDA457ASDN1"
+                target='_blank'
+                rel="noreferrer"
+                className="py-4 px-3 sm:px-8 cursor-pointer text-sm bg-white text-orange-600 hover:bg-neutral-100 shadow-lg font-semibold"
               >
                 Agendar Consultoria Gratuita
-              </Button>
+              </a>
             </div>
 
             <div className="text-center space-y-3">
-              <Button variant="outline" onClick={resetQuiz} className="border-orange-500/30 hover:bg-orange-500/10 text-white">
-                Fazer Quiz Novamente
-              </Button>
+              {/* <Button variant="outline" onClick={resetQuiz} className="border-orange-500/30 hover:bg-orange-500/10 text-white"> */}
+              {/*   Fazer Quiz Novamente */}
+              {/* </Button> */}
               <div className="text-sm text-neutral-400">
                 <a href="/" className="hover:underline hover:text-orange-500 transition-colors">
                   ← Voltar ao início
@@ -317,19 +318,6 @@ export default function SecurityQuiz() {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-white">Email profissional</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="seu@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                onKeyUp={(e) => e.code === 'Enter' ? handleEmailSubmit() : e}
-                className="text-center bg-neutral-900 border-neutral-600 text-white placeholder:text-neutral-400"
-                ref={emailInputRef}
-              />
-            </div>
-            <div className="space-y-2">
               <Label htmlFor="name" className="text-white">Nome completo</Label>
               <Input
                 id="name"
@@ -342,6 +330,20 @@ export default function SecurityQuiz() {
                 ref={nameInputRef}
               />
             </div>
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-white">Email profissional</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="seu@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyUp={(e) => e.code === 'Enter' ? handleEmailSubmit() : e}
+                className="text-center bg-neutral-900 border-neutral-600 text-white placeholder:text-neutral-400"
+                ref={emailInputRef}
+              />
+            </div>
+
             <Button
               onClick={handleEmailSubmit}
               variant="startup"
@@ -372,7 +374,7 @@ export default function SecurityQuiz() {
             </div>
           </div>
           <Progress value={progress} className="mb-6" />
-          <CardTitle className="text-2xl text-white">
+          <CardTitle className="text-base sm:text-2xl text-white">
             {questions[currentQuestion].question}
           </CardTitle>
         </CardHeader>
@@ -382,10 +384,10 @@ export default function SecurityQuiz() {
               <Button
                 key={index}
                 variant="quiz"
-                className="w-full text-left justify-start h-auto p-6 hover:bg-orange-500/10 hover:border-orange-500/30 hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] transition-all duration-300"
+                className="whitespace-break-spaces w-full justify-start h-auto p-6 hover:bg-orange-500/10 hover:border-orange-500/30 hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] transition-all duration-300"
                 onClick={() => handleAnswer(questions[currentQuestion].id, option.points)}
               >
-                <span className="text-white">{option.text}</span>
+                <span className="text-white">{option.text} Lorem ipsum dolor sit amet.</span>
               </Button>
             ))}
           </div>
