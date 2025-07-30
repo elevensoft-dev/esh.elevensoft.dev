@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import React from 'react';
 import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
 import { Button } from '~/components/ui/button';
@@ -7,15 +8,58 @@ import { Label } from '~/components/ui/label';
 import { Progress } from '~/components/ui/progress';
 import { useQuizAnalytics } from '~/hooks/use-quiz-analytics';
 
-interface Question {
-  id: number;
-  question: string;
-  options: { text: string; points: number }[];
-}
-
-interface UserAnswers {
-  [key: number]: number;
-}
+const questions = [
+  {
+    id: 1,
+    question: "Como sua equipe gerencia as chaves SSH e senhas para acessar ativos de rede hoje?",
+    options: [
+      { text: "Cada um tem suas chaves, talvez em planilhas", points: 0 },
+      { text: "Usamos um cofre de senhas compartilhado (ex: 1Password, LastPass)", points: 1 },
+      { text: "Temos uma VPN, e a partir dela o acesso é direto", points: 2 },
+      { text: "Usamos um Bastion Host ou Gateway de Acesso centralizado", points: 3 }
+    ]
+  },
+  {
+    id: 2,
+    question: "Quando um funcionário é desligado, como você garante que TODOS os acessos dele são revogados imediatamente?",
+    options: [
+      { text: "É um processo manual, servidor por servidor, e torcemos para não esquecer nada", points: 0 },
+      { text: "Rodamos alguns scripts para tentar automatizar", points: 1 },
+      { text: "O processo é bem definido, mas ainda manual e leva algumas horas", points: 2 },
+      { text: "É 100% automatizado e centralizado. Revogamos o acesso em um único lugar", points: 3 }
+    ]
+  },
+  {
+    id: 3,
+    question: "Se um incidente ocorresse AGORA, você conseguiria assistir em tempo real ou rever em vídeo exatamente o que um usuário fez no terminal?",
+    options: [
+      { text: "Não, não temos essa capacidade", points: 0 },
+      { text: "Talvez, analisando logs de texto do sistema, o que seria lento e difícil", points: 1 },
+      { text: "Sim, temos gravação de sessão, mas o acesso aos vídeos não é imediato", points: 2 },
+      { text: "Sim, temos gravação e replay instantâneo de todas as sessões", points: 3 }
+    ]
+  },
+  {
+    id: 4,
+    question: "Um analista júnior precisa de acesso a um servidor de produção para depurar um problema. Como você limita o que ele pode fazer?",
+    options: [
+      { text: "Ele recebe acesso de root ou um usuário com muitos privilégios. Confiamos nele.", points: 0 },
+      { text: "Editamos o arquivo 'sudoers' para dar permissões específicas, o que é complexo", points: 1 },
+      { text: "Damos o acesso e ficamos monitorando a sessão dele ao vivo", points: 2 },
+      { text: "Ele tem acesso a um menu restrito que só permite executar comandos pré-aprovados", points: 3 }
+    ]
+  },
+  {
+    id: 5,
+    question: "Sua empresa precisa passar por auditorias como ISO 27001 ou provar conformidade com a LGPD. Como você gera as evidências de acesso?",
+    options: [
+      { text: "É um pânico. Juntamos logs e relatórios de várias fontes manualmente", points: 0 },
+      { text: "Temos um sistema de logs centralizado, mas a correlação é manual", points: 1 },
+      { text: "Conseguimos gerar relatórios, mas leva um tempo considerável da equipe", points: 2 },
+      { text: "Geramos relatórios de auditoria completos e centralizados com poucos cliques", points: 3 }
+    ]
+  }
+];
 
 interface Profile {
   name: string;
@@ -26,134 +70,51 @@ interface Profile {
   recommendations: string[];
 }
 
-const questions: Question[] = [
-  {
-    id: 1,
-    question: "Sua empresa possui política formal de segurança da informação?",
-    options: [
-      { text: "Sim, implementada e atualizada regularmente", points: 3 },
-      { text: "Sim, mas desatualizada", points: 2 },
-      { text: "Não, mas estamos desenvolvendo", points: 1 },
-      { text: "Não possuímos", points: 0 }
-    ]
-  },
-  {
-    id: 2,
-    question: "Quantos incidentes de segurança sua empresa enfrentou nos últimos 12 meses?",
-    options: [
-      { text: "Nenhum", points: 3 },
-      { text: "1-2 incidentes menores", points: 2 },
-      { text: "3-5 incidentes", points: 1 },
-      { text: "Mais de 5 incidentes", points: 0 }
-    ]
-  },
-  {
-    id: 3,
-    question: "Sua equipe utiliza autenticação em dois fatores (2FA)?",
-    options: [
-      { text: "Sim, em todos os sistemas críticos", points: 3 },
-      { text: "Sim, em alguns sistemas", points: 2 },
-      { text: "Apenas para alguns usuários", points: 1 },
-      { text: "Não utilizamos", points: 0 }
-    ]
-  },
-  {
-    id: 4,
-    question: "Como são realizados os backups dos dados críticos?",
-    options: [
-      { text: "Backups automáticos diários com teste de restauração", points: 3 },
-      { text: "Backups regulares sem teste", points: 2 },
-      { text: "Backups esporádicos", points: 1 },
-      { text: "Não temos rotina de backup", points: 0 }
-    ]
-  },
-  {
-    id: 5,
-    question: "Qual o nível de treinamento em segurança da sua equipe?",
-    options: [
-      { text: "Treinamentos regulares e atualizações constantes", points: 3 },
-      { text: "Treinamento anual básico", points: 2 },
-      { text: "Treinamento eventual", points: 1 },
-      { text: "Não temos treinamentos específicos", points: 0 }
-    ]
-  },
-  {
-    id: 6,
-    question: "Como é feito o controle de acesso aos sistemas?",
-    options: [
-      { text: "Controle baseado em funções com revisões periódicas", points: 3 },
-      { text: "Controle básico por usuário", points: 2 },
-      { text: "Controle limitado", points: 1 },
-      { text: "Acesso livre ou pouco controlado", points: 0 }
-    ]
-  },
-  {
-    id: 7,
-    question: "Sua empresa possui um plano de resposta a incidentes?",
-    options: [
-      { text: "Sim, testado e atualizado regularmente", points: 3 },
-      { text: "Sim, mas não testado", points: 2 },
-      { text: "Plano básico em desenvolvimento", points: 1 },
-      { text: "Não possuímos", points: 0 }
-    ]
-  },
-  {
-    id: 8,
-    question: "Como é feito o monitoramento de segurança?",
-    options: [
-      { text: "Monitoramento 24/7 com alertas automáticos", points: 3 },
-      { text: "Monitoramento básico com logs", points: 2 },
-      { text: "Verificações eventuais", points: 1 },
-      { text: "Não fazemos monitoramento", points: 0 }
-    ]
-  }
-];
-
 const profiles: Profile[] = [
   {
-    name: "Crítico",
-    description: "Sua empresa está vulnerável a ataques cibernéticos. É urgente implementar medidas de segurança básicas.",
-    score: "0-8 pontos",
+    name: "Risco Crítico",
+    description: "Sua infraestrutura está altamente exposta a acessos indevidos, vazamento de dados e erros humanos. A falta de controle e auditoria centralizada é um ponto de falha urgente.",
+    score: "0-5 pontos",
     color: "security-critical",
     icon: <XCircle className="w-8 h-8" />,
     recommendations: [
-      "Implementar política de segurança imediatamente",
-      "Configurar autenticação em dois fatores",
-      "Estabelecer rotina de backups",
-      "Treinar equipe em segurança básica"
+      "Centralizar a gestão de credenciais imediatamente para eliminar chaves espalhadas.",
+      "Implementar gravação de sessão para ter 100% de visibilidade.",
+      "Automatizar o processo de revogação de acessos (offboarding).",
+      "Estabelecer um ponto único de acesso (Gateway/Bastion).",
     ]
   },
   {
-    name: "Intermediário",
-    description: "Você já começou a jornada de segurança, mas ainda há importantes lacunas para fechar.",
-    score: "9-16 pontos",
+    name: "Vulnerabilidade Moderada",
+    description: "Você possui algumas boas práticas, mas ainda opera com processos manuais e reativos que consomem tempo e deixam brechas de segurança significativas.",
+    score: "6-10 pontos",
     color: "security-warning",
     icon: <AlertTriangle className="w-8 h-8" />,
     recommendations: [
-      "Atualizar políticas de segurança existentes",
-      "Implementar monitoramento proativo",
-      "Ampliar treinamentos da equipe",
-      "Criar plano de resposta a incidentes"
+      "Avançar de logs de texto para replay visual de sessões para acelerar investigações.",
+      "Explorar o controle preventivo de comandos para reduzir o risco humano.",
+      "Otimizar a geração de relatórios de auditoria para economizar tempo.",
+      "Refinar o controle de privilégios para além do 'sudoers'.",
     ]
   },
   {
-    name: "Avançado",
-    description: "Parabéns! Sua empresa possui um bom nível de segurança. Considere evoluir para práticas mais avançadas.",
-    score: "17-24 pontos",
+    name: "Maturidade em Acesso",
+    description: "Parabéns! Sua empresa possui uma base sólida de segurança de acesso. O próximo nível é otimizar a eficiência e implementar controles preventivos avançados.",
+    score: "11-15 pontos",
     color: "security-success",
     icon: <CheckCircle className="w-8 h-8" />,
     recommendations: [
-      "Implementar auditoria de segurança regular",
-      "Considerar certificações de segurança",
-      "Avaliar soluções de segurança avançadas",
-      "Estabelecer programa de bug bounty"
+      "Implementar bloqueio proativo de comandos perigosos em vez de apenas auditar.",
+      "Consolidar suas ferramentas de acesso em uma única plataforma para reduzir custos e complexidade.",
+      "Automatizar totalmente o ciclo de vida das permissões baseado em funções.",
+      "Usar a segurança como um diferencial competitivo para seus clientes.",
     ]
   }
 ];
 
 export default function SecurityQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<UserAnswers>({});
+  const [answers, setAnswers] = useState<Record<number, number>>({});
   const [email, setEmail] = useState('');
   const [showEmailCapture, setShowEmailCapture] = useState(false);
   const [showResult, setShowResult] = useState(false);
@@ -171,15 +132,15 @@ export default function SecurityQuiz() {
     }
   };
 
-  const calculateProfile = () => {
+  const calculateProfile = (): Profile => {
     const totalScore = Object.values(answers).reduce((sum, points) => sum + points, 0);
 
-    if (totalScore <= 8) {
-      return profiles[0]; // Crítico
-    } else if (totalScore <= 16) {
-      return profiles[1]; // Intermediário
+    if (totalScore <= 5) {
+      return profiles[0];
+    } else if (totalScore <= 10) {
+      return profiles[1];
     } else {
-      return profiles[2]; // Avançado
+      return profiles[2];
     }
   };
 
@@ -192,7 +153,6 @@ export default function SecurityQuiz() {
       setShowResult(true);
       setShowEmailCapture(false);
 
-      // Salvar resultado no analytics
       saveQuizResult({
         email,
         answers,
@@ -235,7 +195,7 @@ export default function SecurityQuiz() {
           </CardHeader>
           <CardContent className="space-y-8">
             <div>
-              <h3 className="font-semibold mb-4 text-white text-lg">Recomendações para sua empresa:</h3>
+              <h3 className="font-semibold mb-4 text-white text-lg">Seu Plano de Ação Recomendado:</h3>
               <ul className="space-y-3">
                 {profile.recommendations.map((rec, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -247,16 +207,18 @@ export default function SecurityQuiz() {
             </div>
 
             <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-8 rounded-lg text-center shadow-[0_0_40px_rgba(255,138,41,0.2)]">
-              <h3 className="font-semibold mb-3 text-gray-900 text-lg">Quer melhorar sua segurança?</h3>
+              <h3 className="font-semibold mb-3 text-gray-900 text-xl">O ESH foi criado para resolver exatamente isso.</h3>
               <p className="text-neutral-800 mb-6">
-                Agende uma consultoria gratuita com nossos especialistas em segurança.
+                Nossa plataforma implementa todas as recomendações do seu diagnóstico em uma única solução, simples e poderosa.
               </p>
-              <Button
-                variant="secondary"
-                className="bg-white text-orange-600 hover:bg-neutral-100 shadow-lg font-semibold"
-              >
-                Agendar Consultoria Gratuita
-              </Button>
+              <a href="/#solution" target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="secondary"
+                  className="bg-white text-orange-600 hover:bg-neutral-100 shadow-lg font-semibold px-8 py-4 text-base"
+                >
+                  Veja como o ESH Funciona
+                </Button>
+              </a>
             </div>
 
             <div className="text-center space-y-3">
@@ -284,10 +246,10 @@ export default function SecurityQuiz() {
               <Shield className="w-8 h-8 text-gray-900" />
             </div>
             <CardTitle className="text-2xl font-bold text-white mb-4">
-              Quase terminando!
+              Seu diagnóstico está pronto!
             </CardTitle>
             <CardDescription className="text-neutral-400">
-              Digite seu email para receber o resultado personalizado do seu diagnóstico de segurança.
+              Insira seu melhor e-mail para receber o relatório completo e seu plano de ação personalizado.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
@@ -296,7 +258,7 @@ export default function SecurityQuiz() {
               <Input
                 id="email"
                 type="email"
-                placeholder="seu@email.com"
+                placeholder="cto@suaempresa.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="text-center bg-neutral-900 border-neutral-600 text-white placeholder:text-neutral-400"
@@ -311,7 +273,7 @@ export default function SecurityQuiz() {
               Ver Meu Diagnóstico
             </Button>
             <p className="text-xs text-neutral-400 text-center">
-              Seus dados estão seguros e não serão compartilhados com terceiros.
+              Respeitamos sua privacidade. Sem spam, apenas valor.
             </p>
           </CardContent>
         </Card>
@@ -354,3 +316,19 @@ export default function SecurityQuiz() {
     </div>
   );
 }
+
+interface ValuePillarProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+const ValuePillar = ({ icon, title, description }: ValuePillarProps) => (
+  <div className="text-center p-4">
+    <div className="w-20 h-20 bg-neutral-800 rounded-full flex items-center justify-center mx-auto mb-4 border border-neutral-700">
+      {icon}
+    </div>
+    <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+    <p className="text-neutral-400">{description}</p>
+  </div>
+);
