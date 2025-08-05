@@ -9,7 +9,7 @@ import { Label } from '~/components/ui/label';
 import { Input } from '~/components/ui/input';
 import { useQuizAnalytics } from '~/hooks/use-quiz-analytics';
 import { isValidEmailFull } from '~/lib/utils';
-import quizData from '~/data/quiz/questions/quiz-01.json'
+import quizData from '~/data/quiz/questions/quiz-00.json'
 
 interface UserAnswers {
   [key: number]: number;
@@ -18,9 +18,9 @@ interface UserAnswers {
 interface Profile {
   name: string;
   description: string;
-  score: string;
-  color: string;
-  icon: React.ReactNode;
+  score?: string;
+  color?: string;
+  icon?: React.ReactNode;
   recommendations: string[];
 }
 
@@ -112,17 +112,17 @@ export default function SecurityQuiz() {
           <CardHeader className="text-center">
             <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 mb-6 mx-auto shadow-[0_0_40px_rgba(255,138,41,0.2)]`}>
               <div className="text-gray-900">
-                {Icon && <Icon className="w-8 h-8" />}
+                {Icon ? <Icon className="w-8 h-8 text-white" /> : <CheckCircle className='w-8 h-8 text-white' />}
               </div>
             </div>
             <CardTitle className="text-3xl font-bold text-white mb-4">
-              Perfil: {profile.name}
+              {profile.name}
             </CardTitle>
             <CardDescription className="text-lg text-neutral-400">
               {profile.description}
             </CardDescription>
             <div className="mt-4 mx-auto border border-orange-500/30 bg-orange-500/10 text-orange-500 inline-block px-3 py-1 rounded-full text-sm">
-              {profile.score}
+              {profile.score ? profile.score : 'Excelente'}
             </div>
           </CardHeader>
           <CardContent className="space-y-8">

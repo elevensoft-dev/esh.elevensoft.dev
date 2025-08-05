@@ -113,7 +113,7 @@
   ],
   "profiles": [
     {
-      "name": "Risco Crítico",
+      "name": "Perfil: Risco Crítico",
       "description": "Sua infraestrutura está altamente exposta a acessos indevidos, vazamento de dados e erros humanos. A falta de controle e auditoria centralizada é um ponto de falha urgente.",
       "score": "0-5 pontos",
       "color": "security-critical",
@@ -126,7 +126,7 @@
       ]
     },
     {
-      "name": "Vulnerabilidade Moderada",
+      "name": "Perfil: Vulnerabilidade Moderada",
       "description": "Você possui algumas boas práticas, mas ainda opera com processos manuais e reativos que consomem tempo e deixam brechas de segurança significativas.",
       "score": "6-10 pontos",
       "color": "security-warning",
@@ -139,7 +139,7 @@
       ]
     },
     {
-      "name": "Maturidade em Acesso",
+      "name": "Perfil: Maturidade em Acesso",
       "description": "Parabéns! Sua empresa possui uma base sólida de segurança de acesso. O próximo nível é otimizar a eficiência e implementar controles preventivos avançados.",
       "score": "11-15 pontos",
       "color": "security-success",
