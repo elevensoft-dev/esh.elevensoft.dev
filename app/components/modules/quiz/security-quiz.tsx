@@ -9,12 +9,7 @@ import { Label } from '~/components/ui/label';
 import { Input } from '~/components/ui/input';
 import { useQuizAnalytics } from '~/hooks/use-quiz-analytics';
 import { isValidEmailFull } from '~/lib/utils';
-
-interface Question {
-  id: number;
-  question: string;
-  options: { text: string; points: number }[];
-}
+import quizData from '~/data/quiz/questions/quiz-01.json'
 
 interface UserAnswers {
   [key: number]: number;
@@ -29,130 +24,11 @@ interface Profile {
   recommendations: string[];
 }
 
-const questions: Question[] = [
-  {
-    id: 1,
-    question: "Sua empresa possui política formal de segurança da informação?",
-    options: [
-      { text: "Sim, implementada e atualizada regularmente", points: 3 },
-      { text: "Sim, mas desatualizada", points: 2 },
-      { text: "Não, mas estamos desenvolvendo", points: 1 },
-      { text: "Não possuímos", points: 0 }
-    ]
-  },
-  {
-    id: 2,
-    question: "Quantos incidentes de segurança sua empresa enfrentou nos últimos 12 meses?",
-    options: [
-      { text: "Nenhum", points: 3 },
-      { text: "1-2 incidentes menores", points: 2 },
-      { text: "3-5 incidentes", points: 1 },
-      { text: "Mais de 5 incidentes", points: 0 }
-    ]
-  },
-  {
-    id: 3,
-    question: "Sua equipe utiliza autenticação em dois fatores (2FA)?",
-    options: [
-      { text: "Sim, em todos os sistemas críticos", points: 3 },
-      { text: "Sim, em alguns sistemas", points: 2 },
-      { text: "Apenas para alguns usuários", points: 1 },
-      { text: "Não utilizamos", points: 0 }
-    ]
-  },
-  {
-    id: 4,
-    question: "Como são realizados os backups dos dados críticos?",
-    options: [
-      { text: "Backups automáticos diários com teste de restauração", points: 3 },
-      { text: "Backups regulares sem teste", points: 2 },
-      { text: "Backups esporádicos", points: 1 },
-      { text: "Não temos rotina de backup", points: 0 }
-    ]
-  },
-  {
-    id: 5,
-    question: "Qual o nível de treinamento em segurança da sua equipe?",
-    options: [
-      { text: "Treinamentos regulares e atualizações constantes", points: 3 },
-      { text: "Treinamento anual básico", points: 2 },
-      { text: "Treinamento eventual", points: 1 },
-      { text: "Não temos treinamentos específicos", points: 0 }
-    ]
-  },
-  {
-    id: 6,
-    question: "Como é feito o controle de acesso aos sistemas?",
-    options: [
-      { text: "Controle baseado em funções com revisões periódicas", points: 3 },
-      { text: "Controle básico por usuário", points: 2 },
-      { text: "Controle limitado", points: 1 },
-      { text: "Acesso livre ou pouco controlado", points: 0 }
-    ]
-  },
-  {
-    id: 7,
-    question: "Sua empresa possui um plano de resposta a incidentes?",
-    options: [
-      { text: "Sim, testado e atualizado regularmente", points: 3 },
-      { text: "Sim, mas não testado", points: 2 },
-      { text: "Plano básico em desenvolvimento", points: 1 },
-      { text: "Não possuímos", points: 0 }
-    ]
-  },
-  {
-    id: 8,
-    question: "Como é feito o monitoramento de segurança?",
-    options: [
-      { text: "Monitoramento 24/7 com alertas automáticos", points: 3 },
-      { text: "Monitoramento básico com logs", points: 2 },
-      { text: "Verificações eventuais", points: 1 },
-      { text: "Não fazemos monitoramento", points: 0 }
-    ]
-  }
-];
-
-const profiles: Profile[] = [
-  {
-    name: "Crítico",
-    description: "Sua empresa está vulnerável a ataques cibernéticos. É urgente implementar medidas de segurança básicas.",
-    score: "0-8 pontos",
-    color: "security-critical",
-    icon: <XCircle className="w-8 h-8" />,
-    recommendations: [
-      "Implementar política de segurança imediatamente",
-      "Configurar autenticação em dois fatores",
-      "Estabelecer rotina de backups",
-      "Treinar equipe em segurança básica"
-    ]
-  },
-  {
-    name: "Intermediário",
-    description: "Você já começou a jornada de segurança, mas ainda há importantes lacunas para fechar.",
-    score: "9-16 pontos",
-    color: "security-warning",
-    icon: <AlertTriangle className="w-8 h-8" />,
-    recommendations: [
-      "Atualizar políticas de segurança existentes",
-      "Implementar monitoramento proativo",
-      "Ampliar treinamentos da equipe",
-      "Criar plano de resposta a incidentes"
-    ]
-  },
-  {
-    name: "Avançado",
-    description: "Parabéns! Sua empresa possui um bom nível de segurança. Considere evoluir para práticas mais avançadas.",
-    score: "17-24 pontos",
-    color: "security-success",
-    icon: <CheckCircle className="w-8 h-8" />,
-    recommendations: [
-      "Implementar auditoria de segurança regular",
-      "Considerar certificações de segurança",
-      "Avaliar soluções de segurança avançadas",
-      "Estabelecer programa de bug bounty"
-    ]
-  }
-];
+const iconMap = {
+  CheckCircle,
+  AlertTriangle,
+  XCircle,
+} as const;
 
 export default function SecurityQuiz() {
   const nameInputRef = useRef<HTMLInputElement | null>(null);
@@ -170,7 +46,7 @@ export default function SecurityQuiz() {
     const newAnswers = { ...answers, [questionId]: points };
     setAnswers(newAnswers);
 
-    if (currentQuestion < questions.length - 1) {
+    if (currentQuestion < quizData?.questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       setShowEmailCapture(true);
@@ -181,11 +57,11 @@ export default function SecurityQuiz() {
     const totalScore = Object.values(answers).reduce((sum, points) => sum + points, 0);
 
     if (totalScore <= 8) {
-      return profiles[0]; // Crítico
+      return quizData.profiles[0]; // Crítico
     } else if (totalScore <= 16) {
-      return profiles[1]; // Intermediário
+      return quizData.profiles[1]; // Intermediário
     } else {
-      return profiles[2]; // Avançado
+      return quizData.profiles[2]; // Avançado
     }
   };
 
@@ -220,17 +96,8 @@ export default function SecurityQuiz() {
     }
   };
 
-  const resetQuiz = () => {
-    setCurrentQuestion(0);
-    setAnswers({});
-    setEmail('');
-    setName('');
-    setShowEmailCapture(false);
-    setShowResult(false);
-    setProfile(null);
-  };
-
-  const progress = ((currentQuestion + 1) / questions.length) * 100;
+  const progress = ((currentQuestion + 1) / quizData.questions.length) * 100;
+  const Icon = iconMap[profile?.icon as keyof typeof iconMap];
 
   useEffect(() => {
     if(showEmailCapture && nameInputRef.current) {
@@ -245,7 +112,7 @@ export default function SecurityQuiz() {
           <CardHeader className="text-center">
             <div className={`inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 mb-6 mx-auto shadow-[0_0_40px_rgba(255,138,41,0.2)]`}>
               <div className="text-gray-900">
-                {profile.icon}
+                {Icon && <Icon className="w-8 h-8" />}
               </div>
             </div>
             <CardTitle className="text-3xl font-bold text-white mb-4">
@@ -286,9 +153,6 @@ export default function SecurityQuiz() {
             </div>
 
             <div className="text-center space-y-3">
-              {/* <Button variant="outline" onClick={resetQuiz} className="border-orange-500/30 hover:bg-orange-500/10 text-white"> */}
-              {/*   Fazer Quiz Novamente */}
-              {/* </Button> */}
               <div className="text-sm text-neutral-400">
                 <a href="/" className="hover:underline hover:text-orange-500 transition-colors">
                   ← Voltar ao início
@@ -370,24 +234,24 @@ export default function SecurityQuiz() {
               <Shield className="w-6 h-6 text-gray-900" />
             </div>
             <div className="border border-orange-500/30 bg-orange-500/10 text-orange-500 px-3 py-1 rounded-full text-sm">
-              {currentQuestion + 1} de {questions.length}
+              {currentQuestion + 1} de {quizData.questions.length}
             </div>
           </div>
           <Progress value={progress} className="mb-6" />
           <CardTitle className="text-base sm:text-2xl text-white">
-            {questions[currentQuestion].question}
+            {quizData.questions[currentQuestion].question}
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {questions[currentQuestion].options.map((option, index) => (
+            {quizData.questions[currentQuestion].options.map((option, index) => (
               <Button
                 key={index}
                 variant="quiz"
                 className="whitespace-break-spaces w-full justify-start h-auto p-6 hover:bg-orange-500/10 hover:border-orange-500/30 hover:shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] transition-all duration-300"
-                onClick={() => handleAnswer(questions[currentQuestion].id, option.points)}
+                onClick={() => handleAnswer(quizData.questions[currentQuestion].id, option.points)}
               >
-                <span className="text-white">{option.text} Lorem ipsum dolor sit amet.</span>
+                <span className="text-white">{option.text}</span>
               </Button>
             ))}
           </div>
