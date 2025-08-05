@@ -1,0 +1,79 @@
+/*
+  QUIZ 1: O Diagnóstico do CTO Estratégico
+  =========================================
+  OBJETIVO: Validar o avatar de Liderança Técnica (CTO, CIO, Head de TI).
+  POR QUÊ: Foca em dores de alto nível (risco, custo, estratégia) para entender se esse público se engaja. As respostas nos dizem o que é mais importante para quem toma a decisão de compra.
+*/
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Pensando no próximo ano, qual é a sua maior prioridade estratégica para a equipe de tecnologia?",
+      "options": [
+        { "text": "Reduzir o risco de segurança e garantir conformidade (compliance).", "points": 3 },
+        { "text": "Aumentar a eficiência e a velocidade de entrega (DevOps).", "points": 2 },
+        { "text": "Otimizar e reduzir os custos operacionais (infra, licenças).", "points": 1 },
+        { "text": "Escalar a equipe e a infraestrutura de forma sustentável.", "points": 1 }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Qual destes cenários de risco de acesso à infraestrutura mais te preocupa?",
+      "options": [
+        { "text": "Um ex-funcionário ainda ter acesso a um servidor crítico.", "points": 3 },
+        { "text": "Um erro humano de um desenvolvedor derrubar um ambiente de produção.", "points": 3 },
+        { "text": "Não conseguir provar quem fez o quê durante uma auditoria.", "points": 2 },
+        { "text": "A lentidão e complexidade da VPN atrapalhando a produtividade.", "points": 1 }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Como você mede o ROI (Retorno sobre Investimento) de uma nova ferramenta de segurança/infra?",
+      "options": [
+        { "text": "Principalmente pela redução de horas de trabalho manual da equipe.", "points": 2 },
+        { "text": "Pela mitigação de riscos financeiros (multas, perdas por incidentes).", "points": 3 },
+        { "text": "Pela consolidação e redução de custos de outras ferramentas.", "points": 1 },
+        { "text": "É uma métrica difícil, geralmente focamos mais na capacidade técnica.", "points": 0 }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Qual o maior obstáculo para a agilidade da sua equipe de DevOps/SRE hoje?",
+      "options": [
+        { "text": "Processos de acesso e permissões lentos e burocráticos.", "points": 3 },
+        { "text": "Ferramentas legadas e complexas que exigem muita manutenção.", "points": 2 },
+        { "text": "Falta de visibilidade e dificuldade em depurar problemas em produção.", "points": 2 },
+        { "text": "Questões de conformidade que retardam o ciclo de desenvolvimento.", "points": 1 }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Perfil: Líder Focado em Risco e Compliance",
+      "description": "Sua principal preocupação é a proteção do negócio. Você busca ativamente soluções que minimizem a exposição a riscos de segurança e garantam conformidade, mesmo que isso tenha um custo.",
+      "recommendations": [
+        "Priorizar soluções com auditoria completa e imutável.",
+        "Buscar ferramentas que automatizem a gestão de identidade e acesso.",
+        "Investir em controle preventivo para reduzir a dependência do fator humano."
+      ]
+    },
+    {
+      "name": "Perfil: Líder Focado em Eficiência e DevOps",
+      "description": "Seu objetivo é fazer a máquina girar mais rápido. Você valoriza ferramentas que removem atrito, automatizam tarefas e liberam seus engenheiros para focar no que realmente importa: o produto.",
+      "recommendations": [
+        "Adotar plataformas que centralizem e simplifiquem o fluxo de trabalho.",
+        "Buscar automação para processos de onboarding e offboarding de acessos.",
+        "Implementar soluções que ofereçam visibilidade instantânea para acelerar a resolução de incidentes."
+      ]
+    },
+    {
+      "name": "Perfil: Líder Focado em Otimização e Custo",
+      "description": "Você tem um olhar apurado para o TCO (Custo Total de Propriedade). Seu desafio é manter a operação segura e eficiente, controlando os custos de infraestrutura, licenças e horas de trabalho.",
+      "recommendations": [
+        "Consolidar múltiplas ferramentas de acesso (VPN, cofres de senha) em uma única plataforma.",
+        "Calcular o custo de horas de engenharia gastas em tarefas manuais de acesso.",
+        "Priorizar soluções com precificação transparente e previsível."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+/*
+  QUIZ 8: Diagnóstico de Migração: Saindo do Open Source
+  ======================================================
+  OBJETIVO: Converter usuários de Jumpserver, Guacamole, etc.
+  POR QUÊ: Foca diretamente nas dores de quem usa soluções open-source (manutenção, falta de suporte, complexidade) e posiciona o ESH como a evolução natural e gerenciada.
+*/
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual sua maior frustração com sua solução open-source atual (Jumpserver, Guacamole, etc.)?",
+      "options": [
+        { "text": "O tempo e o esforço gastos em instalação, configuração e manutenção.", "points": 3 },
+        { "text": "A falta de um suporte profissional e rápido quando algo quebra.", "points": 3 },
+        { "text": "A complexidade para usar features mais avançadas ou a falta delas.", "points": 2 },
+        { "text": "A interface de usuário (UI/UX) não é muito amigável.", "points": 1 }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Quanto da sua equipe de engenharia está alocada para manter e dar suporte à sua ferramenta de acesso?",
+      "options": [
+        { "text": "Ninguém formalmente, resolvemos os problemas quando aparecem.", "points": 2 },
+        { "text": "Pelo menos uma pessoa gasta uma parte significativa do seu tempo com isso.", "points": 3 },
+        { "text": "Temos uma equipe dedicada para nossas ferramentas internas.", "points": 1 }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Se você pudesse adicionar uma coisa à sua solução atual com um estalar de dedos, o que seria?",
+      "options": [
+        { "text": "Um time de suporte especialista para me ajudar.", "points": 3 },
+        { "text": "Controle de comandos mais simples e integrado.", "points": 2 },
+        { "text": "Uma interface mais moderna e intuitiva.", "points": 1 },
+        { "text": "Relatórios de auditoria automáticos e fáceis de gerar.", "points": 2 }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Pronto para Evoluir",
+      "description": "Você já entende o valor de um bastion host, mas está sentindo na pele o custo oculto do open-source: o tempo da sua equipe. O ESH oferece todo o poder que você já tem, mas como um serviço gerenciado, com suporte de elite e uma experiência de usuário superior.",
+      "recommendations": [
+        "Libere sua equipe de engenharia da tarefa de manter uma ferramenta de acesso.",
+        "Ganhe acesso a features de nível enterprise, como o Controle de Comandos, sem a complexidade de configuração.",
+        "Tenha a tranquilidade de um parceiro especialista cuidando da sua segurança de acesso."
+      ]
+    }
+  ]
+}

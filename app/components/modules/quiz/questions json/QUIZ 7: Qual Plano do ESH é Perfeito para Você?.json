@@ -1,0 +1,69 @@
+/*
+  QUIZ 7: Qual Plano do ESH é Perfeito para Você?
+  ===============================================
+  OBJETIVO: Ajudar o cliente a se qualificar para o plano correto, funcionando como um vendedor consultivo.
+  POR QUÊ: Reduz a ansiedade da escolha e a fricção na página de preços. Ao final, o cliente sente que a recomendação foi feita para ele, aumentando a confiança na decisão de compra.
+*/
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual frase melhor descreve sua necessidade principal neste momento?",
+      "options": [
+        { "text": "Precisamos urgentemente de visibilidade. Queremos saber quem acessa o quê e ter um registro de tudo.", "points": 1 },
+        { "text": "Já temos alguma visibilidade, mas precisamos de relatórios robustos para auditorias e de um suporte mais ágil.", "points": 2 },
+        { "text": "Nossa prioridade máxima é impedir ativamente que erros ou ações maliciosas aconteçam, não apenas registrá-los.", "points": 3 },
+        { "text": "Somos uma equipe pequena e precisamos de uma solução de acesso seguro com um bom custo-benefício.", "points": 0 }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Quão importante é a integração com seu provedor de identidade (ex: Google Workspace, Azure AD) para login único (SSO)?",
+      "options": [
+        { "text": "Não é uma prioridade no momento.", "points": 1 },
+        { "text": "Seria bom ter, mas não é um impeditivo.", "points": 2 },
+        { "text": "É um requisito fundamental para nossa política de segurança.", "points": 3 }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Qual nível de suporte técnico sua operação exige?",
+      "options": [
+        { "text": "Suporte padrão via e-mail é suficiente.", "points": 1 },
+        { "text": "Precisamos de um tempo de resposta mais rápido (suporte prioritário).", "points": 2 },
+        { "text": "Exigimos um canal de comunicação direto (Slack/WhatsApp) com um engenheiro dedicado.", "points": 3 }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Recomendação: Plano Start",
+      "description": "Sua necessidade está focada no controle de acesso essencial e na visibilidade. O Plano Start oferece a base de segurança e auditoria que você precisa para começar com o pé direito.",
+      "recommendations": [
+        "Ideal para equipes de até 30 usuários.",
+        "Oferece gravação e replay de sessão.",
+        "A melhor relação custo-benefício para ter controle."
+      ]
+    },
+    {
+      "name": "Recomendação: Plano Profissional",
+      "description": "Você precisa de uma solução robusta, sem limites de escala e com foco em auditoria. O Plano Profissional é a escolha ideal para empresas que levam a conformidade a sério.",
+      "recommendations": [
+        "Usuários e servidores ilimitados para escalar sem preocupações.",
+        "Relatórios de auditoria avançados para conformidade.",
+        "Suporte prioritário para garantir sua tranquilidade."
+      ]
+    },
+    {
+      "name": "Recomendação: Plano Enterprise",
+      "description": "Sua operação é crítica e exige o máximo em segurança e controle. O Plano Enterprise foi desenhado para você, com foco em prevenção, integração e suporte de elite.",
+      "recommendations": [
+        "Controle Granular de Comandos para poder preventivo total.",
+        "Integração SSO para uma gestão de identidade unificada.",
+        "Suporte dedicado com um engenheiro para uma parceria estratégica."
+      ]
+    }
+  ]
+}
+// LÓGICA DE CÁLCULO:
+// Some os pontos. Se o resultado for <= 3, recomende Start. Se for <= 6, recomende Profissional. Se for > 6, recomende Enterprise.

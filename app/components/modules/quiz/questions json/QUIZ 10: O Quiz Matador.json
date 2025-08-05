@@ -1,0 +1,95 @@
+/*
+  QUIZ 10: O Quiz Matador (Padrão Ouro)
+  ======================================
+  OBJETIVO: Ser nossa principal isca de marketing, balanceada para atrair e converter o maior espectro do nosso público-alvo.
+  POR QUÊ: É o resultado da nossa melhor estratégia combinada. Foca nas dores mais comuns e universais de acesso à infraestrutura e apresenta o ESH como a solução lógica.
+*/
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Como sua equipe gerencia as chaves SSH e senhas para acessar servidores hoje?",
+      "options": [
+        { "text": "Cada um tem suas chaves, talvez em planilhas", "points": 0 },
+        { "text": "Usamos um cofre de senhas compartilhado (ex: 1Password, LastPass)", "points": 1 },
+        { "text": "Temos uma VPN, e a partir dela o acesso é direto", "points": 2 },
+        { "text": "Usamos um Bastion Host ou Gateway de Acesso centralizado", "points": 3 }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Quando um funcionário é desligado, como você garante que TODOS os acessos dele são revogados imediatamente?",
+      "options": [
+        { "text": "É um processo manual, servidor por servidor, e torcemos para não esquecer nada", "points": 0 },
+        { "text": "Rodamos alguns scripts para tentar automatizar", "points": 1 },
+        { "text": "O processo é bem definido, mas ainda manual e leva algumas horas", "points": 2 },
+        { "text": "É 100% automatizado e centralizado. Revogamos o acesso em um único lugar", "points": 3 }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Se um incidente ocorresse AGORA, você conseguiria assistir em tempo real ou rever em vídeo exatamente o que um usuário fez no terminal?",
+      "options": [
+        { "text": "Não, não temos essa capacidade", "points": 0 },
+        { "text": "Talvez, analisando logs de texto do sistema, o que seria lento e difícil", "points": 1 },
+        { "text": "Sim, temos gravação de sessão, mas o acesso aos vídeos não é imediato", "points": 2 },
+        { "text": "Sim, temos gravação e replay instantâneo de todas as sessões", "points": 3 }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Um desenvolvedor júnior precisa de acesso a um servidor de produção para depurar um problema. Como você limita o que ele pode fazer?",
+      "options": [
+        { "text": "Ele recebe acesso de root ou um usuário com muitos privilégios. Confiamos nele.", "points": 0 },
+        { "text": "Editamos o arquivo 'sudoers' para dar permissões específicas, o que é complexo", "points": 1 },
+        { "text": "Damos o acesso e ficamos monitorando a sessão dele ao vivo", "points": 2 },
+        { "text": "Ele tem acesso a um menu restrito que só permite executar comandos pré-aprovados", "points": 3 }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Sua empresa precisa passar por auditorias como ISO 27001 ou provar conformidade com a LGPD. Como você gera as evidências de acesso?",
+      "options": [
+        { "text": "É um pânico. Juntamos logs e relatórios de várias fontes manualmente", "points": 0 },
+        { "text": "Temos um sistema de logs centralizado, mas a correlação é manual", "points": 1 },
+        { "text": "Conseguimos gerar relatórios, mas leva um tempo considerável da equipe", "points": 2 },
+        { "text": "Geramos relatórios de auditoria completos e centralizados com poucos cliques", "points": 3 }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Risco Crítico",
+      "description": "Sua infraestrutura está altamente exposta a acessos indevidos, vazamento de dados e erros humanos. A falta de controle e auditoria centralizada é um ponto de falha urgente.",
+      "score": "0-5 pontos",
+      "recommendations": [
+        "Centralizar a gestão de credenciais imediatamente para eliminar chaves espalhadas.",
+        "Implementar gravação de sessão para ter 100% de visibilidade.",
+        "Automatizar o processo de revogação de acessos (offboarding).",
+        "Estabelecer um ponto único de acesso (Gateway/Bastion)."
+      ]
+    },
+    {
+      "name": "Vulnerabilidade Moderada",
+      "description": "Você possui algumas boas práticas, mas ainda opera com processos manuais e reativos que consomem tempo e deixam brechas de segurança significativas.",
+      "score": "6-10 pontos",
+      "recommendations": [
+        "Avançar de logs de texto para replay visual de sessões para acelerar investigações.",
+        "Explorar o controle preventivo de comandos para reduzir o risco humano.",
+        "Otimizar a geração de relatórios de auditoria para economizar tempo.",
+        "Refinar o controle de privilégios para além do 'sudoers'."
+      ]
+    },
+    {
+      "name": "Maturidade em Acesso",
+      "description": "Parabéns! Sua empresa possui uma base sólida de segurança de acesso. O próximo nível é otimizar a eficiência e implementar controles preventivos avançados.",
+      "score": "11-15 pontos",
+      "recommendations": [
+        "Implementar bloqueio proativo de comandos perigosos em vez de apenas auditar.",
+        "Consolidar suas ferramentas de acesso em uma única plataforma para reduzir custos e complexidade.",
+        "Automatizar totalmente o ciclo de vida das permissões baseado em funções.",
+        "Usar a segurança como um diferencial competitivo para seus clientes."
+      ]
+    }
+  ]
+}
