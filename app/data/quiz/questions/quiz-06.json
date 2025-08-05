@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Quantos engenheiros/analistas na sua equipe precisam de acesso regular a servidores?",
+      "options": [
+        {
+          "text": "1-5",
+          "points": 3
+        },
+        {
+          "text": "6-15",
+          "points": 10
+        },
+        {
+          "text": "16-30",
+          "points": 23
+        },
+        {
+          "text": "Mais de 30",
+          "points": 40
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Qual o custo médio mensal aproximado de um engenheiro na sua folha (salário + encargos)?",
+      "options": [
+        {
+          "text": "Até R$ 8.000",
+          "points": 8000
+        },
+        {
+          "text": "Entre R$ 8.000 e R$ 12.000",
+          "points": 10000
+        },
+        {
+          "text": "Entre R$ 12.000 e R$ 16.000",
+          "points": 14000
+        },
+        {
+          "text": "Acima de R$ 16.000",
+          "points": 18000
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Quantas horas por semana sua equipe gasta em tarefas manuais de acesso (pedir/conceder acesso, gerenciar chaves, investigar logs)?",
+      "options": [
+        {
+          "text": "Menos de 2 horas",
+          "points": 1
+        },
+        {
+          "text": "Entre 2 e 5 horas",
+          "points": 3
+        },
+        {
+          "text": "Entre 5 e 10 horas",
+          "points": 7
+        },
+        {
+          "text": "Mais de 10 horas",
+          "points": 12
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Você paga por alguma outra ferramenta para acesso remoto (VPN, cofre de senhas, etc.)?",
+      "options": [
+        {
+          "text": "Não, usamos apenas soluções gratuitas.",
+          "points": 0
+        },
+        {
+          "text": "Sim, gastamos até R$ 500/mês.",
+          "points": 500
+        },
+        {
+          "text": "Sim, gastamos entre R$ 500 e R$ 2.000/mês.",
+          "points": 1250
+        },
+        {
+          "text": "Sim, gastamos mais de R$ 2.000/mês.",
+          "points": 3000
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Cálculo de ROI",
+      "description": "Com base nas suas respostas, calculamos o retorno potencial sobre o investimento ao adotar o ESH. Este cálculo considera a economia de horas de trabalho e a possível consolidação de outras ferramentas.",
+      "recommendations": [
+        "O ESH automatiza tarefas que hoje consomem tempo valioso da sua equipe.",
+        "A centralização permite reduzir ou eliminar custos com outras licenças de software.",
+        "A redução do risco de incidentes representa uma economia imensurável em potencial."
+      ]
+    }
+  ]
+}

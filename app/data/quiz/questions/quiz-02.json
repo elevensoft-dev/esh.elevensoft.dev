@@ -1,0 +1,121 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual tarefa manual relacionada a acesso mais consome seu tempo ou te causa mais frustração?",
+      "options": [
+        {
+          "text": "Configurar permissões em arquivos 'sudoers' ou políticas de IAM.",
+          "points": 3
+        },
+        {
+          "text": "Gerar, distribuir e rotacionar chaves SSH para a equipe.",
+          "points": 3
+        },
+        {
+          "text": "Conectar e desconectar de VPNs para acessar diferentes ambientes.",
+          "points": 2
+        },
+        {
+          "text": "Procurar em logs de texto para entender o que causou um problema.",
+          "points": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Quando você precisa de acesso a um novo servidor, como é o processo?",
+      "options": [
+        {
+          "text": "Eu mesmo tenho autonomia para me dar o acesso.",
+          "points": 1
+        },
+        {
+          "text": "Peço a chave para um colega via Slack/Teams.",
+          "points": 0
+        },
+        {
+          "text": "Abro um ticket e espero alguém liberar, o que pode levar horas.",
+          "points": 3
+        },
+        {
+          "text": "O acesso é baseado em regras e liberado automaticamente.",
+          "points": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Qual a sua maior preocupação ao executar um comando em um servidor de produção?",
+      "options": [
+        {
+          "text": "Digitar o comando errado e causar um incidente.",
+          "points": 3
+        },
+        {
+          "text": "Não ter um histórico claro do que eu fiz para referência futura.",
+          "points": 2
+        },
+        {
+          "text": "A lentidão da conexão SSH através da VPN.",
+          "points": 1
+        },
+        {
+          "text": "Não tenho grandes preocupações, é parte do trabalho.",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Se você pudesse ter um 'superpoder' para gerenciar infraestrutura, qual seria?",
+      "options": [
+        {
+          "text": "Um 'Ctrl+Z' para comandos executados em produção.",
+          "points": 3
+        },
+        {
+          "text": "Um histórico em vídeo de tudo que já foi feito em qualquer servidor.",
+          "points": 2
+        },
+        {
+          "text": "Acesso instantâneo e seguro a qualquer recurso, de qualquer lugar.",
+          "points": 2
+        },
+        {
+          "text": "Nunca mais ter que me preocupar com uma chave SSH na vida.",
+          "points": 1
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Perfil: O Arquiteto de Automação",
+      "description": "Você odeia tarefas repetitivas e busca constantemente maneiras de automatizar e simplificar processos. Sua dor é a complexidade e o trabalho manual que te impedem de focar em desafios de engenharia maiores.",
+      "recommendations": [
+        "Buscar plataformas que tratem o acesso como código (Access as Code).",
+        "Priorizar soluções com APIs robustas para integração com seus scripts e pipelines de CI/CD.",
+        "Adotar ferramentas que centralizem a gestão de permissões para evitar configurações manuais."
+      ]
+    },
+    {
+      "name": "Perfil: O Guardião da Estabilidade (SRE)",
+      "description": "Sua principal missão é manter os sistemas de pé e responder a incidentes rapidamente. Sua dor é a falta de visibilidade e o medo de erros humanos que podem causar indisponibilidade.",
+      "recommendations": [
+        "Implementar gravação e replay de sessão como ferramenta primária de investigação.",
+        "Adotar controles preventivos para mitigar o risco de comandos perigosos.",
+        "Centralizar o acesso para ter um ponto único de observabilidade e controle durante incidentes."
+      ]
+    },
+    {
+      "name": "Perfil: O Construtor Ágil (DevOps)",
+      "description": "Você vive no limiar entre o desenvolvimento e a operação. Sua dor é o atrito e a burocracia que retardam o ciclo de vida do software, especialmente no acesso a ambientes de teste e produção.",
+      "recommendations": [
+        "Utilizar gateways de acesso que eliminem a necessidade de VPNs lentas.",
+        "Adotar sistemas de permissão baseados em tags e funções para acelerar o onboarding.",
+        "Buscar ferramentas que forneçam acesso seguro e rápido para depuração em produção."
+      ]
+    }
+  ]
+}

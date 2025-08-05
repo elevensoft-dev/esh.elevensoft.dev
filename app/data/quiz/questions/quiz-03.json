@@ -1,0 +1,122 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Sua equipe acessa a infraestrutura crítica a partir de redes Wi-Fi domésticas ou públicas?",
+      "options": [
+        {
+          "text": "Sim, diretamente, sem nenhuma camada extra de segurança.",
+          "points": 0
+        },
+        {
+          "text": "Sim, mas sempre através de uma conexão VPN corporativa.",
+          "points": 2
+        },
+        {
+          "text": "Não, o acesso é restrito a partir de IPs ou redes confiáveis.",
+          "points": 3
+        },
+        {
+          "text": "Não tenho certeza de como eles se conectam.",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "As chaves SSH ou credenciais de acesso ficam armazenadas nos notebooks dos funcionários?",
+      "options": [
+        {
+          "text": "Sim, na pasta .ssh ou em arquivos de texto.",
+          "points": 0
+        },
+        {
+          "text": "Sim, mas dentro de um gerenciador de senhas com senha mestra.",
+          "points": 1
+        },
+        {
+          "text": "Não, usamos um sistema que gera credenciais de curta duração.",
+          "points": 3
+        },
+        {
+          "text": "Não, as chaves ficam em um bastion host e não são distribuídas.",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Sua empresa exige o uso de 2FA (Autenticação de Dois Fatores) para o acesso SSH?",
+      "options": [
+        {
+          "text": "Não, usamos apenas a chave SSH.",
+          "points": 0
+        },
+        {
+          "text": "Apenas para o acesso à VPN, não para o SSH em si.",
+          "points": 1
+        },
+        {
+          "text": "Sim, para todos os acessos a servidores de produção.",
+          "points": 3
+        },
+        {
+          "text": "Estamos planejando implementar.",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Você tem um inventário centralizado e atualizado de QUEM tem acesso a O QUÊ?",
+      "options": [
+        {
+          "text": "Não, a informação está descentralizada e seria difícil de auditar.",
+          "points": 0
+        },
+        {
+          "text": "Temos uma planilha que tentamos manter atualizada.",
+          "points": 1
+        },
+        {
+          "text": "Sim, nosso sistema de IAM (ex: AWS IAM) nos dá essa visão.",
+          "points": 2
+        },
+        {
+          "text": "Sim, temos um painel central que mostra todos os acessos e permissões.",
+          "points": 3
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Score de Risco: ALTO",
+      "description": "Seu modelo de acesso remoto atual apresenta vulnerabilidades críticas. A combinação de credenciais distribuídas e falta de visibilidade centralizada cria um alvo fácil para ataques.",
+      "recommendations": [
+        "Implementar um Gateway de Acesso para que o tráfego nunca seja direto.",
+        "Eliminar o uso de chaves SSH de longa duração armazenadas localmente.",
+        "Forçar o uso de 2FA em todas as conexões de infraestrutura.",
+        "Centralizar a gestão de permissões para ter um inventário em tempo real."
+      ]
+    },
+    {
+      "name": "Score de Risco: MÉDIO",
+      "description": "Você já utiliza camadas de segurança como VPN, mas ainda depende de processos que podem ser falhos, como a gestão de credenciais nos endpoints e a falta de auditoria granular.",
+      "recommendations": [
+        "Substituir a VPN por um gateway de acesso mais moderno e com mais contexto.",
+        "Adotar a gravação de sessão para ter prova do que é feito após a conexão.",
+        "Automatizar a rotação de credenciais ou adotar certificados."
+      ]
+    },
+    {
+      "name": "Score de Risco: BAIXO",
+      "description": "Sua empresa demonstra uma boa maturidade em segurança de acesso remoto. Seus processos são centralizados e seguem boas práticas. O próximo passo é a otimização e o controle preventivo.",
+      "recommendations": [
+        "Implementar o bloqueio de comandos para reduzir o risco de erro humano.",
+        "Analisar o custo e a complexidade da sua solução atual em comparação com plataformas mais integradas.",
+        "Usar sua postura de segurança como um argumento de vendas para seus próprios clientes."
+      ]
+    }
+  ]
+}

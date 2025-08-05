@@ -1,0 +1,73 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Ao avaliar uma solução de acesso, o que é mais importante para você?",
+      "options": [
+        {
+          "text": "Ter a marca mais conhecida do mercado, independentemente do custo.",
+          "points": 1
+        },
+        {
+          "text": "A melhor relação entre poder tecnológico e custo total de propriedade.",
+          "points": 3
+        },
+        {
+          "text": "A agilidade na implementação e a facilidade de uso para a equipe.",
+          "points": 3
+        },
+        {
+          "text": "O nível de suporte e a proximidade com o fornecedor.",
+          "points": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Como sua empresa lida com a precificação de software em Dólar (USD)?",
+      "options": [
+        {
+          "text": "Não é um problema, nosso orçamento é em dólar.",
+          "points": 1
+        },
+        {
+          "text": "É um incômodo, mas aceitável para a ferramenta certa.",
+          "points": 2
+        },
+        {
+          "text": "É um grande problema. A variação cambial torna o planejamento impossível.",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Qual a sua expectativa para o suporte técnico de uma ferramenta crítica como esta?",
+      "options": [
+        {
+          "text": "Um portal de tickets com SLAs padrão de mercado é suficiente.",
+          "points": 1
+        },
+        {
+          "text": "Acesso a um time de suporte no meu fuso horário é importante.",
+          "points": 2
+        },
+        {
+          "text": "Falar diretamente com engenheiros, em português, é um diferencial enorme.",
+          "points": 3
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Perfil: O Estrategista de Valor",
+      "description": "Você busca o poder e a segurança de soluções de nível mundial, mas é inteligente o suficiente para saber que a marca mais cara nem sempre é a melhor escolha. Você valoriza o ROI, a agilidade e uma parceria estratégica real.",
+      "recommendations": [
+        "O ESH entrega 90% das funcionalidades dos gigantes por uma fração do custo e sem a complexidade.",
+        "Nossa precificação em Reais oferece a previsibilidade que sua diretoria financeira vai adorar.",
+        "Nosso suporte de especialistas no Brasil oferece uma agilidade que nenhum fornecedor internacional pode igualar."
+      ]
+    }
+  ]
+}

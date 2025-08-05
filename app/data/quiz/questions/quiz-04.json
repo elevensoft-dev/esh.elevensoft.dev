@@ -1,0 +1,122 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Se um auditor pedisse hoje um relatório de todos os acessos de um usuário específico nos últimos 6 meses, qual seria sua reação?",
+      "options": [
+        {
+          "text": "Pânico. Seria um trabalho manual enorme, juntando logs de vários lugares.",
+          "points": 0
+        },
+        {
+          "text": "Desafio. Temos os logs, mas correlacionar e formatar levaria dias.",
+          "points": 1
+        },
+        {
+          "text": "Confiança. Nosso sistema centralizado gera este relatório em algumas horas.",
+          "points": 2
+        },
+        {
+          "text": "Tranquilidade. O relatório estaria pronto em menos de 5 minutos.",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Como você prova que apenas as pessoas autorizadas têm acesso a servidores com dados sensíveis (em conformidade com a LGPD)?",
+      "options": [
+        {
+          "text": "Mostrando uma planilha de controle de acessos.",
+          "points": 0
+        },
+        {
+          "text": "Mostrando as configurações de grupos de usuários em cada sistema (ex: AWS IAM).",
+          "points": 1
+        },
+        {
+          "text": "Apresentando logs de um sistema de diretório (ex: Active Directory).",
+          "points": 2
+        },
+        {
+          "text": "Apresentando um painel de controle de acesso unificado com trilha de auditoria de permissões.",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Sua capacidade de auditoria se baseia em logs de texto ou em gravações visuais das sessões?",
+      "options": [
+        {
+          "text": "Apenas logs de texto, que podem ser difíceis de interpretar.",
+          "points": 1
+        },
+        {
+          "text": "Logs de texto centralizados em uma ferramenta de SIEM.",
+          "points": 2
+        },
+        {
+          "text": "Temos gravação de sessão completa (replay em vídeo) para todas as atividades.",
+          "points": 3
+        },
+        {
+          "text": "Não temos um sistema de auditoria formal.",
+          "points": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Como é o processo de revisão periódica de acessos (access review) na sua empresa?",
+      "options": [
+        {
+          "text": "Não temos um processo formal de revisão.",
+          "points": 0
+        },
+        {
+          "text": "É um processo manual, feito anualmente, que consome muito tempo.",
+          "points": 1
+        },
+        {
+          "text": "É semi-automatizado, com relatórios que precisam de verificação manual.",
+          "points": 2
+        },
+        {
+          "text": "É totalmente automatizado, com os gestores aprovando/revogando acessos em uma plataforma.",
+          "points": 3
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Nível de Prontidão: Baixo",
+      "description": "Sua empresa enfrentaria grandes dificuldades em uma auditoria. A falta de processos e ferramentas centralizadas torna a geração de evidências um trabalho manual, caro e propenso a falhas.",
+      "recommendations": [
+        "Implementar uma plataforma de Acesso Privilegiado (PAM) como fonte única da verdade.",
+        "Ativar a gravação de sessão para todas as conexões como evidência irrefutável.",
+        "Centralizar a gestão de permissões para simplificar a revisão de acessos.",
+        "Automatizar a geração de relatórios de conformidade."
+      ]
+    },
+    {
+      "name": "Nível de Prontidão: Médio",
+      "description": "Você possui os dados necessários, mas seus processos ainda são fragmentados e manuais. Uma auditoria seria possível, mas com um custo elevado em tempo e recursos da sua equipe.",
+      "recommendations": [
+        "Consolidar suas fontes de log em uma plataforma que ofereça contexto de negócio.",
+        "Passar da auditoria reativa (logs) para a proativa (replay e alertas).",
+        "Automatizar o ciclo de vida das permissões para reduzir o trabalho manual nas revisões."
+      ]
+    },
+    {
+      "name": "Nível de Prontidão: Alto",
+      "description": "Sua empresa está bem preparada para auditorias. Seus processos são robustos e centralizados. O próximo passo é usar a conformidade como uma vantagem estratégica e otimizar ainda mais a eficiência.",
+      "recommendations": [
+        "Utilizar sua forte postura de conformidade como um diferencial para atrair clientes.",
+        "Implementar controles preventivos para ir além da conformidade e alcançar a segurança proativa.",
+        "Reduzir o número de ferramentas usadas para simplificar a gestão e diminuir custos."
+      ]
+    }
+  ]
+}

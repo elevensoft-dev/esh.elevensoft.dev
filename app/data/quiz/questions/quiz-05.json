@@ -1,0 +1,122 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Onde as chaves SSH privadas da sua equipe estão armazenadas?",
+      "options": [
+        {
+          "text": "Na pasta ~/.ssh na máquina de cada desenvolvedor.",
+          "points": 0
+        },
+        {
+          "text": "Em um repositório Git privado (prática perigosa!).",
+          "points": 0
+        },
+        {
+          "text": "Em um cofre de senhas como 1Password ou LastPass.",
+          "points": 1
+        },
+        {
+          "text": "As chaves não são distribuídas; usamos um sistema de gateway que as gerencia.",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Com que frequência as chaves SSH são rotacionadas (trocadas)?",
+      "options": [
+        {
+          "text": "Nunca ou quase nunca. Usamos a mesma chave por anos.",
+          "points": 0
+        },
+        {
+          "text": "Apenas quando um funcionário sai ou um notebook é perdido.",
+          "points": 1
+        },
+        {
+          "text": "Temos uma política para rotacionar anualmente, mas é um processo manual.",
+          "points": 2
+        },
+        {
+          "text": "Usamos certificados SSH de curta duração que expiram automaticamente.",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Como você sabe quais chaves públicas (.pub) em um servidor correspondem a quais usuários?",
+      "options": [
+        {
+          "text": "Não temos um mapeamento claro; confiamos nos comentários dentro do arquivo.",
+          "points": 0
+        },
+        {
+          "text": "Mantemos uma planilha ou documento para tentar rastrear isso.",
+          "points": 1
+        },
+        {
+          "text": "Nosso processo de deploy automatizado gerencia o arquivo authorized_keys.",
+          "points": 2
+        },
+        {
+          "text": "Não usamos o authorized_keys; nosso gateway de acesso valida o usuário e a chave.",
+          "points": 3
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Um desenvolvedor precisa de acesso temporário a um servidor. Como você concede?",
+      "options": [
+        {
+          "text": "Adicionamos a chave pública dele permanentemente ao servidor.",
+          "points": 0
+        },
+        {
+          "text": "Passamos uma chave temporária para ele via chat.",
+          "points": 1
+        },
+        {
+          "text": "Concedemos acesso por um período definido em nossa plataforma de acesso.",
+          "points": 3
+        },
+        {
+          "text": "Ele usa o acesso de outro colega.",
+          "points": 0
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "name": "Nível de Risco: Crítico",
+      "description": "Sua gestão de chaves SSH é um campo minado. Chaves de longa duração, descentralizadas e sem um inventário claro representam um dos maiores riscos de segurança para sua infraestrutura.",
+      "recommendations": [
+        "Eliminar imediatamente o armazenamento de chaves em repositórios ou planilhas.",
+        "Adotar um Gateway SSH que centralize a autenticação e autorização.",
+        "Substituir chaves estáticas por um modelo de acesso baseado em identidade.",
+        "Implementar um processo para revogar chaves de forma instantânea e centralizada."
+      ]
+    },
+    {
+      "name": "Nível de Risco: Moderado",
+      "description": "Você já tem alguma organização, como o uso de cofres de senha, mas ainda lida com a complexidade de chaves estáticas e processos manuais de rotação e revogação.",
+      "recommendations": [
+        "Automatizar o ciclo de vida das chaves para reduzir o trabalho manual.",
+        "Implementar a gravação de sessão para saber o que é feito com cada chave.",
+        "Considerar a migração para um modelo de certificados de curta duração."
+      ]
+    },
+    {
+      "name": "Nível de Risco: Baixo",
+      "description": "Sua gestão de chaves SSH segue boas práticas. Você já centraliza e automatiza grande parte do processo. O próximo passo é a integração total e a otimização da experiência do usuário.",
+      "recommendations": [
+        "Integrar seu sistema de acesso com seu provedor de identidade (IdP) para SSO.",
+        "Adicionar controle de comandos como uma camada extra de segurança sobre o acesso SSH.",
+        "Consolidar suas ferramentas para uma experiência de acesso unificada."
+      ]
+    }
+  ]
+}
