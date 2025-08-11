@@ -1,0 +1,86 @@
+- ### **🎬 Roteiro de Anúncio 1: O Ângulo do "Ponto Cego"**
+	- Este roteiro foca na curiosidade e no medo do desconhecido.
+	- 🔥 **Título (para texto na tela):** QUAL O PONTO CEGO DA SUA INFRA?
+	- 🎵 **Áudio Sugerido:** Um áudio com suspense crescente, ou um som de "glitch" eletrônico.
+	- **ROTEIRO DO REELS (Cenas Rápidas)**
+		- **Cena 1 (0-3s):**
+			- **Visual:** Close no seu rosto, falando com seriedade para a câmera.
+			- **Texto na Tela:** Servidor caiu. Cliente ligando.
+			- **Narração:** "Servidor caiu, cliente ligando sem parar e no grupo da equipe... silêncio."
+		- **Cena 2 (3-6s):**
+			- **Visual:** B-roll rápido de um terminal com logs passando rapidamente. A imagem parece confusa.
+			- **Texto na Tela:** Logs não contam a história toda.
+			- **Narração:** "Você olha os logs, vê um IP, mas não sabe QUEM fez, O QUE fez nem POR QUÊ."
+		- **Cena 3 (6-9s):**
+			- **Visual:** Você aponta para a câmera, como se estivesse fazendo uma pergunta direta e desafiadora.
+			- **Texto na Tela:** Esse é o seu PONTO CEGO.
+			- **Narração:** "Esse é o seu ponto cego, e ele pode custar o seu emprego ou o seu cliente."
+		- **Cena 4 (9-13s):**
+			- **Visual:** Sorriso confiante, mudando o tom para uma solução.
+			- **Texto na Tela:** Descubra o seu nível de risco.
+			- **Narração (CTA):** "Pensando nisso, criamos um diagnóstico de 2 minutos pra você achar esses pontos cegos. Responda o quiz e veja o resultado na hora. Clique em 'Saiba Mais'!"
+- ### **🎬 Roteiro de Anúncio 2: O Ângulo da "Ferramenta de Confiança"**
+	- Este roteiro posiciona o ESH como algo que protege a equipe da injustiça da suspeita.
+	- 🔥 **Título (para texto na tela):** A PIOR COISA DEPOIS DE UMA FALHA...
+	- 🎵 **Áudio Sugerido:** Um áudio com uma batida mais séria, que inspira confiança e solidez.
+	- **ROTEIRO DO REELS (Cenas Rápidas)**
+		- **Cena 1 (0-3s):**
+			- **Visual:** Você falando para a câmera em um tom de confidência.
+			- **Texto na Tela:** Não é o erro técnico.
+			- **Narração:** "A pior parte de um incidente em produção não é o erro técnico, mas o que vem depois."
+		- **Cena 2 (3-6s):**
+			- **Visual:** Uma imagem simbólica de um quebra-cabeça com uma peça faltando.
+			- **Texto na Tela:** É o clima de desconfiança.
+			- **Narração:** "O clima de desconfiança que surge quando ninguém tem certeza do que aconteceu. Isso desgasta qualquer time."
+		- **Cena 3 (6-9s):**
+			- **Visual:** Você faz um gesto de "proteger" ou "blindar" com as mãos.
+			- **Texto na Tela:** A verdade protege a equipe.
+			- **Narração:** "Uma ferramenta que traz a verdade não serve para apontar dedos. Serve para proteger a equipe, mostrando os fatos de forma indiscutível."
+		- **Cena 4 (9-13s):**
+			- **Visual:** Tom convidativo e positivo.
+			- **Texto na Tela:** Seus processos geram confiança?
+			- **Narração (CTA):** "Descubra se seus processos atuais geram segurança e confiança. Responda o nosso quiz rápido e tenha um diagnóstico real. Clique em 'Saiba Mais'!"
+- ### **🎬 Roteiro de Anúncio 3: O Ângulo da "Resolução Rápida"**
+	- Este foca no valor do tempo e na eficiência, um benefício direto para a gestão e para a equipe.
+	- 🔥 **Título (para texto na tela):** INCIDENTE: CADA MINUTO CONTA.
+	- 🎵 **Áudio Sugerido:** Um áudio com um tique-taque de relógio ou uma batida rítmica e rápida.
+	- **ROTEIRO DO REELS (Cenas Rápidas)**
+		- **Cena 1 (0-3s):**
+			- **Visual:** Você olha para um relógio no pulso ou na tela do computador, com ar de urgência.
+			- **Texto na Tela:** Aplicação fora do ar.
+			- **Narração:** "Quando a aplicação para, o cronômetro do prejuízo começa a rodar."
+		- **Cena 2 (3-6s):**
+			- **Visual:** B-roll de alguém com a mão na cabeça, parecendo perdido em meio a muitas telas.
+			- **Texto na Tela:** Quanto tempo você leva para diagnosticar?
+			- **Narração:** "E o tempo mais caro é o da investigação. Horas que poderiam ser usadas para corrigir, são gastas tentando entender a causa raiz."
+		- **Cena 3 (6-9s):**
+			- **Visual:** Você estala os dedos, com um sorriso de "problema resolvido".
+			- **Texto na Tela:** Diagnóstico em minutos, não em horas.
+			- **Narração:** "E se o diagnóstico levasse minutos? Com um replay da sessão, a equipe vai direto ao ponto, sem perda de tempo."
+		- **Cena 4 (9-13s):**
+			- **Visual:** Apontando para o celular, mostrando como é fácil.
+			- **Texto na Tela:** Sua resposta a incidentes é rápida?
+			- **Narração (CTA):** "Meça a agilidade da sua operação. Faça nosso Diagnóstico de Resposta a Incidentes e veja onde você pode melhorar. É rápido, gratuito e online! Clique em 'Saiba Mais'!"
+- ### **🎬 Roteiro de Anúncio 4: O Ângulo do "Aprendizado Contínuo"**
+	- Este roteiro é mais proativo, posicionando a rastreabilidade como uma forma de melhorar processos e treinar a equipe.
+	- 🔥 **Título (para texto na tela):** E SE VOCÊ PUDESSE APRENDER COM OS ERROS?
+	- 🎵 **Áudio Sugerido:** Um áudio inspirador, leve e otimista, que remeta a crescimento e evolução.
+	- **ROTEIRO DO REELS (Cenas Rápidas)**
+		- **Cena 1 (0-3s):**
+			- **Visual:** Você em frente a um quadro branco, desenhando um gráfico simples de melhoria.
+			- **Texto na Tela:** Erros acontecem. O que você faz com eles?
+			- **Narração:** "Erros no sistema são inevitáveis. A diferença está no que sua empresa faz depois que eles acontecem."
+		- **Cena 2 (3-6s):**
+			- **Visual:** Close no quadro branco, onde você circula a palavra "APRENDER".
+			- **Texto na Tela:** Corrigir é bom. Aprender é melhor.
+			- **Narração:** "A maioria só corrige. Os melhores times aprendem, transformando cada incidente em uma oportunidade de melhoria."
+		- **Cena 3 (6-9s):**
+			- **Visual:** Você falando para a câmera de forma didática, como um mentor.
+			- **Texto na Tela:** Rastreabilidade gera conhecimento.
+			- **Narração:** "Para aprender, você precisa de dados claros. Rastrear o que foi feito permite aprimorar processos e treinamentos."
+		- **Cena 4 (9-13s):**
+			- **Visual:** Tom positivo, convidando para uma autoavaliação.
+			- **Texto na Tela:** QUAL O NÍVEL DE MATURIDADE DA SUA TI?
+			- **Narração (CTA):** "Quer descobrir se seus processos geram segurança e confiança? Responda nosso quiz e veja se sua equipe está preparada para evoluir. Clique em 'Saiba Mais'!"
+message.txt
+7 KB

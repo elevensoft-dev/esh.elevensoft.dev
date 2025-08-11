@@ -110,7 +110,7 @@ const FeatureRow: React.FC<FeatureRowProps> = ({ category, feature, start, pro, 
   );
 };
 
-export function Pricing() {
+export default function Pricing() {
   return (
     <div className="bg-neutral-950 text-white">
       <div className="container mx-auto px-4 py-20 md:py-28">
