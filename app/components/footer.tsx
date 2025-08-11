@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   InstagramLogoIcon, 
   LinkedInLogoIcon, 
-  EnvelopeClosedIcon,
+  EnvelopeOpenIcon,
   HomeIcon,
   MarginIcon,
   ArrowTopRightIcon,
@@ -167,7 +167,7 @@ export function Footer() {
               <h4 className="text-white font-semibold mb-3">Informações de Contato</h4>
               <div className="space-y-2 text-neutral-400">
                 <div className="flex items-center gap-2 justify-center lg:justify-start">
-                  <EnvelopeClosedIcon className="w-4 h-4 text-orange-400" />
+                                        <EnvelopeOpenIcon className="w-4 h-4 text-orange-400" />
                   <a href="mailto:ola@elevensoft.dev" className="hover:text-orange-400 transition-colors">
                     ola@elevensoft.dev
                   </a>

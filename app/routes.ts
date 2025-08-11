@@ -23,4 +23,9 @@ export default [
   // NOVA ROTA: Página de Comparação (/compare)
   route("/compare", "routes/compare.tsx"),
 
+  // NOVAS ROTAS: Páginas Legais
+  route("/politica-privacidade", "routes/politica-privacidade.tsx"),
+  route("/termos-uso", "routes/termos-uso.tsx"),
+  route("/cookies", "routes/cookies.tsx"),
+
 ] satisfies RouteConfig;
