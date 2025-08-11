@@ -22,17 +22,17 @@ export function SocialProof() {
     },
     {
       name: "TechCorp",
-      logo: "https://via.placeholder.com/80x80/3B82F6/FFFFFF?text=TC",
+      logo: "public/esh logo 2.png",
       description: "Consultoria em TI"
     },
     {
       name: "SecureNet",
-      logo: "https://via.placeholder.com/80x80/10B981/FFFFFF?text=SN",
+      logo: "public/esh logo 3.png",
       description: "Segurança cibernética"
     },
     {
       name: "DataFlow",
-      logo: "https://via.placeholder.com/80x80/8B5CF6/FFFFFF?text=DF",
+      logo: "public/esh logo 4.png",
       description: "Análise de dados"
     }
   ];
