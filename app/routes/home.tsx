@@ -4,6 +4,7 @@ import { SocialProof } from "./home/components/socialProof";
 import { Problem } from "./home/components/problem";
 import { Solution } from "./home/components/solution";
 import { Pricing } from "./home/components/pricing";
+import { PricingFaq } from "./home/components/pricing-faq";
 import { Faq } from "./home/components/faq";
 import { Footer } from "~/components/footer";
 import AboutPage from "./about";
@@ -24,6 +25,7 @@ export default function Home() {
       <Problem />
       <Solution />
       <Pricing />
+      <PricingFaq />
       <Faq />
       <Footer />
     </main>
