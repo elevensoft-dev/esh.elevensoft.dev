@@ -24,15 +24,30 @@ export const links: Route.LinksFunction = () => [
   },
   {
     rel: "icon", href: "favicon.png"
+  },
+  {
+    rel: "manifest", href: "/manifest.json"
+  },
+  {
+    rel: "apple-touch-icon", href: "/esh logo 2.png"
+  },
+  {
+    rel: "canonical", href: "https://esh.elevensoft.dev"
   }
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#f97316" />
+        <meta name="msapplication-TileColor" content="#f97316" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="ESH" />
+        <meta name="format-detection" content="telephone=no" />
         <Meta />
         <Links />
       </head>

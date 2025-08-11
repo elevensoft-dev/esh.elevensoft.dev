@@ -1,0 +1,57 @@
+{
+  "name": "ESH - Eleven Soft - Acesso Remoto Seguro",
+  "short_name": "ESH",
+  "description": "Plataforma definitiva para controle, auditoria e segurança de acesso a servidores",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "categories": ["business", "productivity", "security"],
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/esh logo 2.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/dashboard-notebook.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/tags-notebook.webp",
+      "sizes": "750x1334",
+      "type": "image/webp",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Quiz de Segurança",
+      "short_name": "Quiz",
+      "description": "Teste de diagnóstico de segurança",
+      "url": "/quiz",
+      "icons": [{ "src": "/logo.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Preços",
+      "short_name": "Preços",
+      "description": "Ver planos e preços",
+      "url": "/pricing",
+      "icons": [{ "src": "/logo.png", "sizes": "192x192" }]
+    }
+  ]
+} 

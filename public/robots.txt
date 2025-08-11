@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://esh.elevensoft.dev/sitemap.xml
+
+# Crawl-delay para respeitar o servidor
+Crawl-delay: 1
+
+# Permitir indexação de todas as páginas principais
+Allow: /about
+Allow: /pricing
+Allow: /security
+Allow: /compare
+Allow: /docs
+Allow: /quiz
+
+# Permitir indexação de recursos estáticos importantes
+Allow: /logo.png
+Allow: /favicon.ico
+Allow: /og-image.jpg
+
+# Bloquear arquivos desnecessários
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /.vite/
+Disallow: /build/
+Disallow: /*.json$
+Disallow: /*.log$ 

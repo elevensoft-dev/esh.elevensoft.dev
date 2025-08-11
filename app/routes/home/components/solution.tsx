@@ -1,4 +1,5 @@
 import { CheckIcon } from '@radix-ui/react-icons';
+import { ContentImage } from '~/components/ui/optimized-image';
 
 export function Solution() {
   return (
@@ -37,14 +38,14 @@ export function Solution() {
               </ul>
             </div>
             <div className='md:w-1/2 h-80 overflow-hidden ring-1 ring-neutral-800 rounded-xl bg-neutral-950'>
-              <img className="object-cover object-center w-full h-full" src="/dashboard-notebook.webp" alt="Dashboard do ESH" />
+              <ContentImage className="object-cover object-center w-full h-full" src="/dashboard-notebook.webp" alt="Dashboard do ESH" />
             </div>
           </article>
 
           {/* ARTIGO 2: O GRANDE DIFERENCIAL (Tecnologia ESUT) */}
           <article className="bg-orange-950/20 p-3 rounded-xl ring-2 ring-orange-500/50 flex flex-col md:flex-row gap-x-5 w-full">
             <div className='md:w-1/2 h-80 overflow-hidden ring-1 ring-neutral-800 rounded-xl bg-neutral-950'>
-              <img className="object-cover object-center w-full h-full" src="/tags-notebook.webp" alt="Tela de permissões por tags no ESH" />
+              <ContentImage className="object-cover object-center w-full h-full" src="/tags-notebook.webp" alt="Tela de permissões por tags no ESH" />
             </div>
             <div className='text-start space-y-5 md:w-1/2 p-6'>
               <h2 className='text-xl md:text-3xl font-medium text-orange-300'>Vá Além do Acesso. Controle a Ação.</h2>
