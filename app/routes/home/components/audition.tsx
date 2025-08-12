@@ -6,7 +6,7 @@ export function Audition() {
       <h2 className="text-white text-xl md:text-1xl font-semibold my-10 text-center">Controle granular de acessos, encerramento remoto de sessões e replay completo das atividades.</h2>
       <p className="text-neutral-400 text-lg mb-10 text-center">Tenha visibilidade total para investigar qualquer ação e cumprir normas com facilidade. <br /> <b>Audite, proteja e tome decisões com base em evidência — sem suposições.</b></p>
       <div className="ring-1 ring-neutral-600 rounded-2xl max-h-96 overflow-clip">
-        <img className="w-full h-auto object-contain" src="slide-esh-5.png" alt="Audition section slide. Dashboard image." />
+        <img className="w-full h-auto object-contain" src="slide-esh-5.webp" alt="Audition section slide. Dashboard image." />
       </div>
     </section>
   )

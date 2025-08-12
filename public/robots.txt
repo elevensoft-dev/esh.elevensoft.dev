@@ -16,7 +16,7 @@ Allow: /docs
 Allow: /quiz
 
 # Permitir indexação de recursos estáticos importantes
-Allow: /logo.png
+Allow: /logo.webp
 Allow: /favicon.ico
 Allow: /og-image.jpg
 

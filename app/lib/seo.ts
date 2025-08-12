@@ -118,7 +118,7 @@ export function generateStructuredData(config: SEOConfig) {
       "name": "Eleven Soft",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://esh.elevensoft.dev/logo.png"
+        "url": "https://esh.elevensoft.dev/logo.webp"
       }
     },
     "potentialAction": {

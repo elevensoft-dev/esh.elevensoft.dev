@@ -30,7 +30,7 @@ export function Header() {
 
         {/* CORREÇÃO 2: O logo agora é um Link para a homepage */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="Logo Eleven, letra E" className="w-8 h-8" />
+          <img src="/logo.webp" alt="Logo Eleven, letra E" className="w-8 h-8" />
           
         </Link>
 

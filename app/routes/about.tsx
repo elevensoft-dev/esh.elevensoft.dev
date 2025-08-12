@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 // TODO: Substituir por fotos reais do time e do escritório/ambiente
-const founderPhotoUrl = "/socios.png";
-const teamPhotoUrl = "/socios.png";
+const founderPhotoUrl = "/socios.webp";
+const teamPhotoUrl = "/socios.webp";
 
 export default function AboutPage() {
   return (

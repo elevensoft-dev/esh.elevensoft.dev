@@ -22,7 +22,7 @@ export function Footer() {
           {/* Coluna 1: Sobre a Empresa */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <img src="/logo.png" alt="Logo Eleven, letra E" className="w-8 h-8" />
+              <img src="/logo.webp" alt="Logo Eleven, letra E" className="w-8 h-8" />
             </div>
             <p className="text-neutral-400 mb-6 max-w-md">
               A plataforma definitiva para controle, auditoria e segurança de acesso a servidores. 
