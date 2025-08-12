@@ -224,7 +224,6 @@ export function Pricing() {
                 - "Como funciona o plano Enterprise 'Sob Consulta'?"
             */}
         </div>
-
       </div>
     </div>
   );

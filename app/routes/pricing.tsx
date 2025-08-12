@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckIcon, Cross1Icon } from '@radix-ui/react-icons';
 import { PageSEO } from '~/components/seo';
+import { PricingFaq } from '~/routes/home/components/pricing-faq';
 
 const startPlanLink = 'https://www.asaas.com/c/khwwp9tuv0fztx2k';
 const proPlanLink = 'https://www.asaas.com/c/5lwcu96mlzr95dcf';
@@ -235,14 +236,8 @@ export default function Pricing() {
           </div>
 
           {/* 4. FAQ de Preços */}
-          <div className="mt-28 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center">Dúvidas Frequentes sobre Planos</h2>
-            {/* TODO: Adicionar um componente de Accordion/FAQ aqui com perguntas como:
-                  - "O que é uma 'sessão simultânea'?"
-                  - "Posso mudar de plano a qualquer momento?"
-                  - "Existe algum custo de instalação?"
-                  - "Como funciona o plano Enterprise 'Sob Consulta'?"
-              */}
+          <div className="mt-28">
+            <PricingFaq />
           </div>
 
         </div>
