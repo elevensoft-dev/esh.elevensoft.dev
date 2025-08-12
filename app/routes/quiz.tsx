@@ -4,7 +4,7 @@ import { Shield, Play, ArrowRight, Terminal, KeyRound, BarChart } from 'lucide-r
 import { Button } from '~/components/ui/button';
 import SecurityQuiz from '~/components/modules/quiz/security-quiz';
 import { PageSEO } from '~/components/seo';
-import { ContentImage } from '~/components/ui/optimized-image';
+
 
 // TODO: Add a sample "diagnostic report" image in your public/ folder
 const reportImageUrl = "/dashboard-notebook.webp";
@@ -72,7 +72,7 @@ const Index = () => {
               />
             </div>
             <div className="bg-neutral-900 p-2 rounded-lg border border-neutral-700 shadow-2xl shadow-orange-500/10">
-              <ContentImage 
+              <img 
                 src={reportImageUrl} 
                 alt="Exemplo do Relatório de Diagnóstico de Segurança" 
                 className="rounded-md"

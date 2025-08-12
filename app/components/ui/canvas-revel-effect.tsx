@@ -66,40 +66,40 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
   center = ["x", "y"],
 }) => {
   const uniforms = React.useMemo(() => {
-    let colorsArray = [
-      colors[0],
-      colors[0],
-      colors[0],
-      colors[0],
-      colors[0],
-      colors[0],
+    let colorsArray: number[][] = [
+      colors[0]!,
+      colors[0]!,
+      colors[0]!,
+      colors[0]!,
+      colors[0]!,
+      colors[0]!,
     ];
     if (colors.length === 2) {
       colorsArray = [
-        colors[0],
-        colors[0],
-        colors[0],
-        colors[1],
-        colors[1],
-        colors[1],
+        colors[0]!,
+        colors[0]!,
+        colors[0]!,
+        colors[1]!,
+        colors[1]!,
+        colors[1]!,
       ];
     } else if (colors.length === 3) {
       colorsArray = [
-        colors[0],
-        colors[0],
-        colors[1],
-        colors[1],
-        colors[2],
-        colors[2],
+        colors[0]!,
+        colors[0]!,
+        colors[1]!,
+        colors[1]!,
+        colors[2]!,
+        colors[2]!,
       ];
     }
 
     return {
       u_colors: {
         value: colorsArray.map((color) => [
-          color[0] / 255,
-          color[1] / 255,
-          color[2] / 255,
+          (color?.[0] ?? 0) / 255,
+          (color?.[1] ?? 0) / 255,
+          (color?.[2] ?? 0) / 255,
         ]),
         type: "uniform3fv",
       },
@@ -192,7 +192,7 @@ const ShaderMaterial = ({
   uniforms: Uniforms;
 }) => {
   const { size } = useThree();
-  const ref = useRef<THREE.Mesh>();
+  const ref = useRef<THREE.Mesh>(null);
   let lastFrameTime = 0;
 
   useFrame(({ clock }) => {

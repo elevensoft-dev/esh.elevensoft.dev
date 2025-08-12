@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 // CORREÇÃO 1: Importar Link e NavLink do pacote correto 'react-router-dom'
 import { Link, NavLink } from "react-router-dom";
-import { OptimizedImage } from "~/components/ui/optimized-image";
+
 
 // Seu hook de scroll está perfeito, vamos mantê-lo.
 export function Header() {
@@ -30,7 +30,7 @@ export function Header() {
 
         {/* CORREÇÃO 2: O logo agora é um Link para a homepage */}
         <Link to="/" className="flex items-center gap-2">
-          <OptimizedImage src="/logo.png" alt="Logo Eleven, letra E" className="w-8 h-8" priority={true} />
+          <img src="/logo.png" alt="Logo Eleven, letra E" className="w-8 h-8" />
           
         </Link>
 
