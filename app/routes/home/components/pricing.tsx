@@ -77,9 +77,9 @@ const PlanCard: React.FC<PlanCardProps> = ({
         href={ctaLink}
         target="_blank"
         rel="noopener noreferrer"
-        className={`mt-8 block w-full text-center rounded-lg py-3 font-semibold transition-colors ${isFeatured
-            ? 'bg-orange-500 hover:bg-orange-600 text-white'
-            : 'bg-neutral-800 hover:bg-neutral-700'
+        className={`mt-8 block w-full text-center px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${isFeatured
+            ? 'bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)] hover:scale-105 text-white'
+            : 'bg-neutral-800 hover:bg-neutral-700 text-white'
           }`}
       >
         {ctaText}

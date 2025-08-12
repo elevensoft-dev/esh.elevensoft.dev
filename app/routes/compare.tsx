@@ -100,7 +100,7 @@ export default function ComparePage() {
                 <li className="flex gap-3 items-center"><CheckIcon className="w-6 h-6 text-orange-400" /><span><strong>Suporte Real</strong> de especialistas que entendem seu negócio e falam sua língua.</span></li>
                 <li className="flex gap-3 items-center"><CheckIcon className="w-6 h-6 text-orange-400" /><span><strong>Poder de Nível Enterprise</strong> com a facilidade de uso que seu time precisa.</span></li>
             </ul>
-            <a href="/precos" className="mt-8 inline-block px-10 py-4 rounded-lg bg-orange-500 hover:bg-orange-600 text-white font-bold text-lg transition-colors">
+            <a href="/pricing" className="mt-8 inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)] hover:scale-105 text-white font-semibold transition-all duration-300">
                 Veja Nossos Planos e Comece Agora
             </a>
         </div>

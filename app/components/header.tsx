@@ -30,7 +30,7 @@ export function Header() {
 
         {/* CORREÇÃO 2: O logo agora é um Link para a homepage */}
         <Link to="/" className="flex items-center gap-2">
-          <img src="/logo.webp" alt="Logo Eleven, letra E" className="w-8 h-auto" />
+          <img src="/logo.webp" alt="Logo Eleven, letra E" className="w-8 h-auto" width="32" height="42" />
           
         </Link>
 
@@ -82,7 +82,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Link
             to="/pricing" // Leva para a página de preços
-            className="rounded-full bg-orange-400 text-black text-sm px-5 py-2.5 font-semibold transition-transform hover:scale-105"
+            className="px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)] hover:scale-105 text-white font-semibold transition-all duration-300"
           >
             Comece Agora
           </Link>

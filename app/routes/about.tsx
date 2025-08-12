@@ -53,7 +53,7 @@ export default function AboutPage() {
             O ESH é o primeiro passo de uma longa jornada para criar o melhor ecossistema de ferramentas de segurança e DevOps. Se você compartilha da nossa paixão por tecnologia robusta e sem rodeios, venha fazer parte da nossa história.
           </p>
           <div className="mt-8 flex justify-center gap-4">
-            <a href="/precos" className="px-8 py-3 rounded-lg bg-orange-500 hover:bg-orange-600 font-semibold transition-colors">
+            <a href="/pricing" className="px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)] hover:scale-105 text-white font-semibold transition-all duration-300">
               Seja nosso Cliente
             </a>
             {/* TODO: Adicionar um link para uma página de carreiras ou e-mail de contato */}

@@ -9,7 +9,7 @@ export function CallToAction() {
           <h2 className="text-white text-lg md:text-xl font-medium">
             O ESH entrega <b>visibilidade total</b> do que acontece nos seus servidores — em tempo real ou no replay.
           </h2>
-          <button className="text-white bg-orange-600 rounded-full px-6 py-2 text-sm">
+          <button className="px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)] hover:scale-105 text-white font-semibold transition-all duration-300">
             Começar Agora
           </button>
         </div>
