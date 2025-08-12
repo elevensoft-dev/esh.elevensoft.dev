@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { CheckIcon, Cross1Icon } from '@radix-ui/react-icons';
 
 const startPlanLink = 'https://www.asaas.com/c/khwwp9tuv0fztx2k';

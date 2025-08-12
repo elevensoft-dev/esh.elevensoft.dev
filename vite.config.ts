@@ -31,13 +31,6 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router', 'react-router-dom'],
-          ui: ['@radix-ui/react-icons', 'lucide-react'],
-          utils: ['clsx', 'class-variance-authority', 'tailwind-merge'],
-          three: ['three', '@react-three/fiber']
-        },
         assetFileNames: (assetInfo) => {
           if (!assetInfo.name) return 'assets/[name]-[hash][extname]';
           const info = assetInfo.name.split('.');
