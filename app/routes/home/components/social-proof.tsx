@@ -22,17 +22,17 @@ export function SocialProof() {
     },
     {
       name: "TechCorp",
-              logo: "public/esh logo 2.webp",
+      logo: "tech-corp.png",
       description: "Consultoria em TI"
     },
     {
       name: "SecureNet",
-              logo: "public/esh logo 3.webp",
+      logo: "secure-net.webp",
       description: "Segurança cibernética"
     },
     {
       name: "DataFlow",
-              logo: "public/esh logo 4.webp",
+      logo: "data-flow.webp",
       description: "Análise de dados"
     }
   ];
@@ -133,10 +133,10 @@ export function SocialProof() {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                  index === currentIndex
-                    ? 'bg-orange-400 scale-125'
-                    : 'bg-neutral-600 hover:bg-neutral-500'
-                }`}
+index === currentIndex
+? 'bg-orange-400 scale-125'
+: 'bg-neutral-600 hover:bg-neutral-500'
+}`}
                 aria-label={`Ir para slide ${index + 1}`}
               />
             ))}

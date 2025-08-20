@@ -146,7 +146,9 @@ export default function Pricing() {
             </p>
           </div>
 
+          {/* 2. Os Cards de Planos */}
           <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+
             {/* PLANO START */}
             <PlanCard
               name="Start"
@@ -197,6 +199,7 @@ export default function Pricing() {
             />
           </div>
 
+          {/* 3. Tabela Comparativa Detalhada */}
           <div className="mt-28">
             <h2 className="text-3xl font-bold text-center">Compare as Funcionalidades em Detalhe</h2>
             <div className="mt-12 overflow-x-auto">
@@ -232,6 +235,7 @@ export default function Pricing() {
             </div>
           </div>
 
+          {/* 4. FAQ de Preços */}
           <div className="mt-28">
             <PricingFaq />
           </div>

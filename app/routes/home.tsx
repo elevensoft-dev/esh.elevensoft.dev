@@ -1,15 +1,13 @@
-import { Helmet } from 'react-helmet'
+import { Helmet } from '@dr.pogodin/react-helmet';
 
 import { PageSEO } from "~/components/seo";
-import { Footer } from "~/components/footer";
 
 import { Hero } from "./home/components/hero";
-import { Pricing } from "./home/components/pricing";
 import { Faq } from "./home/components/faq";
 import AboutPage from "./about";
 import { SocialProof } from "./home/components/social-proof";
 import { Solution } from "./home/components/solution";
-import { PricingFaq } from "./home/components/pricing-faq";
+import Pricing from './home/components/pricing';
 
 
 export default function Home() {
@@ -31,13 +29,11 @@ export default function Home() {
           />
         </Helmet>
         <Hero />
-        <AboutPage />
-        <SocialProof />
         <Solution />
         <Pricing />
-        <PricingFaq />
+        <SocialProof />
         <Faq />
-        <Footer />
+        <AboutPage />
       </main>
     </PageSEO>
   );
