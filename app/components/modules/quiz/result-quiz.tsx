@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import { AlertTriangle, CheckCircle, XCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
+import { trackPixel } from "~/lib/meta-pixel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "~/components/ui/card";
 
+
 import type { Profile } from "./security-quiz";
-import { Link } from "react-router-dom";
+
 
 const iconMap = {
   CheckCircle,
@@ -15,7 +19,14 @@ export function ResultQuiz() {
   const profile: Profile = JSON.parse(localStorage.getItem('profile') || '{}');
   const Icon = iconMap[profile?.icon as keyof typeof iconMap];
 
-  console.log("aaaa")
+  useEffect(() => {
+    trackPixel("Lead", {
+      page: "Resultado do quiz",
+      userProfile: profile
+    });
+  }, [profile]);
+
+
   if(!profile || !profile.name) {
     return (<div className="text-4xl font-bold text-indigo-300">Erro ao exibir resultado!</div>)
   }
