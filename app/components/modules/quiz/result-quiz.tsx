@@ -20,10 +20,7 @@ export function ResultQuiz() {
   const Icon = iconMap[profile?.icon as keyof typeof iconMap];
 
   useEffect(() => {
-    trackPixel("Lead", {
-      page: "Resultado do quiz",
-      userProfile: profile
-    });
+    trackPixel("Resultado Quiz");
   }, [profile]);
 
 

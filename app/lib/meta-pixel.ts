@@ -11,12 +11,12 @@ declare global {
  * @param eventName Nome do evento (ex: "PageView", "Lead", "Purchase")
  * @param params (opcional) Objeto com parâmetros adicionais
  */
-export function trackPixel(eventName: string, params?: Record<string, any>) {
+export function trackPixel(eventName: string) {
   if (typeof window !== "undefined" && typeof window.fbq === "function") {
-    window.fbq("track", eventName, params);
+    window.fbq("track", eventName);
   } else {
     if (import.meta.env.DEV) {
-      console.warn("fbq não encontrado. Evento ignorado:", eventName, params);
+      console.warn("fbq não encontrado. Evento ignorado:", eventName);
     }
   }
 }
