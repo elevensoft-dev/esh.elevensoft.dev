@@ -9,7 +9,7 @@ export default function Layout() {
   return (
     <div lang="ptBR">
       <Header />
-      <main className="pt-16 p-4 container mx-auto">
+      <main className="pt-16 p-4">
         <Outlet />
       </main>
       <Footer />
