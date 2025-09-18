@@ -146,7 +146,7 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             {/* PLANO START */}
             <PlanCard
               name="Start"
@@ -185,11 +185,11 @@ export default function Pricing() {
               price="Sob Consulta"
               description="Para operações críticas que exigem controle preventivo, compliance e integração total."
               features={[
-                { text: "Sessões Simultâneas Ilimitadas" },
-                { text: "Tudo do plano Profissional, e mais:" },
+                // { text: "Sessões Simultâneas Ilimitadas" },
+                { text: "Tudo do plano Profissional" },
                 { text: "Controle Granular de Comandos (ESUT)", isHighlight: true },
                 { text: "Bloqueio de Ações Perigosas", isHighlight: true },
-                { text: "Single Sign-On (SSO) / AD" },
+                // { text: "Single Sign-On (SSO) / AD" },
                 { text: "Suporte Dedicado (WhatsApp/Slack)" },
               ]}
               ctaText="Fale com um Especialista"
