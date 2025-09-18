@@ -1,11 +1,17 @@
-import { CheckIcon } from '@radix-ui/react-icons';
+import { CheckIcon, IdCardIcon } from '@radix-ui/react-icons';
 
 export function Solution() {
   return (
     // MUDANÇA 1: Adicionamos o id="solution" para que o link do Hero funcione.
     <section id="solution" className="container mx-auto py-24 px-5 md:px-0">
       <div className="text-center">
-        <div className="py-1 px-10 rounded-full bg-neutral-800 text-neutral-400 w-max mx-auto">Funcionalidades</div>
+        <div className="text-center mb-16">
+          <div className="py-1 px-6 rounded-full bg-orange-500/10 text-orange-400 w-max mx-auto text-sm font-medium">
+            <IdCardIcon className="w-4 h-4 inline mr-2" />
+           Funcionalidades
+          </div>
+        </div>
+
         <h1 className="text-white text-xl md:text-3xl font-semibold mt-10 mb-3">
           Você tem a prova do que foi feito no seu servidor?
         </h1>

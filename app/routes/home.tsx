@@ -6,6 +6,7 @@ import { Hero } from "./home/components/hero";
 import { Faq } from "./home/components/faq";
 import AboutPage from "./about";
 import { SocialProof } from "./home/components/social-proof";
+import { TestimonialsSection } from "./home/components/testimonials/testimonials.tsx";
 import { Solution } from "./home/components/solution";
 import Pricing from './home/components/pricing';
 
@@ -31,7 +32,7 @@ export default function Home() {
         <Hero />
         <Solution />
         <Pricing />
-        <SocialProof />
+        <TestimonialsSection />
         <Faq />
         <AboutPage />
       </main>

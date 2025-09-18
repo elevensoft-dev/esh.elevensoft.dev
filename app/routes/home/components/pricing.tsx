@@ -232,11 +232,10 @@ export default function Pricing() {
             </div>
           </div>
 
-          <div className="mt-28">
-            <PricingFaq />
-          </div>
-
         </div>
+      </div>
+      <div className="mt-28">
+        <PricingFaq />
       </div>
     </PageSEO>
   );
