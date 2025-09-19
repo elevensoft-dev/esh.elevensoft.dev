@@ -3,7 +3,7 @@ import { Helmet } from '@dr.pogodin/react-helmet';
 import { PageSEO } from "~/components/seo";
 
 import { Hero } from "./home/components/hero";
-import { Faq } from "./home/components/faq";
+import { FAQSection } from "./home/components/faq-accordion.tsx";
 import AboutPage from "./about";
 import { SocialProof } from "./home/components/social-proof";
 import { TestimonialsSection } from "./home/components/testimonials/testimonials.tsx";
@@ -33,7 +33,8 @@ export default function Home() {
         <Solution />
         <Pricing />
         <TestimonialsSection />
-        <Faq />
+        {/* <Faq /> */}
+        <FAQSection />
         <AboutPage />
       </main>
     </PageSEO>

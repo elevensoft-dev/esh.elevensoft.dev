@@ -32,7 +32,7 @@ export const TestimonialsSection = () => {
   return (
     <section className="py-24 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
-         <div className="text-center mb-16">
+        <div className="text-center mb-16">
           <div className="py-1 px-6 rounded-full bg-orange-500/10 text-orange-400 w-max mx-auto text-sm font-medium">
             <IdCardIcon className="w-4 h-4 inline mr-2" />
             Depoimentos
