@@ -28,8 +28,9 @@ export const TestimonialCard = ({
         ))}
       </div>
 
-      <blockquote className="text-sm text-neutral-300 leading-relaxed mb-6">
-        "{content}"
+      <blockquote
+      className="text-sm text-neutral-300 leading-relaxed mb-6"
+      dangerouslySetInnerHTML={{__html: content}}>
       </blockquote>
 
       <div className="flex items-center gap-3">
@@ -41,9 +42,9 @@ export const TestimonialCard = ({
           />
         </div>
         <div>
-          <div className="text-sm font-semibold text-foreground">{name}</div>
+          <div className="text-sm font-semibold text-amber-700">{name}</div>
           <div className="text-xs text-neutral-300">
-            {role} at {company}
+            <b class="text-amber-600">{role}</b> at {company}
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ const testimonials = [
     name: "Ronaldo Sacco",
     role: "CEO",
     company: "SaperX",
-    content: "O ESH revolucionou o gerenciamento de acessos na SaperX, simplificando processos, aumentando segurança e economizando horas semanais. Nossa equipe agora foca em inovação, impulsionando o crescimento e eficiência no atendimento a clientes.",
+    content: "<b>O ESH revolucionou o gerenciamento de acessos na SaperX</b>, simplificando processos, aumentando segurança e economizando horas semanais. Nossa equipe agora foca em inovação, impulsionando o crescimento e eficiência no atendimento a clientes.",
     avatar: "saperx.enc",
     rating: 5,
   },
@@ -14,15 +14,15 @@ const testimonials = [
     name: "Vitor Corrêa",
     role: "CTO",
     company: "ZR Media",
-    content: "Estamos com o ESH há mais de um ano e, sinceramente, não dá pra imaginar voltar ao que era antes. Antes a gente tinha que confiar só na disciplina da equipe e torcer para não acontecer nenhum deslize dentro do alojamento. Hoje, o ESH garante que tudo está rodando do jeito certo, sem improviso e sem susto",
+    content: "Estamos com o ESH há mais de um ano e, sinceramente, <b>não dá pra imaginar voltar ao que era antes</b>. Antes a gente tinha que confiar só na disciplina da equipe e torcer para não acontecer nenhum deslize dentro do alojamento. Hoje, o ESH garante que tudo está rodando do jeito certo, sem improviso e sem susto",
     avatar: "zr-media.jpg",
     rating: 5,
   },
   {
     name: "Larissa Souza",
-    role: "CFO",
+    role: "CTO",
     company: "Trezze Solutions",
-    content: "Antes a gente não tinha controle real do que rolava nos servidores, hoje conseguimos até assistir o replay das sessões. Isso trouxe uma segurança enorme e evitou ruídos dentro da equipe. Foi uma das poucas ferramentas que mostrou valor logo na primeira semana.",
+    content: "Antes a gente não tinha controle real do que rolava nos servidores, hoje conseguimos até assistir o replay das sessões. Isso trouxe uma segurança enorme e evitou ruídos dentro da equipe. <b>Foi uma das poucas ferramentas que mostrou valor logo na primeira semana</b>.",
     avatar: "trezze.jpg",
     rating: 5,
   },
@@ -38,7 +38,7 @@ export const TestimonialsSection = () => {
             Depoimentos
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-6 mb-4">
-            O que dizem nossos clientes
+            A Tranquilidade de Quem Já Tem o Controle Total
           </h2>
           <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
             Veja como o ESH está impulsionando a segurança das empresas

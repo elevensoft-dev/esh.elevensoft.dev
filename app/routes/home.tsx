@@ -31,11 +31,10 @@ export default function Home() {
         </Helmet>
         <Hero />
         <Solution />
-        <Pricing />
         <TestimonialsSection />
+        <Pricing />
         {/* <Faq /> */}
         <FAQSection />
-        <AboutPage />
       </main>
     </PageSEO>
   );

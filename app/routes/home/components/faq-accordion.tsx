@@ -74,7 +74,7 @@ export const FAQSection = () => {
                         {item.icon}
                       </div>
                     </div>
-                    <span className="text-lg font-semibold group-hover:text-orange-600 transition-colors duration-300">
+                    <span className="text-lg text-white font-semibold group-hover:text-orange-600 transition-colors duration-300">
                       {item.question}
                     </span>
                   </div>

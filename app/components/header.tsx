@@ -10,12 +10,7 @@ interface MenuItem {
   icon?: string;
 }
 
-const menuItems: MenuItem[] = [
-  { label: "Preços", href: "/pricing", description: "Planos e preços competitivos" },
-  { label: "Segurança", href: "/security", description: "Sua segurança em primeiro lugar" },
-  { label: "Comparar", href: "/compare", description: "Compare com outras soluções" },
-  { label: "Sobre Nós", href: "/about", description: "Conheça nossa história e missão" },
-];
+const menuItems: MenuItem[] = [];
 
 export function Header() {
   const {
@@ -70,29 +65,10 @@ export function Header() {
                 </NavLink>
               </div>
             ))}
-
-            {/* Blog */}
-            <a
-              href="https://elevensoft.dev/blog"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-neutral-300 hover:text-white hover:bg-neutral-800/50 transition-colors duration-300 group border border-transparent"
-            >
-              <span className="text-sm font-medium">Blog</span>
-              <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
           </nav>
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Link
-              to="/quiz"
-              className="px-6 py-2.5 rounded-lg text-neutral-300 hover:text-white hover:bg-neutral-800/50 transition-colors duration-300 text-sm font-medium border border-transparent"
-            >
-              Quiz
-            </Link>
             <Link
               to="/pricing"
               className="relative px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-semibold transition-colors duration-300 group overflow-hidden"
@@ -143,26 +119,7 @@ export function Header() {
                 </NavLink>
               ))}
 
-              <a
-                href="https://elevensoft.dev/blog"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between px-4 py-3 rounded-lg text-neutral-300 hover:text-white hover:bg-neutral-800/50 transition-colors duration-300 border border-transparent"
-              >
-                <span className="font-medium">Blog</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-
               <div className="pt-4 border-t border-neutral-800/50 mt-4">
-                <Link
-                  to="/quiz"
-                  className="block px-4 py-3 rounded-lg text-neutral-300 hover:text-white hover:bg-neutral-800/50 transition-colors duration-300 font-medium mb-2 border border-transparent"
-                  onClick={closeMobileMenu}
-                >
-                  Quiz
-                </Link>
                 <Link
                   to="/pricing"
                   className="block px-4 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-semibold transition-colors duration-300 text-center"

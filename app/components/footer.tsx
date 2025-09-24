@@ -14,116 +14,6 @@ export function Footer() {
 
   return (
     <footer className="bg-neutral-900 border-t border-neutral-800">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-              <img src="logo.png" alt="Logo Eleven, letra E" className="w-8 h-auto" width="32" height="42" />
-            </div>
-            <p className="text-neutral-400 mb-6 max-w-md">
-              A plataforma definitiva para controle, auditoria e segurança de acesso a servidores.
-              Construída no Brasil, para empresas brasileiras que levam segurança a sério.
-            </p>
-            <div className="flex gap-4">
-              <a
-                href="https://www.instagram.com/elevensoft.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-lg flex items-center justify-center text-neutral-400 hover:text-white hover:shadow-[0_0_20px_rgba(255,138,41,0.3)] hover:scale-110 transition-all duration-200"
-              >
-                <InstagramLogoIcon className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/eleven-soft-dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-neutral-800 hover:bg-neutral-700 border border-neutral-700 rounded-lg flex items-center justify-center text-neutral-400 hover:text-white hover:shadow-[0_0_20px_rgba(255,138,41,0.3)] hover:scale-110 transition-all duration-200"
-              >
-                <LinkedInLogoIcon className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-white font-semibold mb-6">Produtos</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/security"
-                  className="text-neutral-400 hover:text-orange-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  Segurança
-                  <ArrowTopRightIcon className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/compare"
-                  className="text-neutral-400 hover:text-orange-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  Comparativo
-                  <ArrowTopRightIcon className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/docs"
-                  className="text-neutral-400 hover:text-orange-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  Documentação
-                  <ArrowTopRightIcon className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Empresa e Contato */}
-          <div>
-            <h4 className="text-white font-semibold mb-6">Empresa</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/about"
-                  className="text-neutral-400 hover:text-orange-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  Sobre Nós
-                  <ArrowTopRightIcon className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/pricing"
-                  className="text-neutral-400 hover:text-orange-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  Preços
-                  <ArrowTopRightIcon className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="mailto:ola@elevensoft.dev"
-                  className="text-neutral-400 hover:text-orange-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  Trabalhe Conosco
-                  <ArrowTopRightIcon className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://elevensoft.dev/blog"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-400 hover:text-orange-400 transition-colors duration-200 flex items-center gap-2 group"
-                >
-                  Blog
-                  <ArrowTopRightIcon className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       {/* Seção de Contato Destaque */}
       <div className="border-t border-neutral-800 bg-neutral-950/50">
         <div className="container mx-auto px-4 py-12">
@@ -183,26 +73,14 @@ export function Footer() {
       </div>
 
       <div className="border-t border-neutral-800 bg-neutral-950">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2 text-neutral-400 text-sm">
+        <div className="container mx-auto px-4 py-6 items-center">
+          <div className="text-center">
+            <div className="gap-2 text-neutral-400 text-sm">
               <span>© {currentYear} Eleven Soft. Todos os direitos reservados.</span>
-              <span className="hidden md:inline">•</span>
+              <span className="hidden md:inline m-1">•</span>
               <span className="hidden md:inline">Feito com</span>
-              <HeartIcon className="w-4 h-4 text-red-500 hidden md:inline" />
+              <HeartIcon className="w-4 h-4 text-red-500 hidden md:inline m-1" />
               <span className="hidden md:inline">no Brasil</span>
-            </div>
-
-            <div className="flex gap-6 text-sm">
-              <a href="/politica-privacidade" className="text-neutral-400 hover:text-orange-400 transition-colors">
-                Política de Privacidade
-              </a>
-              <a href="/termos-uso" className="text-neutral-400 hover:text-orange-400 transition-colors">
-                Termos de Uso
-              </a>
-              <a href="/cookies" className="text-neutral-400 hover:text-orange-400 transition-colors">
-                Cookies
-              </a>
             </div>
           </div>
         </div>

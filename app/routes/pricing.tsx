@@ -72,7 +72,7 @@ const PlanCard: React.FC<PlanCardProps> = ({
                 feature.isHighlight ? 'text-orange-400' : 'text-neutral-500'
               }`}
             />
-            <span>{feature.text}</span>
+            <span dangerouslySetInnerHTML={{__html: feature.text}}></span>
           </li>
         ))}
       </ul>
@@ -126,7 +126,7 @@ const FeatureRow: React.FC<FeatureRowProps> = ({ category, feature, start, pro, 
 export default function Pricing() {
   return (
     <PageSEO
-      title="Preços ESH | Eleven Soft - Planos Transparentes para Segurança"
+      title="Segurança de Nível Enterprise. Previsibilidade que só uma solução em Reais oferece."
       description="Planos transparentes para controle de acesso remoto. Start R$599, Profissional R$999, Enterprise sob consulta. Sem custos escondidos, cobrança em Reais."
       keywords="preços ESH, planos segurança, controle acesso, auditoria servidores, custo solução, transparência preços"
       image="/og-image.jpg"
@@ -139,7 +139,7 @@ export default function Pricing() {
           {/* 1. A Promessa de Valor */}
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tighter">
-              Preços Transparentes para uma Segurança Inquestionável.
+              Segurança de Nível Enterprise. Previsibilidade que só o ESH oferece.
             </h1>
             <p className="mt-6 text-lg text-neutral-300">
               Sem custos escondidos, sem surpresas com o câmbio. Escolha o poder que sua operação precisa. Todos os planos são cobrados em <strong>Reais (R$)</strong>.
@@ -157,10 +157,10 @@ export default function Pricing() {
               features={[
                 { text: "Até 30 Usuários" },
                 { text: "Até 25 Sessões Simultâneas" },
-                { text: "Gravação e Replay de Sessões" },
+                { text: "<b>Gravação e Replay</b> de Sessões" },
                 { text: "Acesso Centralizado" },
               ]}
-              ctaText="Contratar Plano Start"
+              ctaText="Agendar Demo"
               ctaLink={startPlanLink}
             />
 
@@ -176,7 +176,7 @@ export default function Pricing() {
                 { text: "Relatórios de Auditoria Avançados" },
                 { text: "Suporte Prioritário via E-mail" },
               ]}
-              ctaText="Contratar Plano Pro"
+              ctaText="Agendar Demo"
               ctaLink={proPlanLink}
               isFeatured={true}
             />
@@ -191,10 +191,9 @@ export default function Pricing() {
                 { text: "Tudo do plano Profissional, e mais:" },
                 { text: "Controle Granular de Comandos (ESUT)", isHighlight: true },
                 { text: "Bloqueio de Ações Perigosas", isHighlight: true },
-                { text: "Single Sign-On (SSO) / AD" },
-                { text: "Suporte Dedicado (WhatsApp/Slack)" },
+                { text: "Suporte Dedicado" },
               ]}
-              ctaText="Fale com um Especialista"
+              ctaText="Agendar Demo"
               ctaLink={enterprisePlanLink}
             />
           </div>
@@ -224,7 +223,6 @@ export default function Pricing() {
 
                   <FeatureRow category="Escala e Integração" />
                   <FeatureRow feature="Usuários Ilimitados" start={false} pro={true} enterprise={true} />
-                  <FeatureRow feature="Single Sign-On (SSO)" start={false} pro={false} enterprise={true} />
 
                   <FeatureRow category="Suporte" />
                   <FeatureRow feature="Suporte via E-mail" start={true} pro={true} enterprise={true} />

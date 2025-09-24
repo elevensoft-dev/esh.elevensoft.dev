@@ -72,7 +72,7 @@ const PlanCard: React.FC<PlanCardProps> = ({
                 feature.isHighlight ? 'text-orange-400' : 'text-neutral-500'
               }`}
             />
-            <span>{feature.text}</span>
+            <span dangerouslySetInnerHTML={{__html: feature.text}}></span>
           </li>
         ))}
       </ul>
@@ -155,10 +155,10 @@ export default function Pricing() {
               features={[
                 { text: "Até 30 Usuários" },
                 { text: "Até 25 Sessões Simultâneas" },
-                { text: "Gravação e Replay de Sessões" },
+                { text: "<b>Gravação e Replay</b> de Sessões" },
                 { text: "Acesso Centralizado" },
               ]}
-              ctaText="Contratar Plano Start"
+              ctaText="Agendar Demo"
               ctaLink={startPlanLink}
             />
 
@@ -168,13 +168,13 @@ export default function Pricing() {
               price="R$ 999"
               description="A escolha ideal para empresas em crescimento com auditoria e segurança como prioridade."
               features={[
-                { text: "Usuários e Servidores Ilimitados" },
+                { text: "Usuários e Servidores <b>Ilimitados</b>" },
                 { text: "Até 80 Sessões Simultâneas" },
                 { text: "Tudo do plano Start, e mais:" },
                 { text: "Relatórios de Auditoria Avançados" },
-                { text: "Suporte Prioritário via E-mail" },
+                { text: "Suporte Prioritário" },
               ]}
-              ctaText="Contratar Plano Pro"
+              ctaText="Agendar Demo"
               ctaLink={proPlanLink}
               isFeatured={true}
             />
@@ -189,10 +189,9 @@ export default function Pricing() {
                 { text: "Tudo do plano Profissional" },
                 { text: "Controle Granular de Comandos (ESUT)", isHighlight: true },
                 { text: "Bloqueio de Ações Perigosas", isHighlight: true },
-                // { text: "Single Sign-On (SSO) / AD" },
-                { text: "Suporte Dedicado (WhatsApp/Slack)" },
+                { text: "Suporte Dedicado" },
               ]}
-              ctaText="Fale com um Especialista"
+              ctaText="Agendar Demo"
               ctaLink={enterprisePlanLink}
             />
           </div>
@@ -221,7 +220,6 @@ export default function Pricing() {
 
                   <FeatureRow category="Escala e Integração" />
                   <FeatureRow feature="Usuários Ilimitados" start={false} pro={true} enterprise={true} />
-                  <FeatureRow feature="Single Sign-On (SSO)" start={false} pro={false} enterprise={true} />
 
                   <FeatureRow category="Suporte" />
                   <FeatureRow feature="Suporte via E-mail" start={true} pro={true} enterprise={true} />
@@ -231,7 +229,6 @@ export default function Pricing() {
               </table>
             </div>
           </div>
-
         </div>
       </div>
       <div className="mt-28">
