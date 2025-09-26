@@ -203,7 +203,7 @@ export function PricingFaq() {
                 Falar com Vendas
               </a>
               <a
-                href="/pricing"
+                href="#pricing"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-neutral-700 hover:bg-neutral-800 transition-colors rounded-lg text-white"
               >
                 Ver Todos os Planos

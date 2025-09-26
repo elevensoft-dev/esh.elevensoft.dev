@@ -133,7 +133,7 @@ export default function Pricing() {
       url="https://esh.elevensoft.dev/pricing"
       type="website"
     >
-      <div className="bg-neutral-950 text-white">
+      <div className="bg-neutral-950 text-white" id="pricing">
         <div className="container mx-auto px-4 py-20 md:py-28">
 
           {/* 1. A Promessa de Valor */}
@@ -159,7 +159,7 @@ export default function Pricing() {
                 { text: "Acesso Centralizado" },
               ]}
               ctaText="Agendar Demo"
-              ctaLink={startPlanLink}
+              ctaLink="https://meetings.hubspot.com/eleven-soft"
             />
 
             {/* PLANO PROFISSIONAL (DESTAQUE) */}
@@ -175,7 +175,7 @@ export default function Pricing() {
                 { text: "Suporte Prioritário" },
               ]}
               ctaText="Agendar Demo"
-              ctaLink={proPlanLink}
+              ctaLink="https://meetings.hubspot.com/eleven-soft"
               isFeatured={true}
             />
 
@@ -192,7 +192,7 @@ export default function Pricing() {
                 { text: "Suporte Dedicado" },
               ]}
               ctaText="Agendar Demo"
-              ctaLink={enterprisePlanLink}
+              ctaLink="https://meetings.hubspot.com/eleven-soft"
             />
           </div>
 

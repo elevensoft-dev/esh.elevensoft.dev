@@ -161,7 +161,7 @@ export default function Pricing() {
                 { text: "Acesso Centralizado" },
               ]}
               ctaText="Agendar Demo"
-              ctaLink={startPlanLink}
+              ctaLink="https://meetings.hubspot.com/eleven-soft"
             />
 
             {/* PLANO PROFISSIONAL (DESTAQUE) */}
@@ -177,7 +177,7 @@ export default function Pricing() {
                 { text: "Suporte Prioritário via E-mail" },
               ]}
               ctaText="Agendar Demo"
-              ctaLink={proPlanLink}
+              ctaLink="https://meetings.hubspot.com/eleven-soft"
               isFeatured={true}
             />
 
@@ -194,7 +194,7 @@ export default function Pricing() {
                 { text: "Suporte Dedicado" },
               ]}
               ctaText="Agendar Demo"
-              ctaLink={enterprisePlanLink}
+              ctaLink="https://meetings.hubspot.com/eleven-soft"
             />
           </div>
 

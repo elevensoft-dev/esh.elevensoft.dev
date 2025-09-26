@@ -12,7 +12,7 @@ export function Solution() {
         </div>
 
         <h1 className="text-white text-xl md:text-3xl font-semibold mt-10 mb-3">
-          Chega de "torcer para não dar errado.
+          Chega de torcer para não dar errado.
         </h1>
         <p className="text-neutral-400 text-lg mb-10 max-w-3xl mx-auto">
           Tenha a prova irrefutável de cada ação e previna incidentes antes que eles aconteçam.

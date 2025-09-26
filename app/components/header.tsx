@@ -70,7 +70,7 @@ export function Header() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <Link
-              to="/pricing"
+              to="https://meetings.hubspot.com/eleven-soft"
               className="relative px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-semibold transition-colors duration-300 group overflow-hidden"
             >
               <span className="relative z-10">Comece Agora</span>
@@ -121,7 +121,7 @@ export function Header() {
 
               <div className="pt-4 border-t border-neutral-800/50 mt-4">
                 <Link
-                  to="/pricing"
+                  to="https://meetings.hubspot.com/eleven-soft"
                   className="block px-4 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-semibold transition-colors duration-300 text-center"
                   onClick={closeMobileMenu}
                 >

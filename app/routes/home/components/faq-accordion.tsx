@@ -80,7 +80,7 @@ export const FAQSection = () => {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="pb-6">
-                  <div className="ml-14 text-neutral-500 leading-relaxed text-base">
+                  <div className="ml-14 text-neutral-500 leading-relaxed text-white">
                     {item.answer}
                   </div>
                 </AccordionContent>

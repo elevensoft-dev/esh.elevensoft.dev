@@ -27,7 +27,7 @@ export function Hero() {
         <div className="flex items-start justify-center px-8 sm:px-24">
           <div className="relative md:max-w-[420px]! flex w-full max-w-[80vw] flex-col items-center justify-start sm:flex-row sm:gap-4">
             <Link
-              to="/pricing"
+              to="https://meetings.hubspot.com/eleven-soft"
               className="px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 hover:shadow-[0_0_40px_rgba(255,138,41,0.2)] hover:scale-105 text-white font-semibold transition-all duration-300 text-center w-full"
             >
               Agendar Demonstração Gratuita
