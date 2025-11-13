@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 export function Hero() {
   return (
@@ -16,10 +16,13 @@ export function Hero() {
         <div>
           <div className="mx-auto flex min-h-[288px] max-w-[80vw] shrink-0 flex-col items-center justify-center gap-4 px-2 py-4 sm:px-16 lg:px-24">
             <h1 className="max-w-4xl text-pretty text-center text-[clamp(32px,7vw,64px)] font-medium leading-none tracking-[-1.44px] text-white md:tracking-[-2.16px]">
-              <span className="text-orange-400">Controle e Auditoria</span> de Acesso a Ativos de Rede, Sem Exceção.
+              <span className="text-orange-400">Controle e Auditoria</span> de
+              Acesso a Ativos de Rede, Sem Exceção.
             </h1>
             <h2 className="text-md max-w-3xl text-pretty text-center text-white md:text-lg">
-              A primeira plataforma de PSM do Brasil. Tenha a visibilidade e a segurança de um PAM enterprise, com a simplicidade e o preço que sua operação exige.
+              A primeira plataforma de PSM do Brasil. Tenha a visibilidade e a
+              segurança de um PAM enterprise, com a simplicidade e o preço que
+              sua operação exige.
             </h2>
           </div>
         </div>
@@ -38,15 +41,32 @@ export function Hero() {
         <div className="flex flex-col items-center justify-end mt-10">
           <div className="flex items-center gap-10 border-neutral-800 px-4 py-2 relative h-12">
             <div className="w-7 h-7 rounded-full border z-10 p-1 border-neutral-700 bg-neutral-900">
-              <img className="max-w-full h-auto" src="https://cdn2.cardume.digital/public/sites/saperx/images/layout/backgrounds/footer.svg" alt="Logo SaperX" />
+              <img
+                className="max-w-full h-auto"
+                src="https://cdn2.cardume.digital/public/sites/saperx/images/layout/backgrounds/footer.svg"
+                alt="Logo SaperX"
+                loading="lazy"
+              />
             </div>
             <div className="absolute left-8 w-7 overflow-clip h-7 p-1 object-contain rounded-full border border-neutral-700 bg-neutral-900 z-20">
-              <img className="max-w-full h-full" src="https://elevensoft.dev/icon.png?0542a25d6bd16a09" alt="Eleven Soft logo" />
+              <img
+                className="max-w-full h-full object-contain"
+                src="https://elevensoft.dev/images/logo/Logo_HOR_Eleven_Negativa.png"
+                alt="Eleven Soft logo"
+                loading="lazy"
+              />
             </div>
             <div className="absolute left-12 w-7 h-7 p-1 object-contain rounded-full bg-neutral-900 border border-neutral-700 z-30">
-              <img className="max-w-full h-auto" src="https://cdn.pixabay.com/photo/2017/02/18/19/20/logo-2078018_1280.png" alt="Pixxey logo" />
+              <img
+                className="max-w-full h-auto"
+                src="https://cdn.pixabay.com/photo/2017/02/18/19/20/logo-2078018_1280.png"
+                alt="Pixxey logo"
+                loading="lazy"
+              />
             </div>
-            <p className="text-sm tracking-tight text-neutral-400">Aprovado por CTOs e Gestores de TI que não abrem mão do controle</p>
+            <p className="text-sm tracking-tight text-neutral-400">
+              Aprovado por CTOs e Gestores de TI que não abrem mão do controle
+            </p>
           </div>
         </div>
       </div>
