@@ -3,10 +3,9 @@ import { Helmet } from "@dr.pogodin/react-helmet"
 import { PageSEO } from "~/components/seo"
 
 import { Hero } from "./home/components/hero"
-import { FAQSection } from "./home/components/faq-accordion.tsx"
-import { TestimonialsSection } from "./home/components/testimonials/testimonials.tsx"
+import { FAQSection } from "./home/components/faq-accordion"
+import { TestimonialsSection } from "./home/components/testimonials/testimonials"
 import { Solution } from "./home/components/solution"
-import Pricing from "./home/components/pricing"
 
 export default function Home() {
   return (
