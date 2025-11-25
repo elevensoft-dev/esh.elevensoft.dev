@@ -1,15 +1,12 @@
-import { Helmet } from '@dr.pogodin/react-helmet';
+import { Helmet } from "@dr.pogodin/react-helmet"
 
-import { PageSEO } from "~/components/seo";
+import { PageSEO } from "~/components/seo"
 
-import { Hero } from "./home/components/hero";
-import { FAQSection } from "./home/components/faq-accordion.tsx";
-import AboutPage from "./about";
-import { SocialProof } from "./home/components/social-proof";
-import { TestimonialsSection } from "./home/components/testimonials/testimonials.tsx";
-import { Solution } from "./home/components/solution";
-import Pricing from './home/components/pricing';
-
+import { Hero } from "./home/components/hero"
+import { FAQSection } from "./home/components/faq-accordion.tsx"
+import { TestimonialsSection } from "./home/components/testimonials/testimonials.tsx"
+import { Solution } from "./home/components/solution"
+import Pricing from "./home/components/pricing"
 
 export default function Home() {
   return (
@@ -32,10 +29,10 @@ export default function Home() {
         <Hero />
         <Solution />
         <TestimonialsSection />
-        <Pricing />
+        {/* <Pricing /> */}
         {/* <Faq /> */}
         <FAQSection />
       </main>
     </PageSEO>
-  );
+  )
 }
